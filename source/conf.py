@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-import sphinx_bootstrap_theme
-
 # -*- coding: utf-8 -*-
 #
 # Networking Class documentation build configuration file, created by

@@ -20,6 +20,7 @@ Tutorials
    :maxdepth: 1
 
    tutorials/raspberry_pi_setup/raspberry_pi_setup.rst
+   tutorials/raspberry_pi_GPIO/raspberry_pi_GPIO.rst
 
 Labs
 ----
