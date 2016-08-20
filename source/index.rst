@@ -1,22 +1,25 @@
-.. Networking Class documentation master file, created by
-   sphinx-quickstart on Fri Aug 19 12:26:33 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-Welcome to Networking Class's documentation!
-============================================
 
-Contents:
+Simpson College Networking Class
+================================
+
+Theory
+------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+
+   chapters/seven_layer_network_model/seven_layer_network_model.rst
+   chapters/physical_layer/physical_layer.rst
 
 
+Tutorials
+---------
 
-Indices and tables
-==================
+.. toctree::
+   :maxdepth: 1
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   tutorials/raspberry_pi_setup/raspberry_pi_setup.rst
 
+Labs
+----
