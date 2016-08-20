@@ -69,3 +69,36 @@ Let's use pin 12, in case you want to keep your blinking LED.
     :align: center
     :alt: alternate text
 
+Now that they are hooked up, let's run some code. On one computer we will
+run a program to alternate the pin 12 between high and low:
+
+.. literalinclude:: send_wire.py
+    :linenos:
+    :language: python
+
+And on the other computer, let's read that wire:
+
+.. literalinclude:: read_wire_poll.py
+    :linenos:
+    :language: python
+
+Great! But what we are doing is "polling." We are periodically seeing if the value changes.
+So if it doesn't change, we are wasting time. If it changes faster than we are polling, then
+we miss changes. Polling is no good.
+
+Instead, we can wait for the wire to change between high and low:
+
+.. literalinclude:: read_wire_wait.py
+    :linenos:
+    :language: python
+
+This is much better. But still no great. Because this is "blocking." Our program can't do anything
+unless there is a change in state on the wire. If there is never a change, we just hang.
+
+A better option? Use a callback. Write a function that the computer will run when there is a
+change in state. The function is run in a separate thread.
+
+.. literalinclude:: read_wire_callback.py
+    :linenos:
+    :language: python
+
