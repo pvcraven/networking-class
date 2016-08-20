@@ -5,7 +5,8 @@ Raspberry Pi Setup
 * Put it in the case
 * Install the memory card. (Pink package, upside down)
 * Install the heatsinks
-* Plug in the GPIO board
+* Plug in the GPIO board. The NEGATIVE power gets plugged into the BLUE lines
+  on the breadboard.
 * Install the cable from the GPIO board to the computer
 * Plug in the:
 
