@@ -3,24 +3,10 @@
 Simpson College Networking Class
 ================================
 
-Theory
-------
-
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   chapters/seven_layer_network_model/seven_layer_network_model.rst
-   chapters/physical_layer/physical_layer.rst
+   chapters/index.rst
+   tutorials/index.rst
+   labs/index.rst
 
-
-Tutorials
----------
-
-.. toctree::
-   :maxdepth: 1
-
-   tutorials/raspberry_pi_setup/raspberry_pi_setup.rst
-   tutorials/raspberry_pi_GPIO/raspberry_pi_GPIO.rst
-
-Labs
-----
