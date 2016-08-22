@@ -62,3 +62,12 @@ Step 4
   a variable to track what bit you are on. Ask your instructor.
 * You may need a small program to reset the state of the pins before you run
   your program. Otherwise you'll get an extra starting bit.
+* It may take some work to keep from adding an extra bit or dropping an bit
+  when your program runs.
+
+Your final result should look something like the video below. One terminal
+shows the sending computer, the other terminal shows the receiving computer.
+
+.. raw:: html
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/n61MLYCA_p0" frameborder="0" allowfullscreen></iframe>
