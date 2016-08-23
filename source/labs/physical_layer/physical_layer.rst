@@ -16,18 +16,22 @@ Your grade for this lab depends on how many steps you complete. Each step gets
 you closer to the protocol that was originally used for things like Ethernet,
 and even your remote control.
 
-========  =====
-Step      Grade
-========  =====
-No steps  F
-Step 1    C-
-Step 2    C+
-Step 3    B-
-Step 4    B
-Step 5    B+
-Step 6    A-
-Step 7    A
-========  =====
+After each step you complete, call me over. Let me see that it is working, ask
+questions to make sure you understand, and then I'll give you the grade.
+Don't skip steps.
+
+========  ===== ======
+Step      Grade Points
+========  ===== ======
+No steps  F     0
+Step 1    C-    70
+Step 2    C+    77
+Step 3    B-    80
+Step 4    B     85
+Step 5    B+    88
+Step 6    A-    91
+Step 7    A     96
+========  ===== ======
 
 If you are new to the Linux command line, which many of you are, ask questions!
 You can also find a lot on line. I recommend this `linux command line tutorial`_
