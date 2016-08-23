@@ -21,12 +21,12 @@ Set up your Raspberry Pi like this photo:
     :alt: alternate text
 
 We will put in a jumper wire to the breakout labeled "17." Then we will run
-that wire to an empty column on the right. Then plug in the short (negative)
-side of the LED into a different hole in that column. Plug the long (positive)
+that wire to an empty column on the right. Then plug in the long (positive)
+side of the LED into a different hole in that column. Plug the short (negative)
 side of the LED into the column to the right.
 
 Then in that same column run a resistor from the positive side of the LED to the
-positive power rail.
+negative power rail (ground).
 
 What is a resistor? It "resists" the flow of electricity. You know it is bad
 to hook up the positive and negative parts of a battery together because it makes
@@ -52,6 +52,15 @@ below:
 .. literalinclude:: led_blink.py
     :linenos:
     :language: python
+
+When the GPIO pin is set "high" electricity flows and the LED lights up. When
+it is set "low" the LED goes out.
+
+(Side note, instead of hooking the LED to ground if you hook it to the
+positive rail then everything is backwards. When you set the GPIO pin to low,
+the LED lights up. When you set it to high it goes out. If you try it, remember
+you have to flip the LED so the positive is still on the positive side of the
+electricity flow.)
 
 Step two: Signal another Raspberry Pi
 -------------------------------------

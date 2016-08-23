@@ -95,7 +95,6 @@ line whenever the clock signal is in a falling state.
 .. image:: clock_signal.svg
     :width: 500px
     :align: center
-    :alt: From Wikipedia Commons
 
 * `Manchester Encoding`_
 * `8b 10b Encoding`_
