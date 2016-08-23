@@ -53,7 +53,7 @@ This is an example, with a 1 second blink time.
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/QzA1KSAlpSw" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7Ef11hFo5lo" frameborder="0" allowfullscreen></iframe>
 
 Step 2
 ^^^^^^
@@ -76,7 +76,8 @@ Go ahead and still print the binary numbers as well, so we can confirm the
 message was received in Step 3.
 
 Here is an example. The green LED is the 'clock' and the red led blinks red
-for a one, and off for a zero. The delay between each bit is 0.25 seconds.
+for a one, and off for a zero. The delay between each clock is 0.1 seconds. Each
+bit takes 0.2 seconds to transmit.
 
 .. raw:: html
 
@@ -114,6 +115,9 @@ shows the sending computer, the other terminal shows the receiving computer.
 .. raw:: html
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/n61MLYCA_p0" frameborder="0" allowfullscreen></iframe>
+
+You can try adjusting the clock delay to see how fast you can receive data. I was
+able to take the clock to 0.0001 and still reliably transmit data.
 
 Step 5
 ^^^^^^
