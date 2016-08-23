@@ -60,14 +60,20 @@ Step 2
 
 Look at the bit shifting tutorial. Encode a message.
 Have one LED blink when there is a one, and not blink when there is a zero.
-The other LED should blink for each change in the bit that you have.
+The clock LED should blink on/off for each change bit that you have.
+
+.. image:: ../../chapters/physical_layer/clock_signal.svg
+    :width: 500px
+    :align: center
+
+
+You should set the LEDs off to begin with. You may need a separate program
+to make sure the LEDs start in that state.
+Keep track of the clock with a Boolean that you flip between
+true and false.
 
 Go ahead and still print the binary numbers as well, so we can confirm the
 message was received in Step 3.
-
-You should set the LEDs off to begin with, and wait a second before starting
-your message. Keep track of the clock with a Boolean that you flip between
-true and false.
 
 Here is an example. The green LED is the 'clock' and the red led blinks red
 for a one, and off for a zero. The delay between each bit is 0.25 seconds.

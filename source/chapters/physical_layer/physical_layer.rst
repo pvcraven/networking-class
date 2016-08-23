@@ -82,6 +82,21 @@ Types of encoding analog onto digital:
 Ways to put bits on a wire:
 
 * `Clock and data signal`_
+
+This uses two wires. One wire is a clock signal, which operates on a regular
+interval. The other signal is a data signal.
+
+On the "rising edge" of the clock signal, the data signal is transitioned
+to either high or low, depending on the data. We don't read the data at this
+point because it is still transitioning. When the clock signal falls we hold
+the data signal at the proper value. The receiver will read from the data
+line whenever the clock signal is in a falling state.
+
+.. image:: clock_signal.svg
+    :width: 500px
+    :align: center
+    :alt: From Wikipedia Commons
+
 * `Manchester Encoding`_
 * `8b 10b Encoding`_
 * (There are many others)
