@@ -38,13 +38,13 @@ You can also find a lot on line. I recommend this `linux command line tutorial`_
 and this `command line cheat sheet`_. If you find something you like better, make
 sure to tell me.
 
-Step 1
-^^^^^^
-
-Start with the tutorial to blink an LED. Make sure you have that working.
-
 Remember: Use 'python3' to run your program. The 'python' command will use
 python version 2, which won't work with our code.
+
+Step 1: Dual Blinking LEDs
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Start with the tutorial to blink an LED. Make sure you have that working.
 
 Get two LEDs to blink at the same time. Use pins 12 and 17. Blink
 both a green and red LED at the same time.
@@ -56,8 +56,8 @@ This is an example, with a 1 second blink time.
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mXCQbWq5w3Q" frameborder="0" allowfullscreen></iframe>
 
 
-Step 2
-^^^^^^
+Step 2: Encode a message
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Look at the bit shifting tutorial. Encode a message.
 Have one LED blink when there is a one, and not blink when there is a zero.
@@ -84,8 +84,8 @@ bit takes 0.2 seconds to transmit.
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/7Ef11hFo5lo" frameborder="0" allowfullscreen></iframe>
 
-Step 3
-^^^^^^
+Step 3: Receive a signal
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Get another Raspberry Pi.
 * You can keep the LEDs attached.
@@ -101,8 +101,8 @@ Step 3
   The read program should be able to detect state changes. If it doesn't, stop
   here and debug.
 
-Step 4
-^^^^^^
+Step 4: Decode a signal
+^^^^^^^^^^^^^^^^^^^^^^^
 
 * Adjust your step 3 program to print out 1's and 0's. Every 8 bits, print
   a new line.
@@ -155,15 +155,15 @@ shows the sending computer, the other terminal shows the receiving computer.
 You can try adjusting the clock delay to see how fast you can receive data. I was
 able to take the clock to 0.0001 and still reliably transmit data.
 
-Step 5
-^^^^^^
+Step 5: Convert decoded bits to bytes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Change your program so it decodes the individual bits, and into an
   array of bytes. Print the message sent from the sending computer.
 
 
-Step 6
-^^^^^^
+Step 6: Manchester encoding
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Update your code so you can send using `Manchester Encoding`_.
 
@@ -175,8 +175,8 @@ Update your code so you can send using `Manchester Encoding`_.
   lines longer.
 
 
-Step 7
-^^^^^^
+Step 7: Manchester decoding
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Write code so you can receive using `Manchester Encoding`_.
 
