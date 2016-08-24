@@ -13,8 +13,8 @@ Please work with another student so you have two Raspberry Pi's to communicate,
 or work with a couple of the computers that I have.
 
 Your grade for this lab depends on how many steps you complete. Each step gets
-you closer to the protocol that was originally used for things like Ethernet,
-and even your remote control.
+you closer to the Manchester encoding protocol that was originally used for
+things like Ethernet, and is even used for IR based TV remotes.
 
 After each step you complete, call me over. Let me see that it is working, ask
 questions to make sure you understand, and then I'll give you the grade.
