@@ -1,3 +1,5 @@
+.. _gpio_tutorial:
+
 Raspberry Pi GPIO
 ==================
 
@@ -107,7 +109,10 @@ unless there is a change in state on the wire. If there is never a change, we ju
 A better option? Use a callback. Write a function that the computer will run when there is a
 change in state. The function is run in a separate thread.
 
+
 .. literalinclude:: read_wire_callback.py
+    :caption: read_wire_callback.py
+    :name: read_wire_callback
     :linenos:
     :language: python
 
