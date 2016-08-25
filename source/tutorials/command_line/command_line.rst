@@ -87,8 +87,25 @@ Command Line
 |                           | and will keep printing additional lines as they are  |
 |                           | added. Great for following log files.                |
 +---------------------------+------------------------------------------------------+
+| **Process Management**                                                           |
++---------------------------+------------------------------------------------------+
+| ps                        | List active processes                                |
++---------------------------+------------------------------------------------------+
+| ps -ef                    | List active processes and details                    |
++---------------------------+------------------------------------------------------+
+| top                       | Continually updated list of CPU heavy processes.     |
++---------------------------+------------------------------------------------------+
+| kill PID                  | Kill the specified process id with SIGTERM.          |
++---------------------------+------------------------------------------------------+
+| kill -9 PID               | Kill the specified process id with                   |
+|                           | `SIGKILL <http://turnoff.us/geek/dont-sigkill/>`_.   |
++---------------------------+------------------------------------------------------+
+| ctrl-z                    | Move currently running process to background.        |
++---------------------------+------------------------------------------------------+
+| command &                 | Run command in the background.                       |
++---------------------------+------------------------------------------------------+
+| bg                        | List background processes.                           |
++---------------------------+------------------------------------------------------+
+| fg                        | Bring job to forground.                              |
++---------------------------+------------------------------------------------------+
 
-ln -s file link – create symbolic link link to file
-touch file – create or update file
-cat > file – places standard input into file
-more file – output the contents of file
