@@ -12,12 +12,21 @@ Wire
 ^^^^
 
 * Regular wire
-* `Twisted Pair`_ - TP, Shielded or unshielded
+* `Twisted Pair`_ - TP. Why is it twisted?
 
 .. image:: Twisted-Pair-AlDmour.jpg
     :width: 500px
     :align: center
     :alt: alternate text
+
+* Shielded (STP) or Unshielded (UTP) Twisted Pair (Image from Pace University)
+
+.. image:: utp_and_stp.jpg
+    :width: 300px
+    :align: center
+    :alt: From Pace University http://webpage.pace.edu/ms16182p/networking/cables.html
+
+
 
 * `Coaxial Cable`_
 
@@ -36,7 +45,13 @@ Light
 ^^^^^
 
 * IR (like older TV remotes)
-* Laser + fiber optics (see `how fiber optics work`_)
+* Laser + fiber optics (see `how fiber optics work`_) (Image from Apollo
+  Technology)
+
+.. image:: fibre_bundle.jpg
+    :width: 500px
+    :align: center
+    :alt: From http://apollotech.com.au/product-category/fibre-optic-cable/
 
 Radio
 ^^^^^
@@ -58,6 +73,10 @@ Radio
     * What is geosynchronous?
     * How far up is a geosynchronous orbit?
     * How long does it take light to make the round trip?
+
+* `United States Spectrum Allocation Chart`_
+* `Electromagnetic Spectrum`_
+* `Radio Wave Propagation`_
 
 Types of communicating
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -114,3 +133,6 @@ line whenever the clock signal is in a falling state.
 .. _Geosynchronous: https://en.wikipedia.org/wiki/Geosynchronous_satellite
 .. _Low Earth Orbit: https://en.wikipedia.org/wiki/Low_Earth_orbit
 .. _8b 10b Encoding: https://en.wikipedia.org/wiki/8b/10b_encoding
+.. _United States Spectrum Allocation Chart: https://upload.wikimedia.org/wikipedia/commons/d/df/United_States_Frequency_Allocations_Chart_2011_-_The_Radio_Spectrum.pdf
+.. _Electromagnetic Spectrum: https://en.wikipedia.org/wiki/Electromagnetic_spectrum
+.. _Radio Wave Propagation: http://www.pac-attack.com/articles/radio-wave-propagation
