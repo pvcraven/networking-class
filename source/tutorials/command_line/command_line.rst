@@ -1,6 +1,8 @@
 Command Line
 ------------
 
+Below is a list of commands you should know. We'll go over them in class:
+
 +---------------------------+------------------------------------------------------+
 | Command                   | Action                                               |
 +================+=================================================================+
@@ -109,3 +111,31 @@ Command Line
 | fg                        | Bring job to forground.                              |
 +---------------------------+------------------------------------------------------+
 
+Oh, didn't remember it all from class? Or you weren't in class that day?
+Or you want to learn more?
+
+No problem. I recommend reading through this site:
+
+http://linuxcommand.org/learning_the_shell.php
+
+The Bash shell is a full programmable language. Linux machines are nice because
+you can script and automate many things that aren't possible to do with a GUI.
+But it takes longer to learn.
+
+Vim
+^^^
+
+You should learn how to use the Vi editor. Vi and Emacs are two text editors
+that most people who work with networks know. We'll just show Vi. Vim is an
+enhanced version of Vi. Most people mean Vim now when they say Vi.
+
+Here is an interactive tutorial:
+
+http://www.openvim.com/
+
+After you go through that, here are a couple jokes that will make sense afterwards:
+
+* Vi is a text editor. Vi stands for "Very Intuitive."
+* Vi is a very popular editor. Because people can't figure out how to quit.
+
+If you just can't take learning Vi, then use ``nano`` instead.

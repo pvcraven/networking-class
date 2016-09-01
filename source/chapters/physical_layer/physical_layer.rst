@@ -26,8 +26,6 @@ Wire
     :align: center
     :alt: From Pace University http://webpage.pace.edu/ms16182p/networking/cables.html
 
-
-
 * `Coaxial Cable`_
 
 .. image:: coaxial_cable_cutaway.svg
@@ -56,6 +54,9 @@ Light
 Radio
 ^^^^^
 
+* `Electromagnetic Spectrum`_
+* `United States Spectrum Allocation Chart`_
+* `Radio Wave Propagation`_
 * Bluetooth
 * Wi-Fi (see `types of wifi standards`_)
 * Microwave links
@@ -72,18 +73,51 @@ Radio
 
     * What is geosynchronous?
     * How far up is a geosynchronous orbit?
+
+      * Approximately 35,786 km (22,236 mi) above sea level
+
     * How long does it take light to make the round trip?
 
-* `United States Spectrum Allocation Chart`_
-* `Electromagnetic Spectrum`_
-* `Radio Wave Propagation`_
+Speed of light:
+
+.. math::
+
+   c = 299,792,458\;\text{m/s}
+
+Distance:
+
+.. math::
+
+   d = 35,786\;\text{km}
+
+   d = 35,786,000\;\text{m}
+
+Round-trip time formula:
+
+.. math::
+
+   t = \frac{2d}{c}
+
+Fill in the formula:
+
+.. math::
+
+   t = \frac{2 \cdot 357,786,000}{299,792,458}
+
+Solve:
+
+.. math::
+
+   t \approx 0.24\;\text{seconds}
+
+
 
 Types of communicating
 ^^^^^^^^^^^^^^^^^^^^^^
 
-* Simplex
-* Half duplex
-* `Full duplex`_
+* Simplex (One way, broadcast radio)
+* Half duplex (Two ways, but can't talk and listen. Walkie-talkies.)
+* `Full duplex`_ (Both can talk and here. Phone.)
 
 Encoding
 ^^^^^^^^

@@ -22,6 +22,8 @@ Raspberry Pi Setup
 * Reboot
 * Open up a terminal
 
-  * Type 'sudo apt-get update'
-  * Type 'sudo apt-get upgrade'
+  * Type ``sudo apt-get update``
+  * Type ``sudo apt-get upgrade``
   * Wait a really long time
+
+* Done!
