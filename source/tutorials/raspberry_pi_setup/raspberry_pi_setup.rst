@@ -93,3 +93,27 @@ this command shuts down (halts) the computer:
 This one reboots:
 
 ``sudo shutdown -r now``
+
+Remote Access
+-------------
+
+Do you prefer to use the Raspberry Pi remotely? You can! First, figure out
+its IP address by typing:
+
+``ifconfig``
+
+Search through that info and see if you can find the computers IP address. The
+IP address will be a set of four numbers that looks like: 10.1.20.190. It won't
+be 0.0.0.0 or 127.0.0.1. Those aren't the numbers you are looking for.
+
+Then, download and use a terminal program like MobaXTerm_. You can connect to
+use the program to connect to that IP address.
+
+.. _MobaXTerm: http://mobaxterm.mobatek.net/
+
+Changing the Default Password
+-----------------------------
+
+By default, the username on your computer is ``pi`` and the password is ``raspberry``.
+To prevent other people and your classmates from accessing your computer, you can
+change the default password. Use the command ``passwd`` from the terminal window.
