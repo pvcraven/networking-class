@@ -1,6 +1,9 @@
 Raspberry Pi Setup
 ==================
 
+Basic Setup and Installation
+----------------------------
+
 * Pull out the motherboard
 * Put it in the case
 * Install the memory card. (Pink package, upside down)
@@ -11,7 +14,7 @@ Raspberry Pi Setup
 * Plug in the:
 
   * Power supply
-  * Network cable (Wifi is built in, but putting the box on Simpson's network is a pain.)
+  * Network cable (Wifi is built in, but putting the box on Simpson's network is a pain. If you don't have a wired connection available, see the section below on how to get onto Simpson's network.)
   * Keyboard
   * Mouse
   * Monitor
@@ -27,3 +30,34 @@ Raspberry Pi Setup
   * Wait a really long time
 
 * Done!
+
+Getting on to Simpson's Network
+-------------------------------
+
+Open a terminal window.
+
+Now, encode your password:
+
+echo -n 'YOUR_REAL_PASSWORD' | iconv -t utf16le | openssl md4 > hash.txt
+
+Open another terminal window.
+
+Edit the configuration file with nano or vim:
+
+``sudo nano /etc/wpa_supplicant/wpa_supplicant.conf``
+
+network={
+    ssid="student"
+	priority=1
+	proto=RSN
+	key_mgmt=WPA-EAP
+	pairwise=CCMP
+	auth_alg=OPEN
+	eap=PEAP
+	identity="USERNAME"
+	password=hash:9a6e.....2782
+	phase1="peaplabel=0"
+	phase2="auth=MSCHAPV2"
+}
+
+Replace
