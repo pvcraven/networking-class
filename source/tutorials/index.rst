@@ -9,3 +9,4 @@ Tutorials
    raspberry_pi_GPIO/raspberry_pi_GPIO.rst
    bit_shifting/bit_shifting.rst
    make_patch_cable/make_patch_cable.rst
+   wireshark/wireshark.rst
