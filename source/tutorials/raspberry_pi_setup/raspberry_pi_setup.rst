@@ -38,6 +38,26 @@ resolution. So plug in the monitor before you power the board.
 Getting on to Simpson's Network
 -------------------------------
 
+Getting a MAC address exception
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Simpson's network expects to computers to have anti-virus software. That's not
+really practical with the Raspberry Pi. So we will need to send IT the MAC addresses
+of our computers, so IT can put in an exception. The MAC address is a layer 2
+protocol for passing frames of data. The IP address is a layer 3 protocol for
+routing packets of data.
+
+You can find the MAC address by using the ``ifconfig`` command. Look at the image
+below:
+
+.. image:: mac_address.png
+    :width: 500px
+    :align: center
+    :alt: mac address location
+
+Connecting
+^^^^^^^^^^
+
 Open a terminal window.
 
 Now, encode your password:

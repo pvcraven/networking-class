@@ -84,6 +84,15 @@ bit takes 0.2 seconds to transmit.
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/7Ef11hFo5lo" frameborder="0" allowfullscreen></iframe>
 
+The basic steps:
+
+1. Put the clock HIGH
+2. Use an ``if`` statement, and figure out if the data line should be high or low.
+3. Wait 0.1 seconds. (Or whatever. Use a constant though for the time, don't
+   hard-code it.)
+4. Bring the clock LOW
+5. Wait 0.1 seconds.
+
 Step 3: Receive a signal
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
