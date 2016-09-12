@@ -23,6 +23,8 @@ Basic Setup and Installation
 * Select an install of Raspbian OS. (It's the only option)
 * Wait a really long time.
 * Reboot
+* Go to 'menu...preferences...mouse and keyboard settings'.
+* Change your keyboard to US. (Might need to scroll up to see it.)
 * Open up a terminal
 
   * Type ``sudo apt-get update``
@@ -31,8 +33,16 @@ Basic Setup and Installation
 
 * Done!
 
-Getting on to Simpson's Network
--------------------------------
+Getting on to the Network
+-------------------------
+
+The easiest way is to get on with a pre-shared key. Ask your
+instructor for how to do this. Simpson's student network won't
+let you on because you don't have anti-virus software.
+
+Below are instructions for getting on if you have an exception
+for that. You can just ignore this probably, but I'm leaving
+it here because it took me a long time to figure out.
 
 Open a terminal window.
 
@@ -47,7 +57,7 @@ Edit the configuration file with nano or vim:
 ``sudo nano /etc/wpa_supplicant/wpa_supplicant.conf``
 
 network={
-    ssid="student"
+    ssid="staff"
 	priority=1
 	proto=RSN
 	key_mgmt=WPA-EAP
