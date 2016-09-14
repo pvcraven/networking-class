@@ -113,9 +113,20 @@ Step 3: Receive a signal
 Step 4: Decode a signal
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-* Adjust your step 3 program to print out 1's and 0's. Every 8 bits, print
-  a new line.
-* In order to do something every 8 bits, you are going to need a counter variable.
+* Adjust your step 3 program.
+* Create a trigger for your clock line to read transitions.
+* Read the clock line.
+
+    * If the clock line is high, just ignore the transition.
+      This is because your data line is also transitioning and we don't want to
+      read now because the results will be unpredictable.
+    * If the clock is low, then POLL the data line. Remember from the tutorial,
+      you can use something like: ``result = GPIO.input(12)`` if you want to
+      read pin 12.
+    * If the data data line is low, print "1". Otherwise print "0"
+    * Remember, trigger on the clock line, read the data from the data line.
+
+* In order to print a line break every 8 bits, you are going to need a counter variable.
   It will need to exist in the function and increase each time the function is
   called. But wait! Variables in a function are reset each call. We need a way
   around this.
@@ -164,11 +175,22 @@ shows the sending computer, the other terminal shows the receiving computer.
 You can try adjusting the clock delay to see how fast you can receive data. I was
 able to take the clock to 0.0001 and still reliably transmit data.
 
+Remember, when you print at either the receiver or receiver, you'll be printing
+those binary numbers backwards.
+
 Step 5: Convert decoded bits to bytes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Change your program so it decodes the individual bits, and into an
-  array of bytes. Print the message sent from the sending computer.
+* Change your program so it decodes the individual bits, and into
+  a bit.
+* You'll need another static variable for your function to hold the result. Maybe
+  call it ``result_byte``.
+* If you receive a zero, do nothing.
+* If you receive a one, shift it into place. For example, ``1 << 3`` would shift
+  the one into the fourth bit position. (We start counting at zero, so the
+  fourth bit is position 3.)
+* Add that value to your ``result_byte``.
+* Print the bytes and confirm they are ok.
 
 
 Step 6: Manchester encoding

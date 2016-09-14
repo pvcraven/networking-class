@@ -19,7 +19,11 @@ for my_byte in byte_array:
 		else:
 			bit_value = 0
 
+		# IMPORTANT: We are printing the least significant bit first.
+		# This basically means our number is printed out BACKWARDS.
+		# Printing it out forwards would mean extra code that would confuse
+		# things, so I'm leaving it like this.
 		print(bit_value, end="")
 
 	# Done with this letter. Go to the next line.
-	print()
+	print(" - {:3} - {:}".format(my_byte, chr(my_byte)))
