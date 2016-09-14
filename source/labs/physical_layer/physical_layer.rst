@@ -67,6 +67,13 @@ The clock LED should blink on/off for each change bit that you have.
     :width: 500px
     :align: center
 
+You need the clock line and a data line.
+
+Initially you might think that you could just keep a
+timer and skip the clock line.
+But if you had 100 1's in a row, your timer might get off and you'd read
+99 1's instead. Or if you just wanted to send a bunch of 0's, well, that's just
+the same as not being connected at all. A clock will allow you to make this work.
 
 You should set the LEDs off to begin with. You may need a separate program
 to make sure the LEDs start in that state.
@@ -196,15 +203,23 @@ Step 5: Convert decoded bits to bytes
 Step 6: Manchester encoding
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Update your code so you can send using `Manchester Encoding`_.
+Update your code so you can send using `Manchester Encoding`_. Manchester
+encoding is great because you don't need a clock line.
 
-* You should always transition high to low when you have a zero.
-* You should always transition low to high when you have a one.
-* You may need to transition mid-way to prep for the next bit.
-* You can modify the sending code in step 2 to do this.
-  The code for step 6 should be similar in length to step 2. Mine was just five
-  lines longer.
+Your receiver code will need two parts.
 
+* Part 1
+
+  * Prep for the data bit transition. Go low or high so that you can transition
+    properly on the actual data transition. See Part 2.
+
+* Wait
+* Part 2: Transition for the data bit
+
+  * You should always transition high to low when you have a zero.
+  * You should always transition low to high when you have a one.
+
+* Wait
 
 Step 7: Manchester decoding
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
