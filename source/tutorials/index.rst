@@ -10,3 +10,5 @@ Tutorials
    bit_shifting/bit_shifting.rst
    make_patch_cable/make_patch_cable.rst
    wireshark/wireshark.rst
+   raw_ethernet/raw_ethernet.rst
+   set_ip_address/set_ip_address.rst
