@@ -39,7 +39,7 @@ Protocols
 	* L2TP_
 	* NDP_
 
-Encryption
+Wireless Encryption Types
     * Open
     * WEP
     * WPA-PSK (AES)
