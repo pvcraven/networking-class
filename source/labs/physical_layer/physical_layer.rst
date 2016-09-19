@@ -60,6 +60,7 @@ Step 2: Encode a message
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Look at the bit shifting tutorial. Encode a message.
+That is, a message with multiple bytes.
 Have one LED blink when there is a one, and not blink when there is a zero.
 The clock LED should blink on/off for each change bit that you have.
 
@@ -184,6 +185,24 @@ able to take the clock to 0.0001 and still reliably transmit data.
 
 Remember, when you print at either the receiver or receiver, you'll be printing
 those binary numbers backwards.
+
+**Important:** When you remote into a computer, as you may be doing with your
+Raspberry Pi, you need to understand how the computer sends text.
+
+Normally the
+computer will store up each character in a buffer. Then when the computer prints
+a blank line it will bundle all the characters up in a packet. This is more
+efficient than sending characters one at a time.
+
+Therefore, if you are using ``end=''`` to keep everything on the same line, you
+may not see the output right away when remoting in.
+
+You can run python "unbuffered" by adding a ``-h`` to the command line. So
+``python3 -h myfile.py`` will not do that buffering.
+
+Or you can change your code to flush the output after every character. At
+the start of your code do a ``import sys``. Then when you want to force the
+characters to output, do a ``sys.stdout.flush()``.
 
 Step 5: Convert decoded bits to bytes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

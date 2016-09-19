@@ -25,7 +25,7 @@ wires must pass the cable connection tester.
 Vocabulary
 ^^^^^^^^^^
 
-When you are ready, explain each of the following concepts:
+Explain each of the items below. Do this orally or via written report.
 
 Media Access Control
 	* CSMA, plus `CSMA/CD`_ and `CSMA/CA`_
@@ -38,6 +38,19 @@ Protocols
 	* PPP_
 	* L2TP_
 	* NDP_
+
+Encryption
+    * Open
+    * WEP
+    * WPA-PSK (AES)
+    * WPA2-PSK (TKIP)
+    * WPA2-PSK (AES)
+    * WPA2-Enterprise
+
+Pseudo-security
+	* SSID hiding
+	* MAC ID filtering
+
 
 Run Wireshark
 ^^^^^^^^^^^^^
