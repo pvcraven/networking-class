@@ -12,3 +12,4 @@ Tutorials
    wireshark/wireshark.rst
    raw_ethernet/raw_ethernet.rst
    set_ip_address/set_ip_address.rst
+   routing/routing.rst
