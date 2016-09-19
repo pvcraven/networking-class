@@ -14,6 +14,7 @@ Step 4    B     85
 Step 5    B+    88
 Step 6    A-    92
 Step 7    A     98
+Step 8    A     100
 ========  ===== ======
 
 Make your own patch cable
@@ -107,6 +108,12 @@ See if you can spot a pattern in data loss:
 	* Print the frame numbers that you don't get.
 	* Get to a spot where you have frame loss. How do the frames drop? Just random
 	  ones? Are they in a clump?
+
+
+MAC address spoof
+^^^^^^^^^^^^^^^^^
+
+Figure out how to spoof a MAC address and explain it to me.
 
 .. _CSMA/CD: https://en.wikipedia.org/wiki/Carrier_sense_multiple_access_with_collision_detection
 .. _CSMA/CA: https://en.wikipedia.org/wiki/Carrier_sense_multiple_access_with_collision_avoidance
