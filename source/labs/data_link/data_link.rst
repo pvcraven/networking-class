@@ -40,7 +40,7 @@ Protocols
 	* L2TP_
 	* NDP_
 
-Encryption
+Wireless Encryption Types
     * Open
     * WEP
     * WPA-PSK (AES)
@@ -56,8 +56,12 @@ Pseudo-security
 Run Wireshark
 ^^^^^^^^^^^^^
 
-Go through the :ref:`wireshark-tutorial`. Explain what you are seeing at Layer
-2.
+Read the chapter on the :ref:`datalink-layer`. Next, go through
+the :ref:`wireshark-tutorial`.
+
+Find a packet that you captured. Sit and explain what you are seeing at Layer 2,
+similar to how the chapter on the :ref:`datalink-layer` did. Also, talk about what
+is in an Ethernet frame that *doesn't* show up on Wireshark.
 
 Send raw Ethernet frames
 ^^^^^^^^^^^^^^^^^^^^^^^^
