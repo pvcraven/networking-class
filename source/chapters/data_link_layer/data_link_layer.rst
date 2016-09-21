@@ -1,3 +1,5 @@
+.. _datalink-layer:
+
 Data Link Layer
 ===============
 

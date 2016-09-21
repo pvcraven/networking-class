@@ -14,6 +14,7 @@ Step 4    B     85
 Step 5    B+    88
 Step 6    A-    92
 Step 7    A     98
+Step 8    A     100
 ========  ===== ======
 
 Make your own patch cable
@@ -25,7 +26,7 @@ wires must pass the cable connection tester.
 Vocabulary
 ^^^^^^^^^^
 
-When you are ready, explain each of the following concepts:
+Explain each of the items below. Do this orally or via written report.
 
 Media Access Control
 	* CSMA, plus `CSMA/CD`_ and `CSMA/CA`_
@@ -39,11 +40,28 @@ Protocols
 	* L2TP_
 	* NDP_
 
+Wireless Encryption Types
+    * Open
+    * WEP
+    * WPA-PSK (AES)
+    * WPA2-PSK (TKIP)
+    * WPA2-PSK (AES)
+    * WPA2-Enterprise
+
+Pseudo-security
+	* SSID hiding
+	* MAC ID filtering
+
+
 Run Wireshark
 ^^^^^^^^^^^^^
 
-Go through the :ref:`wireshark-tutorial`. Explain what you are seeing at Layer
-2.
+Read the chapter on the :ref:`datalink-layer`. Next, go through
+the :ref:`wireshark-tutorial`.
+
+Find a packet that you captured. Sit and explain what you are seeing at Layer 2,
+similar to how the chapter on the :ref:`datalink-layer` did. Also, talk about what
+is in an Ethernet frame that *doesn't* show up on Wireshark.
 
 Send raw Ethernet frames
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -94,6 +112,12 @@ See if you can spot a pattern in data loss:
 	* Print the frame numbers that you don't get.
 	* Get to a spot where you have frame loss. How do the frames drop? Just random
 	  ones? Are they in a clump?
+
+
+MAC address spoof
+^^^^^^^^^^^^^^^^^
+
+Figure out how to spoof a MAC address and explain it to me.
 
 .. _CSMA/CD: https://en.wikipedia.org/wiki/Carrier_sense_multiple_access_with_collision_detection
 .. _CSMA/CA: https://en.wikipedia.org/wiki/Carrier_sense_multiple_access_with_collision_avoidance
