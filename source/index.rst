@@ -15,4 +15,5 @@ based the last stage, the actual application.
    chapters/index.rst
    tutorials/index.rst
    labs/index.rst
+   about.rst
 
