@@ -55,6 +55,8 @@ that article and describe each of these parts (image from Wikipedia Commons):
 * What is the EtherType? (Ethernet II is normally what you see.)
 * What is the Payload?
 * What is the FCS?
+* How large can an Ethernet frame get (1522 bytes. Which means a
+  TCP/IP packet might be split between multiple frames.)
 
 Below is a sample Layer-2 data frame captured by the program Wireshark:
 
