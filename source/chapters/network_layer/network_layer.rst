@@ -115,9 +115,10 @@ tries three times, which is why we have three columns of numbers.
 Netstat
 ^^^^^^^
 
-Now we want to get an idea of how we route between applications. On my work computer
-I have programs like Google Drive, a file browser that can look at network
-drives, Microsoft Outlook, Moba XTerm, SourceTree, and Steam.
+Now we want to get an idea of how we figure out what program gets the
+data once it arrives at the computer. On my work computer
+I have programs like Google Drive, the file browser (that can look at network
+drives), Microsoft Outlook, Moba XTerm, SourceTree, and Steam.
 
 If a packet of data arrives, how do we know what program it goes to? We use
 **ports**. Every (most) network connection has a port. My web server will listen
@@ -127,8 +128,8 @@ and to the program listening on port 80. Responses to my web request will go to
 my computer at 10.1.23.175, and then my web browser which listens to port 15000.
 
 On either UNIX or Windows you can use a program called ``netstat`` to see what
-network connections you have open. You can see more options for netstat by typing
-``netstat /?``. I particularly like ``netstat -b`` which shows me what application
+network connections you have open. You can see command-line options for netstat by typing
+``netstat -?``. I particularly like ``netstat -b`` which shows me what application
 is communicating on what port.
 
 Note: To run ``netstat -b`` you need run the command as an administrator. When
@@ -178,12 +179,22 @@ Now that we've seen an overview of Layer 3, let's dive down into some details.
 Vocabulary
 ----------
 
-* Packets
-* Frames
-* Sockets
-* Datagram
-* Handshaking
-* Checksums
+* **Frame:** A chunk of data at Layer 2. An Ethernet frame can have up to 1500
+  bytes of payload.
+* **Datagram:** A datagram is a chunk of data on a packet-switched network.
+  Unlike a packet, the sender is not notified if the receiver fails to receive
+  the packet.
+* **Packets:**  A chunk of data at Layer 3. We add extra information on a Frame
+  to make it a packet. But it isn't a 1-to-1 mapping. A TCP/IPv4 packet can be
+  up to 64k large, so multiple frames may be needed to move one packet.
+  If a packet fails to be received, the sender gets a message letting it know.
+* **Socket:** A socket is an end-point for a network communication. Think of it
+  as a 'virtual plug.' Our programs create sockets for both the sender and
+  receiver, then we virtually create string a 'cable', then we send data.
+* **Checksums:** To detect if we received the bits correctly, or if there is
+  an error, we use checksums. There are multiple ways to calculate checksums.
+  For the IP, `click here to learn <https://en.wikipedia.org/wiki/IPv4_header_checksum>`_
+  how they are calculated.
 * RFC
 
 TCP/IP
@@ -201,43 +212,74 @@ The OSI model is a conceptual model. Not a technical one. Therefore
 note that TCP/IP is not the same thing as Layer 3. It does, however, work
 out best to cover TCP/IP while we cover Layer 3 of the OSI model.
 
-(Talk about history and TCP/IP stack
-)
-UDP
-^^^
+(Talk about history and TCP/IP stack)
 
-The `User Datagram Protocol`_ sends a packet of data across the network.
+IP
+^^
 
-It is connectionless:
+The `Internet Protocol`_ forms the base communications protocol that both
+UDP and TCP are built on. It is *almost* the same as UDP.
+
+IP is connectionless:
     * You don't have to log in.
     * If you want to send data longer than the maximum size of the packet, there's
       no mechanism to split up the data.
     * If the data doesn't arrive, there's no mechanism to request the data be sent
       again.
+    * IP **does not** have any way to route data between software programs on the
+      computer. Because of this, rarely does one use IP.
 
-Point three is important. There's a joke related to it:
+
+UDP
+^^^
+
+The `User Datagram Protocol`_ sends a packet of data across the network. It is
+built on top of IP, and adds support for *ports*.
+
+IP is connectionless:
+    * You don't have to log in.
+    * If you want to send data longer than the maximum size of the packet, there's
+      no mechanism to split up the data.
+    * If the data doesn't arrive, there's no mechanism to request the data be sent
+      again.
+    * IP **does** have a way to route data between software programs on the
+      computer. We call these *ports*.
+
+Point three is important. Because I know a joke about it, and I love jokes:
     "I'd tell you a UDP joke, but you might not get it."
 
-* What does a UDP packet look like?
+Below is an image that shows how a UDP packet is arranged. Note on the left
+side is shows what part is the Ethernet frame, what part is the IP, and what
+part UDP adds.
 
-A UDP packet can be 65,535 bytes long. With an 8 bit UDP header and a 20 byte
+.. figure:: udp_packet.gif
+    :width: 550px
+    :alt: alternate text
+
+    Image from (`Twiddle, 1997 <http://www.doc.ic.ac.uk/~kpt/Slides/Internet/sld052.htm>`_).
+    Technically it is a datagram and not a packet.
+
+A UDP datagram can be 65,535 bytes long. With an 8 bit UDP header and a 20 byte
 IP header, that leaves 65,507 bytes for data.
 
-How do you send and receive datagrams? Easy. See :ref:`datagram_tutorial`.
+Since a UDP datagram can be larger than an Ethernet frame it can be *fragmented*.
+See the additional fields that support this. Ideally, we don't want to fragment
+our packets.
 
-* How much data can a UDP packet send?
-* What is a checksum?
+How do you send and receive datagrams? Easy. See :ref:`datagram_tutorial`. Also,
+at the end of that tutorial there are many images that pull apart the datagram
+byte by byte. Look at that and see how it maps to the UDP image.
 
+
+
+Ports
+^^^^^
 
 
 TCP
 ^^^
 
-IP
-^^
-
-Ports
-^^^^^
+`Handshaking`_
 
 Gateway
 ^^^^^^^
@@ -251,15 +293,14 @@ Netmask
 IPv4 and IPv6
 ^^^^^^^^^^^^^
 
-Routing
--------
 
-* DVMRP
-* BGP
-* RIP
 
 Protocols
 ---------
+
+ICMP
+^^^^
+
 
 NAT
 ^^^
@@ -290,6 +331,19 @@ SMTP
 IMAP
 ^^^^
 
+How does Routing Work
+---------------------
 
+* DVMRP
+* BGP
+* RIP
 
+Internet Providers
+------------------
+
+* `Tier 1 Network Provider`_
+
+.. _Handshaking: https://en.wikipedia.org/wiki/Handshaking
 .. _User Datagram Protocol: https://en.wikipedia.org/wiki/User_Datagram_Protocol
+.. _Internet Protocol: https://en.wikipedia.org/wiki/Internet_Protocol
+.. _Tier 1 Network Provider: https://en.wikipedia.org/wiki/Tier_1_network
