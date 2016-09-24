@@ -1,36 +1,119 @@
 Routing
 =======
 
+* TODO: In the theory page, talk about Tier 1, Tier 2, etc.
+* TODO: In theory page, talk about IP naming conventions
+	* 127.0.0.1 localhost, through loopback
+	* x.x.x.0 is broadcast
+	* x.x.x.1 is router
+	* x.x.x.10 is switch
+	* x.x.x.100 are nodes
+
+**Hubs:** Hubs connect many Ethernet devices together.
+Computers are connected in a star-type pattern. The hub in the
+middle, and wired connections going to each computer. The hub
+isn't very smart. Whatever one computer transmits to the hub,
+it will transmit to every other computer. Even if the packet
+doesn't go to that computer. Hubs used to be cheaper than
+switches, but not any more. Now hubs are rarely used.
+
+**Switches:** Switches are like hubs, but with one important
+difference. The switch will detect what MAC address is hooked
+up each port. If a frame comes in, the switch will only relay
+it to the port that wants it. This reduces traffic congestion
+and improves security.
+
+**Routers:** Routers usually hook multiple switches together.
+Routers can connect the switches to the Internet as well.
+They build routing tables to figure out the best direction
+to forward packets so they get to their final destination.
+
+Switch Setup
+^^^^^^^^^^^^
+
+The simplest switches are plug-and-play. You can buy them
+at Wal-Mart. Sometimes switches are combined with routers
+as an all-in-one device.
+
+More complex switches can be configured. You can take a
+24 port switch and configure it into four six-port switches
+for example.
+
+We are going to use a more complex switch than a Wal-Mart
+one.
+
+This tutorial covers a very basic setup of a switch.
+My hope is that once you configure a switch just a little,
+you'll know that you *can*. Switch setup will no
+longer be some puffy cloud that only wizards try.
+
+You can buy old switches and routers off EBay for cheap.
+The switches we will use here I bought for $20 or so.
+
 Install Telnet
 --------------
 
-First, install telnet on your Raspberry Pi. (TODO: What is telnet?)
+We have already used Secure Shell (SSH) to connect to another computer.
+SSH is encrypted and a great way to communicate with computers remotely.
+
+Before there was SSH, there was Telnet. Telnet is like SSH, except it
+isn't encrypted. If you log in with your user name and password, someone
+with Wireshark that was on the network could see each of the letters
+typed. Grabbing the password is easy.
+
+You should never use Telnet.
+
+That said, our switches don't support Telnet, so we'll need to use SSH.
+
+Our Raspberry Pi does not include a Telnet program as part of its
+default software. Because no one in their right mind would use it.
+Since we aren't in our right mind, let's install telnet.
 
 ::
 
+  # Get the update lists of software
   sudo apt-get update
+  # Find telnet and install it
   sudo apt-get install telnet
 
-Hook to switch
---------------
+Connect with a Serial Connection
+--------------------------------
 
-Use a USB to serial converter. (TODO: What is serial?)
+Great! We can connect with a telnet, right? No. Our switch doesn't
+even have an IP address to telnet to.
 
-Download driver
-https://www.tripplite.com/support/model/mid/USA-19HS
+We need to connect via a serial cable. Before there was telnet,
+there was a serial connector. Most computers came with a type
+of connector called RS-232. We'd use this connector to connect our
+modems.
 
-Use MobaXTerm to connect
+A lot of networking equipment uses RS-232 as a way to first get
+connected. Unfortunately computers don't come with RS-232 connectors
+anymore. You can get an adapter that plugs into your USB connector that
+will drive an RS-232 port. We'll need that. We will also likely need to
+download a driver for it.
 
-Find Documentation
-------------------
+Download driver:
 
-Get manual for
-"hpj9085a manual"
-Difficult to find because of bad links. Go to HP and find via serial number.
+* USA-19HS: https://www.tripplite.com/support/model/mid/USA-19HS
+* Other connector: TODO
+
+MobaXTerm can connect to a serial line. Serial ports will be named
+something like COM0, COM1, COM2, etc.
+
+Find the Manual
+---------------
+
+We are using a Hewlett Packard HPJ9085a switch. We will probably need
+a manual to learn how to use it. You can get the manual by searching for
+"hpj9085a manual."
+
+Or not. Unfortunately it is very difficult to find because of bad
+links. Go to HP and find the manual via a serial number lookup.
 
 The manual on page 4-12 shows you how to reset switch so we can start fresh.
 
-On startup, you will see::
+Plug in the serial line. On startup, you will see::
 
 	ROM information:
 	   Build directory: /sw/rom/build/nemorom(ndx)
@@ -107,7 +190,10 @@ On startup, you will see::
 	Waiting for Speed Sense.  Press <Enter> twice to continue.
 
 
-After a few more data screens, you get::
+Hit enter a few times. After a few more data screens, you get a
+prompt that looks like:
+
+.. code::
 
   ProCurve Switch 2610-24#
 
@@ -117,12 +203,16 @@ We want to use the ``setup`` command to set it up.
   * It will ask for a name. Call it 'CMSC 340 Switch 1' or similar.
   * Leave contact info, password blank.
   * We won't use a gateway yet. (TODO: Explain what we'd do for a gateway)
-  * Spanning Tree - No if we know things will be hooked up right. Yes if we might have loops. (TODO: Possible exercise: Turn if off, hook up a loop to see what happens. Turn it on and see what happens.)
+  * Spanning Tree - No if we know things will be hooked up right. Yes
+    if we might have loops. (TODO: Possible exercise: Turn if off, hook
+    up a loop to see what happens. Turn it on and see what happens.)
   * Skip time server setup. (TODO: Talk about time servers.)
-  * IP. We will manually set. Hit spacebar twice Use 192.168.1.10 (0 is broadcast, 1 is router. (TODO: Explain broadcast, and number conventions)
+  * IP. We will manually set. Hit spacebar twice Use 192.168.1.10
+    (0 is broadcast, 1 is router. (TODO: Explain broadcast, and number
+    conventions)
   * Netmask: 255.255.255.0 (TODO: Explain netmask and /24 type notation)
 
-Connect to switch with Telnet
+Connect to Switch with Telnet
 -----------------------------
 
 At this point, can use telnet.
