@@ -195,12 +195,16 @@ Vocabulary
   an error, we use checksums. There are multiple ways to calculate checksums.
   For the IP, `click here to learn <https://en.wikipedia.org/wiki/IPv4_header_checksum>`_
   how they are calculated.
-* RFC
+* **RFC:** `Request For Comments`_ is a publication used to set technical standards
+  for the Internet. You can see a
+  `list of standards <https://en.wikipedia.org/wiki/List_of_RFCs>`_. I
+  particularly like the avian carrier standard.
+
 
 TCP/IP
 ------
 
-TCP/IP stands for Transmission Control Protocol/Internet Protocol. The TCP/IP
+TCP/IP stands for `Transmission Control Protocol/Internet Protocol`_. The TCP/IP
 abbreviation is a bit sad, because there is actually a third protocol that is part
 of TCP/IP that gets left out. This is the User Datagram Protocol.
 
@@ -212,7 +216,27 @@ The OSI model is a conceptual model. Not a technical one. Therefore
 note that TCP/IP is not the same thing as Layer 3. It does, however, work
 out best to cover TCP/IP while we cover Layer 3 of the OSI model.
 
-(Talk about history and TCP/IP stack)
+TCP/IP is sometimes referred to as the "TCP/IP stack" because it covers
+several layers.
+
+TCP/IP became a standard for military networks in 1982.
+IBM, AT&T, and DEC became the first people to adopt TCP/IP. Note that they
+already had their own networking standards, and this was a politically difficult
+change.
+
+UNIX and OS/2 systems started being released with TCP/IP stacks. In 1989 AT&T
+released their TCP/IP code into the public domain. They gave it away, which
+was important for creating a standard. This must have been a difficult
+business decision.
+
+You could BUY TCP/IP stacks from vendors for Windows 95. Eventually Microsoft
+released their own TCP/IP stack that you didn't have to buy. With native
+Windows support, this solidified industry standardization around TCP/IP.
+
+Unfortunately, there aren't enough TCP/IP addresses to support all of the network
+devices out there. The four-bytes addresses we are used to seeing come from
+TCP/IPv4. There is a TCP/IPv6 that has longer addresses. Network administrators
+also use Network Address Translation (NAT) to reduce the need for addresses.
 
 IP
 ^^
@@ -347,3 +371,5 @@ Internet Providers
 .. _User Datagram Protocol: https://en.wikipedia.org/wiki/User_Datagram_Protocol
 .. _Internet Protocol: https://en.wikipedia.org/wiki/Internet_Protocol
 .. _Tier 1 Network Provider: https://en.wikipedia.org/wiki/Tier_1_network
+.. _Request For Comments: https://en.wikipedia.org/wiki/Request_for_Comments
+.. _Transmission Control Protocol/Internet Protocol: https://en.wikipedia.org/wiki/Internet_protocol_suite
