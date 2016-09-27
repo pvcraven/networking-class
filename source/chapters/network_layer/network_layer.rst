@@ -294,16 +294,52 @@ How do you send and receive datagrams? Easy. See :ref:`datagram_tutorial`. Also,
 at the end of that tutorial there are many images that pull apart the datagram
 byte by byte. Look at that and see how it maps to the UDP image.
 
-
-
 Ports
 ^^^^^
 
+Ports allow us to route between applications on the same computer. A program on
+a server will "listen" for incoming data on certain ports. You can work with any
+port from 0 to 65,535. Some computers require root or admin privileges for a program
+to listen on ports 0-1023.
+
+By convention, certain ports represent certain services. See
+Wikipedia's `list of TCP and UDP port numbers`_.
+
+The client to the server normally connects using a ephemeral port. These
+are numbered 49152–65535. Therefore a web browser may connect to google.com
+on port 80. The IP address and port may be: 216.58.192.206:80. Google will
+connect back to the client computer on an ephemeral port. So return packets would
+go to 192.168.1.101:51010
 
 TCP
 ^^^
 
 `Handshaking`_
+
+Special IP Addresses
+^^^^^^^^^^^^^^^^^^^^
+
+`Reserved IP Addresses`_
+
+
+Local loop back link:
+  * 127.0.0.1
+
+Private subnets (often used with NAT, explained below):
+  * 10.0.0.0 - 10.255.255.255
+  * 172.16.0.0 - 172.31.255.255
+  * 192.168.0.0 - 192.168.255.255
+
+Local link:
+  * 169.254.0.0 - 169.254.255.255
+
+Often items ending in .0 are broadcast. Items ending in .1 would be the
+gateway. Items ending in .10 would be switches. Ending in .100 would be end-user
+nodes.
+
+Who owns a block of OP addresses?
+
+https://mxtoolbox.com/arin.aspx
 
 Gateway
 ^^^^^^^
@@ -314,10 +350,12 @@ Broadcast
 Netmask
 ^^^^^^^
 
+.. _RFC 1878: http://www.ietf.org/rfc/rfc1878.txt
+.. _netmask: http://www.computerhope.com/jargon/n/netmask.htm
+.. _netmask reference: http://www.unixwiz.net/techtips/netmask-ref.html
+
 IPv4 and IPv6
 ^^^^^^^^^^^^^
-
-
 
 Protocols
 ---------
@@ -373,3 +411,6 @@ Internet Providers
 .. _Tier 1 Network Provider: https://en.wikipedia.org/wiki/Tier_1_network
 .. _Request For Comments: https://en.wikipedia.org/wiki/Request_for_Comments
 .. _Transmission Control Protocol/Internet Protocol: https://en.wikipedia.org/wiki/Internet_protocol_suite
+.. _list of TCP and UDP port numbers: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
+.. _Reserved IP Addresses: https://en.wikipedia.org/wiki/Reserved_IP_addresses
+
