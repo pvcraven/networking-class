@@ -200,6 +200,15 @@ Vocabulary
   `list of standards <https://en.wikipedia.org/wiki/List_of_RFCs>`_. I
   particularly like the avian carrier standard.
 
+* **Bus:** Multiple computers hook up to one long wire and share it. This used
+  to be common because it was easy to wire. It wasn't reliable or fast however.
+* **Hub:** Multiple computers will hook up to a central spot (hub). When one computer
+  wants to say something, the hub will repeat it to all computers.
+* **Switch:** Multiple computers will hook up to a central spot (hub). When one
+  computer wants to talk to another computer, the switch will pass the message to
+  only the computer it was intended to.
+* **Router:** Knows how to intelligently pass a message across multiple computers.
+
 
 TCP/IP
 ------
@@ -305,22 +314,33 @@ to listen on ports 0-1023.
 By convention, certain ports represent certain services. See
 Wikipedia's `list of TCP and UDP port numbers`_.
 
-The client to the server normally connects using a ephemeral port. These
+The client to the server normally connects using a `ephemeral port`_. These
 are numbered 49152–65535. Therefore a web browser may connect to google.com
 on port 80. The IP address and port may be: 216.58.192.206:80. Google will
 connect back to the client computer on an ephemeral port. So return packets would
-go to 192.168.1.101:51010
+go to the client address which might look like 192.168.1.101:51010.
+
 
 TCP
 ^^^
 
-`Handshaking`_
+Most connections on the Internet happen with the
+`Transmission Control Protocol`_ (TCP) protocol. TCP is built on top of
+IP and offers:
+
+* Notification of delivery failure
+* Retransmission
+* Breaking a large message into parts
+* Reassembly in the proper order
+* Network congestion
+
+A lot of these are Layer 4 items on the OSI model. So we will table our discussion
+of TCP until a later date.
 
 Special IP Addresses
 ^^^^^^^^^^^^^^^^^^^^
 
 `Reserved IP Addresses`_
-
 
 Local loop back link:
   * 127.0.0.1
@@ -333,29 +353,84 @@ Private subnets (often used with NAT, explained below):
 Local link:
   * 169.254.0.0 - 169.254.255.255
 
-Often items ending in .0 are broadcast. Items ending in .1 would be the
-gateway. Items ending in .10 would be switches. Ending in .100 would be end-user
-nodes.
+* Items ending in .0 are broadcast. Exactly what the broadcast address is
+  depends on the `netmask`_. It might be something other than .0.
+* Items ending in .1 would be the gateway. This isn't a requirement but most
+  people follow this convention.
+* Items ending in .10 would be switches. A few people follow this convention.
+* Ending in .100 would be end-user nodes. A few people follow this convention.
 
-Who owns a block of OP addresses?
+Blocks of IP addresses (aside from the private subnets) are owned.
+Who owns a block of IP addresses? You can look it up with several tools, such
+as this one:
 
 https://mxtoolbox.com/arin.aspx
 
-Gateway
-^^^^^^^
+We have run out of IPv4 addresses. Therefore we must manage IPv4 addresses
+carefully, or use IPv6.
+
+IPv4 and IPv6
+^^^^^^^^^^^^^
+
+`Internet Protocol version 6`_ uses a much larger address than IPv4.
+
+In 2014 about 99% of the traffic was IPv4.
+In July 2016 Google reported that 13% of the traffic hitting its services was IPv6.
+
+Subnets and Netmasks
+^^^^^^^^^^^^^^^^^^^^
+
+Networks are divided into `subnets`_. We divide the network into a subnet
+of "local" computers. If we want to talk with any of the "local" computers
+we don't need to travel multiple hops. We just talk, and using a switch
+or a hub they will be able to hear us. If we need to talk outside out local
+network, we need to pass it over to a router.
+
+How do figure out what computers are local or not? It depends on the IP address
+and a `netmask`_. For example, we might have all 254 computers on the local
+subnet numbered::
+
+  192.168.1.1 to 192.168.1.255
+
+Or do we need a bigger subnet? We could have over 65,000 computers on:
+
+  192.168.1.1 to 192.168.255.255
+
+We determine what part of the IP address is "local" and what part is routing
+with the `netmask`_ which comes from `RFC 1878`_.
+
+The Subnet mask covers the routing portion of the address with 1's.
+
+From Wikipedia's entry on subnetworks:
+
+=============== ======================================= ====================
+What            Binary form                             Dot-decimal notation
+=============== ======================================= ====================
+IP address      ``11000000.10101000.00000101.10000010``        192.168.5.130
+Subnet mask     ``11111111.11111111.11111111.00000000``        255.255.255.0
+Network prefix  ``11000000.10101000.00000101.00000000``          192.168.5.0
+Host part       ``00000000.00000000.00000000.10000010``            0.0.0.130
+=============== ======================================= ====================
+
+We often show a subnet's routing properties using `CIDR form`_. The subnet above
+would be shown with 192.168.5.0/24.
+
+See also this handy `netmask reference`_.
 
 Broadcast
 ^^^^^^^^^
 
-Netmask
+Sending a message to the broadcast address will send the message to every
+computer in the subnet. Useful if you want to announce something to every
+computer. To find the broadcast address, use your IP address and bit-wise
+and it with the netmask. This would be the 'network prefix' sown in the example
+table above.
+
+Gateway
 ^^^^^^^
 
-.. _RFC 1878: http://www.ietf.org/rfc/rfc1878.txt
-.. _netmask: http://www.computerhope.com/jargon/n/netmask.htm
-.. _netmask reference: http://www.unixwiz.net/techtips/netmask-ref.html
-
-IPv4 and IPv6
-^^^^^^^^^^^^^
+This is your router. If a message isn't intended for your network, we will
+pass it to the router.
 
 Protocols
 ---------
@@ -413,4 +488,13 @@ Internet Providers
 .. _Transmission Control Protocol/Internet Protocol: https://en.wikipedia.org/wiki/Internet_protocol_suite
 .. _list of TCP and UDP port numbers: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
 .. _Reserved IP Addresses: https://en.wikipedia.org/wiki/Reserved_IP_addresses
+.. _ephemeral port: https://en.wikipedia.org/wiki/Ephemeral_port
+.. _Transmission Control Protocol: https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+.. _subnets: htt``ps://en.wikipedia.org/wiki/Subnetwork
+.. _RFC 1878: http://www.ietf.org/rfc/rfc1878.txt
+.. _netmask: http://www.computerhope.com/jargon/n/netmask.htm
+.. _netmask reference: http://www.unixwiz.net/techtips/netmask-ref.html
+.. _CIDR form: https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation
+.. _Internet Protocol version 6: https://en.wikipedia.org/wiki/IPv6
+
 
