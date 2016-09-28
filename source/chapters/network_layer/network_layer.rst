@@ -430,13 +430,22 @@ Gateway
 ^^^^^^^
 
 This is your router. If a message isn't intended for your network, we will
-pass it to the router.
+pass it to the router. A router's IP address should normally be one more than
+the broadcast IP address. So if your broadcast address is 192.168.1.0 the router
+should be 192.168.1.1.
+
+By using a netmask, the router can quickly figure out if the message should be
+picked up for routing, or left to the local network.
 
 Protocols
 ---------
 
 ICMP
 ^^^^
+
+`Internet Control Message Protocol`_ (ICMP) is defined by `RFC 792`_. Also, there
+is a `ICMPv6`_ version of the protocol.
+
 
 
 NAT
@@ -445,7 +454,7 @@ NAT
 DNS
 ^^^
 
-Tricks, talk about 8.8.8.8
+Tricks, talk about `Google public DNS`_ at 8.8.8.8 and 8.8.4.4.
 
 DHCP
 ^^^^
@@ -496,5 +505,8 @@ Internet Providers
 .. _netmask reference: http://www.unixwiz.net/techtips/netmask-ref.html
 .. _CIDR form: https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation
 .. _Internet Protocol version 6: https://en.wikipedia.org/wiki/IPv6
-
+.. _Internet Control Message Protocol: https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol
+.. _RFC 792: https://tools.ietf.org/html/rfc792
+.. _Google public DNS: https://developers.google.com/speed/public-dns/docs/using
+.. _ICMPv6: https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_version_6
 
