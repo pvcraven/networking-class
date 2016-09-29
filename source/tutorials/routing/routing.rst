@@ -1,32 +1,7 @@
-Routing
-=======
+.. _routing-tutorial:
 
-* TODO: In the theory page, talk about Tier 1, Tier 2, etc.
-* TODO: In theory page, talk about IP naming conventions
-	* 127.0.0.1 localhost, through loopback
-	* x.x.x.0 is broadcast
-	* x.x.x.1 is router
-	* x.x.x.10 is switch
-	* x.x.x.100 are nodes
-
-**Hubs:** Hubs connect many Ethernet devices together.
-Computers are connected in a star-type pattern. The hub in the
-middle, and wired connections going to each computer. The hub
-isn't very smart. Whatever one computer transmits to the hub,
-it will transmit to every other computer. Even if the packet
-doesn't go to that computer. Hubs used to be cheaper than
-switches, but not any more. Now hubs are rarely used.
-
-**Switches:** Switches are like hubs, but with one important
-difference. The switch will detect what MAC address is hooked
-up each port. If a frame comes in, the switch will only relay
-it to the port that wants it. This reduces traffic congestion
-and improves security.
-
-**Routers:** Routers usually hook multiple switches together.
-Routers can connect the switches to the Internet as well.
-They build routing tables to figure out the best direction
-to forward packets so they get to their final destination.
+Routing Tutorial
+================
 
 Switch Setup
 ^^^^^^^^^^^^
@@ -356,12 +331,12 @@ Router
 
 
 
-----
- cmsc340router
 
- Enter a secret 'cmsc340secret' - Enables configuration
- Enter a password 'cmsc340password' - Enables monitoring
- Enter virtual terminal password - 'cmsc340vt' for hooking up via network
+
+
+Enter a secret 'cmsc340secret' - Enables configuration
+Enter a password 'cmsc340password' - Enables monitoring
+Enter virtual terminal password - 'cmsc340vt' for hooking up via network
 
 Now type:
 ``help``
