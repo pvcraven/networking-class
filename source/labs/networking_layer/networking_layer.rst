@@ -26,8 +26,9 @@ Document how this is done.
 
 Explain how to set the hostname on a Windows computer.
 
-Explain ``/etc/resolv.conf`` and ``/etc/hosts`` on Linux works. Also explain
-the `Host Name Resolution Order <https://support.microsoft.com/en-us/kb/172218>`_
+Explain how the ``/etc/resolv.conf`` and ``/etc/hosts`` files on Linux work.
+Also explain the
+`Host Name Resolution Order <https://support.microsoft.com/en-us/kb/172218>`_
 in Windows.
 
 Part 2 - ARP
@@ -39,6 +40,8 @@ address of your Raspberry Pi without hooking it up to a monitor.
 
 You may want to borrow my label maker to put the physical address of your
 Pi on the outside.
+
+You may wonder why I didn't teach you this earlier.
 
 Part 3 - NSLookup
 ^^^^^^^^^^^^^^^^^
@@ -148,5 +151,10 @@ Have the instructor see that you:
     * Can log into one of the switches
     * You have logged into the router
     * That you can route between both switches
+
+You can get
+`lots of certifications <http://www.cisco.com/c/en/us/training-events/training-certifications/certifications.html>`_
+in how to configure Cisco routers. They can be a ticket to a nice job.
+
 
 .. _nmap: https://nmap.org/
