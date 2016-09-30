@@ -21,9 +21,14 @@ Show me each step in person, or e-mail me a document.
 Part 1 - Hostname
 ^^^^^^^^^^^^^^^^^
 
-Set the host name on your Raspberry Pi. Document how this is done.
+Set the host name (computer name) on your Raspberry Pi.
+Document how this is done.
 
 Explain how to set the hostname on a Windows computer.
+
+Explain ``/etc/resolv.conf`` and ``/etc/hosts`` on Linux works. Also explain
+the `Host Name Resolution Order <https://support.microsoft.com/en-us/kb/172218>`_
+in Windows.
 
 Part 2 - ARP
 ^^^^^^^^^^^^
@@ -38,7 +43,7 @@ Pi on the outside.
 Part 3 - NSLookup
 ^^^^^^^^^^^^^^^^^
 
-* Figure out how to use ``nslookup``
+* Figure out how to use the ``nslookup`` command.
 * Explain how to buy your own domain. Or just show me a domain you've bought.
 * Tell me the
   `steps <http://blog.catchpoint.com/2014/07/01/dns-lookup-domain-name-ip-address/>`_
@@ -50,10 +55,10 @@ Part 4 - Ping
 ^^^^^^^^^^^^^
 
 * Figure out how to use the ``ping`` command.
-* Pick a server to ping. Not a local one, some server further away.
+* Pick a server to ping. Not a local one, but a server further away.
 * Figure out how to `redirect output from a command to a file <https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/redirection.mspx?mfr=true>`_.
 * Run ping a really long time and capture the output. At least an hour. Maybe a day.
-* Create a graph of the ping times
+* Create a graph of the ping times.
 
 Note that not all servers will respond to a ping request. Also, if there is
 traffic congestion, ping packets will be one of the first to get dropped.
@@ -96,22 +101,37 @@ You *can* scan:
 
 Or perhaps try some public computers.
 
+A common, and interesting trick, is for a network administrator to run nmap
+on a local subnet. Then redirect all the output to a file. Each day, run nmap again.
+Do a ``diff`` on the new and old files. If there is a difference, it means
+a network service on your subnet has changed. You can e-mail that difference
+to you automatically.
+That way you can know if someone started a web server or some other server on
+your network. The code to do this takes less space than the English to explain it.
+
 To turn this part in, write up what you found using the tool.
 
 Part 6 - Traceroute
 ^^^^^^^^^^^^^^^^^^^
 
-Use the traceroute on many sources and destinations. At least 10. Then make a graph
-showing the nodes and the routes. For interesting graphs:
+Use the `traceroute <https://en.wikipedia.org/wiki/Traceroute>`_
+on many sources and destinations. At least 10. Then make a graph
+showing the nodes and the routes.
 
-* Start at different locations (coffee shop vs. lab) and go to the same
-  location.
-* Find different places that have as many nodes in common as possible.
-* Run a traceroute one day, and then run another a different day.
+Remember that ``traceroute`` on Windows is ``tracert``.
+
+For interesting graphs:
+    * Start at different locations (coffee shop vs. lab) and go to the same
+      location.
+    * Find different places that have as many nodes in common as possible.
+    * Run a traceroute one day, and then run another a different day.
 
 If you can, find sites that have common pathways.
 
-You may need a large piece of paper.
+You may need a large piece of paper. Or get happy with Visio. Or learn
+`GraphViz <http://www.graphviz.org/>`_ and
+`dot <https://en.wikipedia.org/wiki/DOT_(graph_description_language)>`_ if you
+really want to get crazy.
 
 
 Part 7 - Routing
