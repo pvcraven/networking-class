@@ -448,8 +448,17 @@ is a `ICMPv6`_ version of the protocol.
 
 
 
-NAT
-^^^
+Network Address Translation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`Network Address Translation`_ (NAT) allows multiple computers to "hide" behind
+one router acting as a NAT. This allows:
+
+* Only one IP address is needed to serve many different client computers.
+* Security is improved because connections have to be initiated by computers
+  inside the subnet that the NAT protects.
+
+
 
 DNS
 ^^^
@@ -487,7 +496,47 @@ How does Routing Work
 Internet Providers
 ------------------
 
-* `Tier 1 Network Provider`_
+Internet providers are broken into three tiers. The exact definition of each
+tier is a little hazy. Therefore which tier a provider falls into might depend
+on who you ask, or where you ask the question.
+
+Tier 1
+^^^^^^
+
+A `Tier 1 Network Provider`_ is the top-level of Internet providers.
+Companies like AT&T, Level 3, and Sprint. (See the link for more.)
+These companies control
+the backbone of the Internet. They own so much buried cable and routing capability
+that everyone pays them for the privileged to use it. **Or**, they can hook up
+to other Tier 1 providers at no cost.
+
+Some Tier one providers are regional. A
+company might be Tier 1 in the U.S. but not have any cable internationally, so they
+would not be considered Tier 1 outside the U.S.
+
+Tier 2
+^^^^^^
+
+Tier 2 providers have some of their own networks and cable. They do not have
+enough that they can avoid paying Tier 1 providers.
+
+Tier 3
+^^^^^^
+
+Tier 3 providers don't have any of their own cable. They pay Tier 1 and 2
+providers for the use of the network.
+
+Internet Backbone
+^^^^^^^^^^^^^^^^^
+
+What does this Internet backbone look like?
+The Internet is so complex, it is hard to visualize.
+The `graph on the Wikipedia page <https://en.wikipedia.org/wiki/Internet_backbone>`_
+is interesting, but ties to no geographical locations. And it is old. A newer
+version is at `opte.org <http://www.opte.org/the-internet/>`_.
+
+VOX has a `nice page that shows the evolution of the Internet backbone <http://www.vox.com/a/internet-maps>`_.
+
 
 .. _Handshaking: https://en.wikipedia.org/wiki/Handshaking
 .. _User Datagram Protocol: https://en.wikipedia.org/wiki/User_Datagram_Protocol
@@ -509,4 +558,4 @@ Internet Providers
 .. _RFC 792: https://tools.ietf.org/html/rfc792
 .. _Google public DNS: https://developers.google.com/speed/public-dns/docs/using
 .. _ICMPv6: https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_version_6
-
+.. _Network Address Translation: https://en.wikipedia.org/wiki/Network_address_translation

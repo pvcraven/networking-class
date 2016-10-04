@@ -3,6 +3,34 @@
 Routing Tutorial
 ================
 
+Goal
+----
+
+The goal of this lab is to get you to "peek" inside the world of configurable
+network switches and routers. We won't actually *do* much aside from
+opening the door and peeking inside. But my hope is that if
+you realize what you *can* do, you will:
+
+* Learn more about it yourself.
+* Have a better idea of what network engineers do, when you work with them.
+
+I don't want network setup to be some puffy cloud that you think only wizards try.
+
+If you want to get into networking as a career, it isn't hard.
+You can buy old switches and routers off EBay for cheap.
+The switches we will use here I bought for $20 or so.
+There are a lot of documentation, manuals, and certification study guides
+available on-line and in bookstores.
+
+Cisco_ is a company is responsible for most of the routers on the Internet.
+Hewlett-Packard also has many devices available.
+
+Two-year schools are good places to learn the specific technical skills around
+working with these devices if you are interested.
+If
+you search up "DMACC" and "Cisco" you can find some of the courses DMACC offers
+to become certified working with Cisco Routers.
+
 Switch Setup
 ^^^^^^^^^^^^
 
@@ -15,30 +43,23 @@ More complex switches can be configured. You can take a
 for example.
 
 We are going to use a more complex switch than a Wal-Mart
-one.
+one. This tutorial covers a very basic setup of this switch.
 
-This tutorial covers a very basic setup of a switch.
-My hope is that once you configure a switch just a little,
-you'll know that you *can*. Switch setup will no
-longer be some puffy cloud that only wizards try.
-
-You can buy old switches and routers off EBay for cheap.
-The switches we will use here I bought for $20 or so.
 
 Install Telnet
 --------------
 
-We have already used Secure Shell (SSH) to connect to another computer.
+We have already used Secure Shell (`SSH`_) to connect to another computer.
 SSH is encrypted and a great way to communicate with computers remotely.
 
-Before there was SSH, there was Telnet. Telnet is like SSH, except it
+Before there was SSH, there was Telnet_. Telnet is like SSH, except it
 isn't encrypted. If you log in with your user name and password, someone
 with Wireshark that was on the network could see each of the letters
 typed. Grabbing the password is easy.
 
 You should never use Telnet.
 
-That said, our switches don't support Telnet, so we'll need to use SSH.
+That said, our switches don't support SSH, so we'll need to use Telnet.
 
 Our Raspberry Pi does not include a Telnet program as part of its
 default software. Because no one in their right mind would use it.
@@ -207,7 +228,16 @@ There is also a browser interface.
 Router
 ------
 
-(TODO: How to reset router)
+Resetting the router
+^^^^^^^^^^^^^^^^^^^^
+
+From `NetworkWorld <http://www.networkworld.com/article/2343961/cisco-subnet/cisco-subnet-how-to-reset-a-cisco-router-to-factory-default-removing-the-startup-configuration-file.html>`_:
+
+Type `` erase nvram`` followed by ``reload``.
+
+Router Tutorial
+^^^^^^^^^^^^^^^
+
 * Connect
 * Power up
 * Hit enter
@@ -455,3 +485,6 @@ ru`` for short) to see the details. Including what ports are part of the VLAN.
 
 
 
+.. _SSH: https://en.wikipedia.org/wiki/Secure_Shell
+.. _Telnet: https://en.wikipedia.org/wiki/Telnet
+.. _Cisco: http://www.cisco.com/c/en/us/index.html

@@ -117,7 +117,9 @@ See if you can spot a pattern in data loss:
 MAC address spoof
 ^^^^^^^^^^^^^^^^^
 
-Figure out how to spoof a MAC address and explain it to me.
+Figure out how to spoof a MAC address on Linux and/or
+`Windows <http://www.howtogeek.com/192173/how-and-why-to-change-your-mac-address-on-windows-linux-and-mac/>`.
+Show that you've done it.
 
 .. _CSMA/CD: https://en.wikipedia.org/wiki/Carrier_sense_multiple_access_with_collision_detection
 .. _CSMA/CA: https://en.wikipedia.org/wiki/Carrier_sense_multiple_access_with_collision_avoidance
