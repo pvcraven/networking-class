@@ -80,7 +80,7 @@ even have an IP address to telnet to.
 
 We need to connect via a serial cable. Before there was telnet,
 there was a serial connector. Most computers came with a type
-of connector called RS-232. We'd use this connector to connect our
+of connector called `RS-232`_. We'd use this connector to connect our
 modems.
 
 A lot of networking equipment uses RS-232 as a way to first get
@@ -101,13 +101,18 @@ Find the Manual
 ---------------
 
 We are using a Hewlett Packard HPJ9085a switch. We will probably need
-a manual to learn how to use it. You can get the manual by searching for
-"hpj9085a manual."
+a manual to learn how to use it. You might think that you can get the manual
+on line by searching for "hpj9085a manual."
 
-Or not. Unfortunately it is very difficult to find because of bad
+Or not. Unfortunately it is very difficult to find because of spam and bad
 links. Go to HP and find the manual via a serial number lookup.
 
-The manual on page 4-12 shows you how to reset switch so we can start fresh.
+I searched on "hp manual lookup" and found `this page<http://h20180.www2.hp.com/apps/Lookup?h_pagetype=s-003&h_lang=en&h_client=z-a-r1002-3&h_page=index&h_cc=us&jumpid=hpr_R1002_USEN>`_.
+Then I typed in "hpj9085a". That didn't work. Then I entered the serial number
+and that *did* work.
+
+I found in the manual on page 4-12 shows you how to reset switch so we can start fresh.
+Give that a try.
 
 Plug in the serial line. On startup, you will see::
 
@@ -488,3 +493,4 @@ ru`` for short) to see the details. Including what ports are part of the VLAN.
 .. _SSH: https://en.wikipedia.org/wiki/Secure_Shell
 .. _Telnet: https://en.wikipedia.org/wiki/Telnet
 .. _Cisco: http://www.cisco.com/c/en/us/index.html
+.. _RS-232: https://en.wikipedia.org/wiki/RS-232
