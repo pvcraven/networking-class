@@ -38,6 +38,11 @@ Every time you start up your Raspberry Pi, it could have a new IP address.
 Demonstrate how to use the ``arp`` command from your PC to discover the IP
 address of your Raspberry Pi without hooking it up to a monitor.
 
+If you don't get many addresses when you run ``arp``, skip down and learn to
+run ``nmap`` on an entire subnet. Then run ``arp`` afterwards. Your address
+resolution table will be filled out once you force the computer to connect to
+other local computers.
+
 You may want to borrow my label maker to put the physical address of your
 Pi on the outside.
 
@@ -67,7 +72,9 @@ Part 4 - Ping
 * Pick a server to ping. Not a local one, but a server further away.
 * Figure out how to `redirect output from a command to a file <https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/redirection.mspx?mfr=true>`_.
 * Run ping a really long time and capture the output. At least an hour. Maybe a day.
-* Create a graph of the ping times.
+* Create a graph of the ping times. If you use the ``grep`` tool and regular expressions
+  you can filter out the "extra" and just leave the timings. However it is probably
+  easier just to use search and replace in Excel.
 
 Note that not all servers will respond to a ping request. Also, if there is
 traffic congestion, ping packets will be one of the first to get dropped.
@@ -106,7 +113,10 @@ You *can* scan:
 * 10.1.21.198
 * Any of your Raspberry Pis
 * Any of your friend's Raspberry Pis
-* The entire network of 192.168.1.* on our wireless router
+* The entire network of 192.168.1.* on our wireless router. (Look up how to
+  scan a subnet. You'll use a command like ``nmap -v -sP 192.168.1.0/24``. The
+  output of that command is kind of messy, so some on-line tutorials might have
+  you pipe the output through ``grep`` which can filter based on regular expressions.)
 
 Or perhaps try some public computers.
 
