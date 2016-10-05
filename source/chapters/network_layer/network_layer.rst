@@ -458,8 +458,6 @@ one router acting as a NAT. This allows:
 * Security is improved because connections have to be initiated by computers
   inside the subnet that the NAT protects.
 
-
-
 DNS
 ^^^
 
@@ -483,15 +481,21 @@ LDAP
 SMTP
 ^^^^
 
+`Simple Mail Transfer Protocol`_
+
+
 IMAP
 ^^^^
+
+`Internet Message Access Protocol`_
+
 
 How does Routing Work
 ---------------------
 
-* DVMRP
-* BGP
-* RIP
+* DVMRP - `Distance Vector Multicast Routing Protocol`_
+* BGP - `Border Gateway Protocol`_
+* RIP - `Routing Information Protocol`_
 
 Internet Providers
 ------------------
@@ -559,3 +563,8 @@ VOX has a `nice page that shows the evolution of the Internet backbone <http://w
 .. _Google public DNS: https://developers.google.com/speed/public-dns/docs/using
 .. _ICMPv6: https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_version_6
 .. _Network Address Translation: https://en.wikipedia.org/wiki/Network_address_translation
+.. _Simple Mail Transfer Protocol: https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
+.. _Distance Vector Multicast Routing Protocol: https://en.wikipedia.org/wiki/Distance_Vector_Multicast_Routing_Protocol
+.. _Border Gateway Protocol: https://en.wikipedia.org/wiki/Border_Gateway_Protocol
+.. _Routing Information Protocol: https://en.wikipedia.org/wiki/Routing_Information_Protocol
+.. _Internet Message Access Protocol: https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol

@@ -2,7 +2,7 @@
 import socket
 
 # What IP address do you want to listen on?
-listen_ip_address = '127.0.0.1'
+listen_ip_address = '192.168.1.101'
 
 # What port might the message come in on?
 listen_ip_port = 10000
