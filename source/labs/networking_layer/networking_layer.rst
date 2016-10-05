@@ -46,13 +46,19 @@ You may wonder why I didn't teach you this earlier.
 Part 3 - NSLookup
 ^^^^^^^^^^^^^^^^^
 
-* Figure out how to use the ``nslookup`` command.
+* Figure out how to use the ``nslookup`` command:
+
+  * Get an IP address from a domain.
+  * Get a domain from an IP address (reverse lookup)
+  * Explain what a non-authoritative answer means
+
 * Explain how to buy your own domain. Or just show me a domain you've bought.
 * Tell me the
-  `steps <http://blog.catchpoint.com/2014/07/01/dns-lookup-domain-name-ip-address/>`_
+  `steps <https://www.verisign.com/en_US/website-presence/online/how-dns-works/index.xhtml>`_
   that the client lookup in the
   `DNS <https://en.wikipedia.org/wiki/Domain_Name_System>`_ system goes through.
-* Tell me how to find out who owns a domain
+* Demonstrate how to find out who owns a domain. Use ICANN, not some other
+  service, as ICANN provides the most information.
 
 Part 4 - Ping
 ^^^^^^^^^^^^^
