@@ -107,7 +107,7 @@ on line by searching for "hpj9085a manual."
 Or not. Unfortunately it is very difficult to find because of spam and bad
 links. Go to HP and find the manual via a serial number lookup.
 
-I searched on "hp manual lookup" and found `this page<http://h20180.www2.hp.com/apps/Lookup?h_pagetype=s-003&h_lang=en&h_client=z-a-r1002-3&h_page=index&h_cc=us&jumpid=hpr_R1002_USEN>`_.
+I searched on "hp manual lookup" and found `this page <http://h20180.www2.hp.com/apps/Lookup?h_pagetype=s-003&h_lang=en&h_client=z-a-r1002-3&h_page=index&h_cc=us&jumpid=hpr_R1002_USEN>`_.
 Then I typed in "hpj9085a". That didn't work. Then I entered the serial number
 and that *did* work.
 

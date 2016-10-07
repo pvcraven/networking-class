@@ -447,7 +447,6 @@ ICMP
 is a `ICMPv6`_ version of the protocol.
 
 
-
 Network Address Translation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -458,36 +457,68 @@ one router acting as a NAT. This allows:
 * Security is improved because connections have to be initiated by computers
   inside the subnet that the NAT protects.
 
+.. image:: nat_table.png
+    :width: 500px
+    :align: center
+    :alt: alternate text
+
 DNS
 ^^^
 
-Tricks, talk about `Google public DNS`_ at 8.8.8.8 and 8.8.4.4.
+Researching `how the Domain Name System
+works <https://www.verisign.com/en_US/website-presence/online/how-dns-works/index.xhtml>`_ is
+part of the Layer 3 lab. Therefore we won't explain it here.
+
+If you don't have a DNS you can hook up to for some reason, you can use
+the two `Google Public DNS Servers`_ at 8.8.8.8 and 8.8.4.4.
 
 DHCP
 ^^^^
 
+In the "old days" every time we put a new computer on the network, we had
+to tell the computer its network address, the gateway, the netmask,
+and the DNS servers.
+
+That's too much work. What if this could be automated?
+The `Dynamic Host Configuration Protocol`_ (DHCP) does this. When the computer
+gets onto the network, it makes a request to get this information. The exact
+construction of the packets is available at the Wikipedia article linked
+earlier.
+
+Most routers have built-in DHCP servers. You can get a DHCP server for a
+Windows or Linux computer, but the configuration is a headache compared to
+easy of a router that "just works."
+
+Here is a screen from my DSL modem:
+
+.. image:: dhcp.png
+    :width: 500px
+    :align: center
+    :alt: alternate text
+
+It will start giving out IP addresses at 192.168.0.2 and go up to 192.168.0.254.
+
+When a computer gets an IP address, it will do so with a "lease." After so
+many seconds, it will ask for a new IP address. It might get the same one, but
+there is no guarantee.
+
+Having a "lease" helps keep from running out of addresses. A coffee shop that
+has 200 available IP addresses for its customer might run out of IP addresses
+if the leases are for 24 hours. Having a shorter lease would help make sure
+we don't run out.
+
+Firewall
+^^^^^^^^
+
+.. image:: firewall.png
+    :width: 500px
+    :align: center
+    :alt: alternate text
+
 WINS
 ^^^^
 
-FTP
-^^^
 
-NTP
-^^^
-
-LDAP
-^^^^
-
-SMTP
-^^^^
-
-`Simple Mail Transfer Protocol`_
-
-
-IMAP
-^^^^
-
-`Internet Message Access Protocol`_
 
 
 How does Routing Work
@@ -560,11 +591,10 @@ VOX has a `nice page that shows the evolution of the Internet backbone <http://w
 .. _Internet Protocol version 6: https://en.wikipedia.org/wiki/IPv6
 .. _Internet Control Message Protocol: https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol
 .. _RFC 792: https://tools.ietf.org/html/rfc792
-.. _Google public DNS: https://developers.google.com/speed/public-dns/docs/using
+.. _Google Public DNS Servers: https://developers.google.com/speed/public-dns/docs/using
 .. _ICMPv6: https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_version_6
 .. _Network Address Translation: https://en.wikipedia.org/wiki/Network_address_translation
-.. _Simple Mail Transfer Protocol: https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
 .. _Distance Vector Multicast Routing Protocol: https://en.wikipedia.org/wiki/Distance_Vector_Multicast_Routing_Protocol
 .. _Border Gateway Protocol: https://en.wikipedia.org/wiki/Border_Gateway_Protocol
 .. _Routing Information Protocol: https://en.wikipedia.org/wiki/Routing_Information_Protocol
-.. _Internet Message Access Protocol: https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
+.. _Dynamic Host Configuration Protocol: https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol

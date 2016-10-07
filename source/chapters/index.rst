@@ -8,3 +8,5 @@ Theory
    physical_layer/physical_layer.rst
    data_link_layer/data_link_layer.rst
    network_layer/network_layer.rst
+   transport_layer/transport_layer.rst
+   session_layer/session_layer.rst
