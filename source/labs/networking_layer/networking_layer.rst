@@ -18,18 +18,20 @@ Step 7    A     97
 
 Show me each step in person, or e-mail me a document.
 
-Part 1 - Hostname
-^^^^^^^^^^^^^^^^^
+Part 1 - Hostname and Address
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Set the host name (computer name) on your Raspberry Pi.
-Document how this is done.
+Do the following:
 
-Explain how to set the hostname on a Windows computer.
-
-Explain how the ``/etc/resolv.conf`` and ``/etc/hosts`` files on Linux work.
-Also explain the
-`Host Name Resolution Order <https://support.microsoft.com/en-us/kb/172218>`_
-in Windows.
+* Set the host name (computer name) on your Raspberry Pi.
+  Document how this is done.
+* Explain how to set the hostname on a Windows computer.
+* Explain how the ``/etc/resolv.conf`` and ``/etc/hosts`` files on Linux work.
+* Explain the
+  `Host Name Resolution Order <https://support.microsoft.com/en-us/kb/172218>`_
+  in Windows.
+* Explain how to manually set a computer's IP address on either Mac, Linux, or Windows.
+* Explain how to manually set a computer's DNS servers.
 
 Part 2 - ARP
 ^^^^^^^^^^^^
@@ -152,6 +154,7 @@ You may need a large piece of paper. Or get happy with Visio. Or learn
 `dot <https://en.wikipedia.org/wiki/DOT_(graph_description_language)>`_ if you
 really want to get crazy.
 
+Someone has done a lot of this, you can see their `Internet Map`_ results.
 
 Part 7 - Routing
 ^^^^^^^^^^^^^^^^
@@ -174,3 +177,4 @@ in how to configure Cisco routers. They can be a ticket to a nice job.
 
 
 .. _nmap: https://nmap.org/
+.. _Internet Map: http://internet-map.net/
