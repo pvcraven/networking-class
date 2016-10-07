@@ -23,7 +23,9 @@ Part 1 - Hostname and Address
 
 Do the following:
 
-* Set the host name (computer name) on your Raspberry Pi.
+* Set the host name (computer name) on a Linux computer like your
+  Raspberry Pi. Don't use ``raspi-config``, because that is specific to the
+  Pi, we want a method that will work for all Linux computers.
   Document how this is done.
 * Explain how to set the hostname on a Windows computer.
 * Explain how the ``/etc/resolv.conf`` and ``/etc/hosts`` files on Linux work.
