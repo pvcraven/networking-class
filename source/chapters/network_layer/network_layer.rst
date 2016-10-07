@@ -562,9 +562,63 @@ settings onto all the domain computers.
 How does Routing Work
 ---------------------
 
-* DVMRP - `Distance Vector Multicast Routing Protocol`_
-* BGP - `Border Gateway Protocol`_
-* RIP - `Routing Information Protocol`_
+How do we find the best path to our destination?
+
+* Autonomous System - Collection of routers under a common administration. For
+  example, the set of routers owned by one ISP.
+* Interior Gateway Protocols - Protocols for use inside an autonomous system.
+* Exterior Gateway Protocols - Protocols (really, just one) for use outside an autonomout system.
+
+In the example below, BGP is the Exterior Gateway Protocol, while EIGRP, IS-IS
+OSPF, and RIP are Interior:
+
+.. figure:: bgp.jpg
+
+  Image from `Cisco Networking Academy's Introduction to Routing Dynamically <http://www.ciscopress.com/articles/article.asp?p=2180210&seqNum=7>`_
+
+Interior Gateway Protocols
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Distance Vector Protocol: RIP, RIPv2, IGRP, EIGRP
+* Link State Routing Protocol: OSPF and IS-IS
+
+Exterior Gateway Protocols
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Path-Vector Routing Protocol: BGP
+
+
+RIP
+^^^
+
+`Routing Information Protocol`_ One of the original.
+
+RIP is a Distance Vector Protocol. It wants to minimize hop count.
+It can't hop more than 15 hops. It sends its whole routing table every 30
+seconds. Even if there is not change. This isn't a great thing to do with larger
+networks.
+
+Initially, each router only knows the routers hooked up to it. This will be
+its "routing table." The routing table has all the computers hooked up to it.
+
+After this, it will send updates with its routing table, and get updates with
+other router's tables.
+
+`This tutorial <http://www.9tut.com/rip-routing-protocol-tutorial>`_ does a good
+job stepping through how this process works.
+
+
+ IGRP, EIGRP, OSPF, IS-IS and BGP
+
+DVMRP
+^^^^^
+
+`Distance Vector Multicast Routing Protocol`_
+
+BGP
+^^^
+
+`Border Gateway Protocol`_
 
 Internet Providers
 ------------------
