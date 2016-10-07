@@ -13,6 +13,8 @@ NTP
 LDAP
 ^^^^
 
+Also mention Active Directory.
+
 SMTP
 ^^^^
 

@@ -538,8 +538,26 @@ await commands.
 WINS
 ^^^^
 
+Aside from TCP/IP and the related DNS, there is another way to name computers.
+This is used on local networks. When you click on "network" with the file
+browser of your computer, you are using NetBIOS_ to find local computers and
+computer names.
 
+NetBIOS limits computer names to 15 characters. I believe it was one of the first
+method for naming and discovering computers over the network.
 
+The Windows Internet Name Service (WINS_) is Microsoft's version of the
+NetBIOS Name Service.
+
+WINS is related to the Server Message Block (SMB_), a higher-level protocol,
+that helps set up network file shares.
+
+You can name your computer as part of a "Workgroup." This requires no permissions.
+You can also name your computer as part of the "Domain." To add or rename
+a computer, you need permissions from that domain.
+
+When a computer is on the domain, a domain admin can "force" certain computer
+settings onto all the domain computers.
 
 How does Routing Work
 ---------------------
@@ -620,3 +638,6 @@ VOX has a `nice page that shows the evolution of the Internet backbone <http://w
 .. _Dynamic Host Configuration Protocol: https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol
 .. _Firewall: https://en.wikipedia.org/wiki/Firewall_(computing)
 .. _ICQ: https://en.wikipedia.org/wiki/ICQ
+.. _NetBIOS: https://en.wikipedia.org/wiki/NetBIOS
+.. _WINS: https://en.wikipedia.org/wiki/Windows_Internet_Name_Service
+.. _SMB: https://en.wikipedia.org/wiki/Windows_Internet_Name_Service
