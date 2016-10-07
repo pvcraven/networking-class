@@ -211,10 +211,7 @@ Part 7 - Routing
 
 You can do this part solo, or paired up.
 
-Before you begin, reset both the switch and the router. (Note, I don't have
-instructions on how to do this yet, so you'll need to wait until I do.)
-
-Then, to complete, go through the :ref:`routing-tutorial`.
+Make sure you 'reset' the router as part of the :ref:`routing-tutorial`.
 
 Have the instructor see that you:
     * Can log into one of the switches
