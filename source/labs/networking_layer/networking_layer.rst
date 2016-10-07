@@ -81,6 +81,56 @@ Part 4 - Ping
 Note that not all servers will respond to a ping request. Also, if there is
 traffic congestion, ping packets will be one of the first to get dropped.
 
+**Totally random suggestion to get side-tracked with:**
+
+If you are on Linux or Mac, you can use ``grep`` to filter your ping
+commands so that only the timing is left over. `Grep`_ is a tool used to quickly
+filter text based on regular expressions.
+
+I don't want to show you *exactly* how to do that, so I'll give
+you a different example. The ``ifconfig`` outputs a lot of text::
+
+  craven@cs ~ $ ifconfig
+  eth0      Link encap:Ethernet  HWaddr 52:54:00:ae:c5:0e
+            inet addr:206.72.8.162  Bcast:206.72.8.255  Mask:255.255.255.0
+            inet6 addr: fe80::5054:ff:feae:c50e/64 Scope:Link
+            UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+            RX packets:1197657294 errors:0 dropped:361116 overruns:0 frame:0
+            TX packets:19216543 errors:0 dropped:0 overruns:0 carrier:0
+            collisions:0 txqueuelen:1000
+            RX bytes:138105341533 (138.1 GB)  TX bytes:5148797084 (5.1 GB)
+
+  lo        Link encap:Local Loopback
+            inet addr:127.0.0.1  Mask:255.0.0.0
+            inet6 addr: ::1/128 Scope:Host
+            UP LOOPBACK RUNNING  MTU:65536  Metric:1
+            RX packets:685399 errors:0 dropped:0 overruns:0 frame:0
+            TX packets:685399 errors:0 dropped:0 overruns:0 carrier:0
+            collisions:0 txqueuelen:0
+            RX bytes:160200407 (160.2 MB)  TX bytes:160200407 (160.2 MB)
+
+I could use a pipe character ``|`` and "pipe" the output of ``ifconfig`` into the
+grep command::
+
+  craven@cs ~ $ ifconfig | grep 'inet addr'
+            inet addr:206.72.8.162  Bcast:206.72.8.255  Mask:255.255.255.0
+            inet addr:127.0.0.1  Mask:255.0.0.0
+
+I could even fancy that up using the ``-o`` option that only displays matching
+text. Along with my advanced knowledge of `regular expressions`_::
+
+  craven@cs ~ $ ifconfig | grep -o 'inet addr:[0-9\.]*'
+  inet addr:206.72.8.162
+  inet addr:127.0.0.1
+
+And I could "chain" grep filters::
+
+  craven@cs ~ $ ifconfig | grep -o 'inet addr:[0-9\.]*' | grep -o '[0-9\.]*'
+  206.72.8.162
+  127.0.0.1
+
+Or you could just use search/replace to remove the extra text in Excel. That works too.
+
 Part 5 - NMap
 ^^^^^^^^^^^^^
 
@@ -178,3 +228,5 @@ in how to configure Cisco routers. They can be a ticket to a nice job.
 
 .. _nmap: https://nmap.org/
 .. _Internet Map: http://internet-map.net/
+.. _regular expressions: https://regexone.com/
+.. _grep: https://en.wikipedia.org/wiki/Grep
