@@ -446,6 +446,10 @@ ICMP
 `Internet Control Message Protocol`_ (ICMP) is defined by `RFC 792`_. Also, there
 is a `ICMPv6`_ version of the protocol.
 
+ICMP is used to send a response message back to a computer if the router is
+unable to forward a packet to its destination. It also will send a message back
+if the Time To Live (TTL) expires on a packet.
+
 
 Network Address Translation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -492,7 +496,7 @@ easy of a router that "just works."
 Here is a screen from my DSL modem:
 
 .. image:: dhcp.png
-    :width: 500px
+    :width: 550px
     :align: center
     :alt: alternate text
 
@@ -510,10 +514,26 @@ we don't run out.
 Firewall
 ^^^^^^^^
 
+A firewall_ can be either a software or hardware device. It physically (or
+virtually) sits between a computer and the outside network, or between
+as subnet and the outside network.
+
+An administrator can use a firewall to filter network traffic going into
+or out of a device. Here is an example of a firewall that I set up with
+Amazon Web Services:
+
 .. image:: firewall.png
-    :width: 500px
+    :width: 550px
     :align: center
     :alt: alternate text
+
+A firewall does not filter viruses. But if a rogue program on a computer were
+to open up a new network port, or try to connect to the outside world, it
+could filter that out.
+
+Typically firewalls do not filter outgoing traffic, so a computer that is
+part of a botnet will often create its own connection to a ICQ_ server and
+await commands.
 
 WINS
 ^^^^
@@ -598,3 +618,5 @@ VOX has a `nice page that shows the evolution of the Internet backbone <http://w
 .. _Border Gateway Protocol: https://en.wikipedia.org/wiki/Border_Gateway_Protocol
 .. _Routing Information Protocol: https://en.wikipedia.org/wiki/Routing_Information_Protocol
 .. _Dynamic Host Configuration Protocol: https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol
+.. _Firewall: https://en.wikipedia.org/wiki/Firewall_(computing)
+.. _ICQ: https://en.wikipedia.org/wiki/ICQ
