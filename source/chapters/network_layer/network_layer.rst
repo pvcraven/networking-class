@@ -658,7 +658,7 @@ BGP
 
 `Border Gateway Protocol`_
 
-`Watch this video on BGP <https://youtu.be/z8INzy9E628>`. Searching on, and
+`Watch this video on BGP <https://youtu.be/z8INzy9E628>`_. Searching on, and
 playing aroung with BGP looking glass is rather interesting.
 
 Internet Providers
