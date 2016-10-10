@@ -608,17 +608,33 @@ other router's tables.
 job stepping through how this process works.
 
 
- IGRP, EIGRP, OSPF, IS-IS and BGP
+OSPF
+^^^^
 
-DVMRP
+* `Open Shortest Path First <https://en.wikipedia.org/wiki/Open_Shortest_Path_First>`_
+
+IGRP
+^^^^
+
+* `Interior Gateway Routing Protocol <https://en.wikipedia.org/wiki/Interior_Gateway_Routing_Protocol>`_
+
+EIGRP
 ^^^^^
 
-`Distance Vector Multicast Routing Protocol`_
+* `EIGRP <https://en.wikipedia.org/wiki/Enhanced_Interior_Gateway_Routing_Protocol>`_
+
+IS-IS
+^^^^^
+
+* `IS-IS <https://en.wikipedia.org/wiki/IS-IS>`_
 
 BGP
 ^^^
 
 `Border Gateway Protocol`_
+
+`Watch this video on BGP <https://youtu.be/z8INzy9E628>`. Searching on, and
+playing aroung with BGP looking glass is rather interesting.
 
 Internet Providers
 ------------------
