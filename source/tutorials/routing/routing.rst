@@ -94,8 +94,10 @@ Download driver:
 * USA-19HS: https://www.tripplite.com/support/model/mid/USA-19HS
 * Other connector: TODO
 
-MobaXTerm can connect to a serial line. Serial ports will be named
-something like COM0, COM1, COM2, etc.
+MobaXTerm can connect to a "serial" line. Serial ports will be named
+something like COM0, COM1, COM2, etc. Set your baud rate to 9600.
+
+
 
 Find the Manual
 ---------------
