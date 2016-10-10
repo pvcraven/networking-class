@@ -565,9 +565,12 @@ How does Routing Work
 How do we find the best path to our destination?
 
 * Autonomous System - Collection of routers under a common administration. For
-  example, the set of routers owned by one ISP.
+  example, the set of routers owned by one ISP. The Internet is divided into
+  autonomous systems. There can be about 65,000 of them.
+  `Here is a table of them <http://www.bgplookingglass.com/list-of-autonomous-system-numbers>`_.
+  ``whois`` can give info on which autonomous system a node belongs to.
 * Interior Gateway Protocols - Protocols for use inside an autonomous system.
-* Exterior Gateway Protocols - Protocols (really, just one) for use outside an autonomout system.
+* Exterior Gateway Protocols - Protocols (really, just one) for use outside an autonomous system.
 
 In the example below, BGP is the Exterior Gateway Protocol, while EIGRP, IS-IS
 OSPF, and RIP are Interior:
@@ -587,6 +590,29 @@ Exterior Gateway Protocols
 
 * Path-Vector Routing Protocol: BGP
 
+Protocol Categories
+^^^^^^^^^^^^^^^^^^^
+
+* `Distance-vector routing protocol <https://en.wikipedia.org/wiki/Distance-vector_routing_protocol>`_
+
+  * Periodically sends info about known routes to their neighbors.
+  * Distance-vector is more robust than link-state.
+  * Distance-vector requires less CPU and memory than link-state.
+  * Distance-vector only knows its neighbors and the cost to forward a packet
+    in hops, to go there.
+
+* `Link-state routing protocol <https://en.wikipedia.org/wiki/Link-state_routing_protocol>`_
+
+  * Sends info about state of their links to the *entire* network. Not just
+    neighbors.
+  * Link state converges on paths faster than distance-vector.
+  * Link-state requires each node to be cooperative.
+  * Each node "knows" the entire network.
+
+* `Path-vector routing protocol <https://en.wikipedia.org/wiki/Path_vector_protocol>`_
+
+  * Easier to set link costs. Don't pass traffic to networks that cost money. Or
+    any other rules to follow commercial relationships.
 
 RIP
 ^^^
@@ -606,7 +632,6 @@ other router's tables.
 
 `This tutorial <http://www.9tut.com/rip-routing-protocol-tutorial>`_ does a good
 job stepping through how this process works.
-
 
 OSPF
 ^^^^
