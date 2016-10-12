@@ -478,7 +478,7 @@ Telnet to switch. (Not the router)
 
 Type ``show vlan``. No VLAN yet.
 
-Get into configuration mode with ``configuration``.
+Get into configuration mode with ``config``.
 
 Create a new vlan with ``vlan 13``. Or whatever number. Prompt changes to let
 you know what VLAN you are configuring.
