@@ -86,13 +86,15 @@ modems.
 A lot of networking equipment uses RS-232 as a way to first get
 connected. Unfortunately computers don't come with RS-232 connectors
 anymore. You can get an adapter that plugs into your USB connector that
-will drive an RS-232 port. We'll need that. We will also likely need to
-download a driver for it.
+will drive an RS-232 port. We'll need that.
+
+We will also *may* need to download a driver for it, if it doesn't plug-and-play
+like we hope:
 
 Download driver:
 
 * USA-19HS: https://www.tripplite.com/support/model/mid/USA-19HS
-* Other connector: TODO
+* Cable Matters (blue and silver): http://www.cablematters.com/cs-Downloads.aspx
 
 MobaXTerm can connect to a "serial" line. Serial ports will be named
 something like COM0, COM1, COM2, etc. Set your baud rate to 9600.
@@ -211,9 +213,8 @@ We want to use the ``setup`` command to set it up.
     up a loop to see what happens. Turn it on and see what happens.)
   * Skip time server setup. (TODO: Talk about time servers.)
   * IP. We will manually set. Hit spacebar twice Use 192.168.1.10
-    (0 is broadcast, 1 is router. (TODO: Explain broadcast, and number
-    conventions)
-  * Netmask: 255.255.255.0 (TODO: Explain netmask and /24 type notation)
+    (0 is broadcast, 1 is router.)
+  * Netmask: 255.255.255.0
 
 Connect to Switch with Telnet
 -----------------------------
@@ -222,8 +223,7 @@ At this point, can use telnet.
 	* Plug in Raspberry Pi to switch
 	* Do ifconfig, won't have IP address. No magic yet.
 	* Set ip: ``sudo ifconfig eth0 192.168.1.100 netmask 255.255.255.0``
-	* Set gateway: ``sudo route add default gw 192.168.1.1`` (TODO: What is a
-	  gateway)
+	* Set gateway: ``sudo route add default gw 192.168.1.1``
 	* Type ``telnet 192.168.1.10``
 	* Yay! We are there
 
@@ -469,12 +469,12 @@ After you are done, you need to save your changes::
 	cmsc340router#
 
 
-(TODO: http://www.informit.com/library/content.aspx?b=CCNP_Studies_Switching&seqNum=47)
+http://www.informit.com/library/content.aspx?b=CCNP_Studies_Switching&seqNum=47
 
 Port Based VLAN
 ---------------
 
-Telnet to router.
+Telnet to switch. (Not the router)
 
 Type ``show vlan``. No VLAN yet.
 

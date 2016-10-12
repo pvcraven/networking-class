@@ -7,3 +7,4 @@ Tutorials
    physical_layer.rst
    data_link_layer.rst
    network_layer.rst
+   transport_layer.rst
