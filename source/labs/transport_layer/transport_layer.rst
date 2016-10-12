@@ -47,6 +47,8 @@ Data Transmission Rates and Packet Sizes
 * Graph the results
 * Test the resulting speed if you keep the connection open, or if you close/open
   each time when sending data.
+* For the best results, you may want to "toss" the first 100 packets or so,
+  as those packets often have different timings.
 
 Bouncing Balls
 ^^^^^^^^^^^^^^
