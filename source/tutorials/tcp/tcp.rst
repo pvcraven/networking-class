@@ -12,13 +12,13 @@ Send TCP Message
 
 Receive TCP Message, Blocking
 -----------------------------
-.. literalinclude:: send_tcp.py
+.. literalinclude:: receive_tcp_blocking.py
     :linenos:
     :language: python
 
 Receive TCP Message, Non-Blocking
 ---------------------------------
-.. literalinclude:: send_tcp.py
+.. literalinclude:: receive_tcp_nonblocking.py
     :linenos:
     :language: python
 
