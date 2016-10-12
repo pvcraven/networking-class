@@ -4,7 +4,6 @@ BUFFER_SIZE = 1024
 
 my_ip_address = '127.0.0.1'
 my_ip_port = 5005
-my_message = "Hello, World!"
 
 # We need to build a "state machine" that keeps
 # track of if we are connected or not

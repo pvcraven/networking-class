@@ -4,7 +4,6 @@ BUFFER_SIZE = 1024
 
 my_ip_address = '127.0.0.1'
 my_ip_port = 5005
-my_message = "Hello, World!"
 
 # Create a socket for sending/receiving data
 my_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
