@@ -13,8 +13,8 @@ Step 5    A     95
 Step 6    A     100
 ========  ===== ======
 
-Packet Sizes
-^^^^^^^^^^^^
+Handshaking
+^^^^^^^^^^^
 
 * Read how `TCP handshaking`_ occurs when building a connection.
 * Examine the code at :ref:`tcp_tutorial`.
