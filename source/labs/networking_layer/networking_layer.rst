@@ -182,7 +182,16 @@ to you automatically.
 That way you can know if someone started a web server or some other server on
 your network. The code to do this takes less space than the English to explain it.
 
-To turn this part in, write up what you found using the tool.
+To turn this part in, write up what you found using the tool. Include:
+
+* Output of at two nmap scans on individual machines. Do a quick one or
+  two sentence explanation of what each scan shows.
+* One more scan of a machine that uses some different command line options.
+  Look at what is available for command line options, and try a few out. I just
+  want to see that you are able to do something past the default scan.
+  Quickly explain the result.
+* Scan our entire class wireless subnet (not Simpson's, but the one we set
+  up for class).
 
 Part 6 - Traceroute
 ^^^^^^^^^^^^^^^^^^^
