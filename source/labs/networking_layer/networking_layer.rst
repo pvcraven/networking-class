@@ -78,7 +78,8 @@ Part 4 - Ping
 * Run ping a really long time and capture the output. At least an hour. Maybe a day.
 * Create a graph of the ping times. If you use the ``grep`` tool and regular expressions
   you can filter out the "extra" and just leave the timings. However it is probably
-  easier just to use search and replace in Excel.
+  easier just to use search and replace in Excel. I **don't** want a histogram.
+  Just graph the ping times for each ping.
 
 Note that not all servers will respond to a ping request. Also, if there is
 traffic congestion, ping packets will be one of the first to get dropped.
@@ -184,7 +185,7 @@ your network. The code to do this takes less space than the English to explain i
 
 To turn this part in, write up what you found using the tool. Include:
 
-* Output of at two nmap scans on individual machines. Do a quick one or
+* Output of two nmap scans on individual machines. Do a quick one or
   two sentence explanation of what each scan shows.
 * One more scan of a machine that uses some different command line options.
   Look at what is available for command line options, and try a few out. I just
