@@ -49,11 +49,11 @@ Sometimes like my students who laugh when I tell the same joke over.
 when he/she could be sending data. Time is wasted. If the timeout is set too
 short, then mass confusion happens:
 
-.. figure:: ack_1_early_timeout.svg
+.. figure:: sliding-windows-protocol.png
     :width: 340px
     :alt: alternate text
 
-    Timed out too early
+    Sliding window. Slide from `Gondwe Ben <http://www.slideshare.net/GondweBenard/module15>`_
 
 Sliding window, size larger than one
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -61,6 +61,12 @@ Sliding window, size larger than one
 This constant back and forth is slow. Think how much faster we'd be if we
 sent two packets, then did one ack that covered both? Or send 10 data
 packets and wait for an "ack" that covered all 10?
+
+.. figure:: ack_1_early_timeout.svg
+    :width: 340px
+    :alt: alternate text
+
+    Timed out too early
 
 This is a *sliding window*. What we described before was a sliding window,
 but of size one. Here is a nice animation of a sliding window in action:
