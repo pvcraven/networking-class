@@ -37,11 +37,18 @@ def send_data(total_bytes, message_size_in_bytes):
 
 def main():
     # How many bytes to send
-    total_bytes = 20000000
+    """
+    total_bytes = 5000000
 
     for message_size_in_bytes in range(25, 0, -1):
         print("Sending {:,} bytes in {} byte chunks.".format(total_bytes, message_size_in_bytes))
         send_data(total_bytes, message_size_in_bytes)
-        time.sleep(0.5)
+    """
+
+    total_bytes = 10
+    message_size_in_bytes = 10
+    for message_size_in_bytes in range(500000):
+        print("Sending {:,} bytes in {} byte chunks.".format(total_bytes, message_size_in_bytes))
+        send_data(total_bytes, message_size_in_bytes)
 
 main()

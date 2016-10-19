@@ -24,7 +24,7 @@ Handshaking
 Packet Sizes
 ^^^^^^^^^^^^
 
-* Examine the code at :ref:`tcp_tutorial`.
+* Examine first few code examples at :ref:`tcp_tutorial` for sending and receiving.
 * Set up your workspace so your sender and receiver are on different computers.
 * Run a Wireshark packet trace to see the data go across the line.
 * Figure out how many characters can you send before the data will be split
@@ -34,8 +34,8 @@ Packet Sizes
 Data Transmission Rates and Packet Sizes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Examine the code at :ref:`tcp_tutorial`.
-* Figure out a way to measure data transmission rates. For example, if your
+* Examine last few code examples at :ref:`tcp_tutorial`.
+* Note how the examples find data transmission rates. For example, if your
   message was 2 bytes long, and you were able to send/receive 5,000 of these
   in 7 seconds, you have a data transmission rate of:
 
@@ -43,12 +43,18 @@ Data Transmission Rates and Packet Sizes
 
   \frac{packets \cdot size}{time} = \frac{ 5000 \cdot 2}{7} = 1,429\:bytes/sec
 
-* Steadily change how much data you send from one byte, up to 5,000.
-* Graph the results
-* Test the resulting speed if you keep the connection open, or if you close/open
-  each time when sending data.
-* For the best results, you may want to "toss" the first 100 packets or so,
-  as those packets often have different timings.
+* Modify the code so that you find the timings of packets from 1 byte of
+  payload up to 25. You may need to do multiple runs and throw out outliers.
+* Graph the results. Here is my graph.
+
+.. image:: data_rate.png
+    :width: 400px
+    :align: center
+    :alt: alternate text
+
+* Find one data point, perhaps 10 bytes of payload, and find the time difference
+  if you were to setup and tear down the connection between each 10 byte chunk,
+  or if you were to leave the connection open.
 
 Bouncing Balls
 ^^^^^^^^^^^^^^

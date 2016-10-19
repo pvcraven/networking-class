@@ -47,6 +47,7 @@ def main():
 
                 # Start timing how long this takes.
                 start_time = time.clock()
+                print("Accepted")
 
             except BlockingIOError:
                 pass
