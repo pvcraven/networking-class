@@ -1,6 +1,6 @@
 import socket
 
-BUFFER_SIZE = 1024
+BUFFER_SIZE = 65535
 
 my_ip_address = '127.0.0.1'
 my_ip_port = 5005
@@ -41,8 +41,11 @@ while True:
     try:
       # Read in the data, up to the number of characters in BUFFER_SIZE
       data = connection.recv(BUFFER_SIZE)
+      if len(data) > 0:
+        print("Data from {}:{} \"{}\"".format(client_address[0], client_address[1], data))
+
+
       state = NO_CONNECTION
-      print("Data from {}:{} \"{}\"".format(client_address[0], client_address[1], data))
       connection.close()
 
     except BlockingIOError:

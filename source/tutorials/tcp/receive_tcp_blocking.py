@@ -1,6 +1,8 @@
 import socket
 
-BUFFER_SIZE = 1024
+# This is your buffer. You can't receive anything more than this at
+# one time.
+BUFFER_SIZE = 65535
 
 my_ip_address = '127.0.0.1'
 my_ip_port = 5005
@@ -35,6 +37,7 @@ while True:
 
   finally:
     # Close the socket. No socket operations can happen after this.
+    # If there was more data to send, you would not want to do this.
     connection.close()
 
 socket.close()
