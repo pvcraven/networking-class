@@ -13,12 +13,21 @@ NO_CONNECTION = 1
 CONNECTED = 2
 
 class MyConnectionHandler:
+    """
+    Handle receiving data
+    """
 
     def __init__(self):
+        """
+        Initialize the class
+        """
         self.my_socket = None
         self.state = NO_CONNECTION
 
     def start_listening(self):
+        """
+        Open the socket for listening
+        """
         # Create a socket for sending/receiving data
         self.my_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -34,6 +43,9 @@ class MyConnectionHandler:
         self.my_socket.listen(2)
 
     def handle_connection(self):
+        """
+        Manage a connected socket
+        """
         # Our full message. Right now it is blank.
         full_message = b""
 
@@ -72,6 +84,8 @@ class MyConnectionHandler:
                     # Append this chunk to the full message
                     full_message += data
 
+                    # Check for a Y instead of an X. This means that we have the
+                    # last packet, and we are done.
                     if full_message[-2] == 89:
 
                         # Stop timing how long this takes.
@@ -104,6 +118,9 @@ class MyConnectionHandler:
         self.my_socket.close()
 
 def main():
+    """
+    Main program
+    """
     my_connection_handler = MyConnectionHandler()
     my_connection_handler.start_listening()
 

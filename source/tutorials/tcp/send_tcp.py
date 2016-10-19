@@ -15,7 +15,7 @@ try:
   my_socket.connect((server_ip_address, server_ip_port))
 
   # Send the message
-  my_socket.send(my_message)
+  my_socket.sendall(my_message)
 
   # Close the socket
   my_socket.close()

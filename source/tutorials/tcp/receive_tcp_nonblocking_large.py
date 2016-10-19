@@ -57,6 +57,7 @@ while not done:
             # Append this chunk to the full message
             full_message += data
 
+            # If we get a \n, then assume we have received all the data.
             if full_message[-1] == 10:
                 # Close the socket. No socket operations can happen after this.
                 state = NO_CONNECTION

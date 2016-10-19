@@ -5,7 +5,10 @@ server_ip_address = '10.1.23.175'
 server_ip_port = 5005
 
 def send_data(total_bytes, message_size_in_bytes):
-
+    """
+    Send a bunch of messages that sum "total_bytes" of data. Break each
+    message into chunks of "message_size_in_bytes". (Try to anyway.)
+    """
     # Total number of messages to send.
     messages_to_send = total_bytes // message_size_in_bytes
 
@@ -35,6 +38,9 @@ def send_data(total_bytes, message_size_in_bytes):
     print("Done")
 
 def main():
+    """
+    Main program.
+    """
     # How many bytes to send
     total_bytes = 50000000
 
