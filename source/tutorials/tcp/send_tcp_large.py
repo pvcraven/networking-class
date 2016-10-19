@@ -6,11 +6,11 @@ server_ip_port = 5005
 
 # Size of our message.
 # Must be at least 1
-messag_size_in_bytes = 300000
+message_size_in_bytes = 300000
 
 # Message as a byte array. (Hence the b at the front.)
 # Send a bunch of x's, and an "END"
-my_message = b"X" * (messag_size_in_bytes - 1) + b"\n"
+my_message = b"X" * (message_size_in_bytes - 1) + b"\n"
 
 try:
   # Open a socket

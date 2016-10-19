@@ -33,3 +33,15 @@ Receive a big multi-part message
 .. literalinclude:: receive_tcp_nonblocking_large.py
     :linenos:
     :language: python
+
+Send lots of messages
+---------------------
+.. literalinclude:: send_tcp_multiple.py
+    :linenos:
+    :language: python
+
+Receive multiple messages
+-------------------------
+.. literalinclude:: receive_tcp_nonblocking_multiple.py
+    :linenos:
+    :language: python
