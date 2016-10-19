@@ -22,3 +22,14 @@ Receive TCP Message, Non-Blocking
     :linenos:
     :language: python
 
+Send a big TCP message
+----------------------
+.. literalinclude:: send_tcp_large.py
+    :linenos:
+    :language: python
+
+Receive a big multi-part message
+--------------------------------
+.. literalinclude:: receive_tcp_nonblocking_large.py
+    :linenos:
+    :language: python

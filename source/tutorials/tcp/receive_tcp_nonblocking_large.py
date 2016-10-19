@@ -5,6 +5,9 @@ BUFFER_SIZE = 65535
 my_ip_address = '127.0.0.1'
 my_ip_port = 5005
 
+# Our full message
+full_message = b""
+
 # We need to build a "state machine" that keeps
 # track of if we are connected or not
 NO_CONNECTION = 1
@@ -26,7 +29,10 @@ my_socket.bind((my_ip_address, my_ip_port))
 # refusing connections.
 my_socket.listen(1)
 
-while True:
+done = False
+chunks = 0
+
+while not done:
 
     # If we have no connection, then see if we can build a connection
     if state == NO_CONNECTION:
@@ -43,17 +49,19 @@ while True:
         try:
             # Read in the data, up to the number of characters in BUFFER_SIZE
             data = connection.recv(BUFFER_SIZE)
+            chunks += 1
+
             if len(data) > 0:
                 print("Data from {}:{} \"{}\"".format(client_address[0], client_address[1], data))
 
-            # Close the socket. No socket operations can happen after this.
-            # If there was more data to send, you would not want to do this.
-            # You would want a loop of 'recv' and keep the 'accept' and 'close'
-            # out of that loop.
-            # Normally you'd send some kind of 'special' data that would indicate
-            # you are done.
-            state = NO_CONNECTION
-            connection.close()
+            # Append this chunk to the full message
+            full_message += data
+
+            if full_message[-1] == 10:
+                # Close the socket. No socket operations can happen after this.
+                state = NO_CONNECTION
+                connection.close()
+                done = True
 
         except BlockingIOError:
             pass
@@ -61,4 +69,4 @@ while True:
 # Close the socket. No socket operations can happen after this.
 my_socket.close()
 
-print("Done")
+print("Done receiving message. Processed {} bytes in {} chunks.".format(len(full_message), chunks))

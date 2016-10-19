@@ -38,6 +38,8 @@ while True:
   finally:
     # Close the socket. No socket operations can happen after this.
     # If there was more data to send, you would not want to do this.
+    # You would want a loop of 'recv' and keep the 'accept' and 'close'
+    # out of that loop.
     connection.close()
 
 socket.close()
