@@ -49,7 +49,7 @@ Sometimes like my students who laugh when I tell the same joke over.
 when he/she could be sending data. Time is wasted. If the timeout is set too
 short, then mass confusion happens:
 
-.. figure:: sliding-windows-protocol.png
+.. figure:: sliding-windows-protocol.jpg
     :width: 340px
     :alt: alternate text
 

@@ -10,3 +10,4 @@ Theory
    network_layer/network_layer.rst
    transport_layer/transport_layer.rst
    session_layer/session_layer.rst
+   security/security.rst

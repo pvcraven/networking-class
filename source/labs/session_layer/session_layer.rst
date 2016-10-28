@@ -21,6 +21,7 @@ Explain in-person (ideally) or write-up the following vocabulary:
 * Explain the following vocabulary:
     * Plaintext_ / Cleartext
     * Ciphertext_
+    * Base64_ Encoding
     * `Block Cipher`_
     * `Symmetric Key`_ / Secret key
         * DES_
@@ -41,14 +42,14 @@ Note, it is best to store passwords as hashes. SSN and Credit Cards should
 always be stored encrypted. It is very likely you will run into this need
 during your career.
 
-In my opinion, it should be crimsaving passwords as anything but secure hashes
-credit card numbers,
+In my opinion, it should be a crime to save passwords as anything but a hash,
+and credit card numbers or SSN as anything but encrypted.
 
 Encryption Coding
 ^^^^^^^^^^^^^^^^^
 
 * Use libraries in Java or Python to perform:
-    * Secret Key Encryption
+    * Secret Key Encryption (Like AES) (`Example <http://www.quickprogrammingtips.com/java/how-to-encrypt-and-decrypt-data-in-java-using-aes-algorithm.html>`)
     * Asymmetric Key Encrypting
     * Hash function
 
@@ -57,6 +58,7 @@ SSH Using Public/Private Keys
 
 * Figure out how to shell to another computer using SSH and a public/private key. Do this
   with two Linux/Mac computers using the ``.ssh`` directory.
+* `Tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2>` (Steps 1-3)
 
 Understanding Cookies
 ^^^^^^^^^^^^^^^^^^^^^
@@ -91,3 +93,4 @@ Other stuff
 .. _Cryptographic hash function: https://en.wikipedia.org/wiki/Cryptographic_hash_function
 .. _Salt: https://en.wikipedia.org/wiki/Salt_(cryptography)
 .. _Digital Signature: https://en.wikipedia.org/wiki/Digital_signature
+.. _Base64: https://en.wikipedia.org/wiki/Base64

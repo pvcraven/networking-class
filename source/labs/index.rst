@@ -8,3 +8,4 @@ Labs
    data_link/data_link.rst
    networking_layer/networking_layer.rst
    transport_layer/transport_layer.rst
+   session_layer/session_layer.rst
