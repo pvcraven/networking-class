@@ -65,10 +65,8 @@ appear to bounce across all the screens.
 
 * Examine the code at :ref:`tcp_tutorial`.
 * Get a "bouncing ball" program to work. Either
-  `this Pygame one <http://programarcadegames.com/python_examples/f.php?file=bouncing_rectangle.py>`_
-  or `this Arcade one <https://pythonhosted.org/arcade/examples/bouncing_rectangle.html>`_
-* Adjust the program so you can have any number of balls bouncing. I suggest creating
-  a ball each time you hit the space bar.
+  `this Pygame one <http://programarcadegames.com/python_examples/f.php?file=bouncing_balls.py>`_
+  or `this Arcade one <https://pythonhosted.org/arcade/examples/bouncing_balls.html>`_
 * Create variables to hold what computer is to your left and right.
 
   * Set them for address and port on "left" and "right" side
