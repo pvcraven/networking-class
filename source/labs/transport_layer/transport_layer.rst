@@ -82,14 +82,17 @@ For example:
 
 ``50,-3,2\n``
 
-To send that information, you will likely need to use `print formatting <http://programarcadegames.com/index.php?chapter=formatting>`_.
+To get that information ready to **send**, you will likely need to use
+`print formatting <http://programarcadegames.com/index.php?chapter=formatting>`_.
+That will allow you to convert from a integer to a string.
 
-You will also likely need to use the python ``split`` function to split the string
-into parts::
+After you **receive** that string, you need to convert it back from a string to an
+integer. You will likely need to use the python ``split`` function to split the
+string into parts::
 
   string_list = my_string.split(",")
 
-And then convert the strings into numbers::
+And then convert the strings into integers like this::
 
   y = int(string_list[0])
 
