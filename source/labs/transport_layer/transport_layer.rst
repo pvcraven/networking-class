@@ -82,6 +82,17 @@ For example:
 
 ``50,-3,2\n``
 
+To send that information, you will likely need to use `print formatting <http://programarcadegames.com/index.php?chapter=formatting>`_.
+
+You will also likely need to use the python ``split`` function to split the string
+into parts::
+
+  string_list = my_string.split(",")
+
+And then convert the strings into numbers::
+
+  y = int(string_list[0])
+
 * Close the connection after sending.
 * Add TCP listeners for the left and for the right.
 * If you receive numbers, add a new ball with the appropriate y value and vector.
