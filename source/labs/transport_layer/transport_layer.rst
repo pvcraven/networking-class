@@ -111,6 +111,7 @@ Threaded Bouncing Balls
 * Instead of non-blocking calls in your main program loop, figure out how to
   create separate receiving threads to manage the network connections. (No
   need to thread the sending.)
+* For an example of using threads in Python, see: :ref:`thread_tutorial`
 
 Foreign Bouncing Balls
 ^^^^^^^^^^^^^^^^^^^^^^
