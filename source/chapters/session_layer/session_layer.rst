@@ -115,6 +115,10 @@ just as easily as your actual e-mail.
 There are more controls in place now, but it is still easy to send mail using
 SMTP. Even just using Telnet.
 
+Note: In the example below I was unable to use MobaXTerm because of the different
+line endings between Windows and UNIX. I instead shelled to a UNIX machine and
+then to mail.simpson.edu.
+
 .. code-block:: none
     :emphasize-lines: 1,6,8,10,12,14-20,22
 
@@ -242,7 +246,7 @@ on a LDAP server.
 
 .. code-block:: php
 
-    $hostname = "ldap://my.ldap.server.com/";
+    $hostname = "ldap://my-ldap-server.mydomain.com/";
 
     $con =  ldap_connect($hostname);
     if (!is_resource($con))
@@ -250,12 +254,15 @@ on a LDAP server.
     ldap_set_option($con, LDAP_OPT_PROTOCOL_VERSION, 3);
     ldap_set_option($con, LDAP_OPT_REFERRALS, 0);
 
-    if (!ldap_bind($con, $username . "@simpson.edu" , $password))
+    if (!ldap_bind($con, $username . "@mydomain.com" , $password))
     {
         $messages['LDAP']="<p class='errormsg'>Error - Login Failed</p>";
         $error=True;
     }
     ldap_close($con);
+
+.. code-block:: none
+    :emphasize-lines: 4
 
 
 Encryption Keys
@@ -276,6 +283,10 @@ Using Keys with HTTPS
 Cookies
 -------
 
+Streaming
+---------
+
+https://sidbala.com/h-264-is-magic/
 
 .. _File Transfer Protocol: https://en.wikipedia.org/wiki/File_Transfer_Protocol
 .. _TL;DR: https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read
