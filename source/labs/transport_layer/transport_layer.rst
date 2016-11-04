@@ -91,6 +91,9 @@ as string to a byte array::
 
     my_byte_array = bytearray(my_string, "UTF-8")
 
+Once you receive it, you'll need to go from a byte array to a string::
+
+    my_string = my_byte_array.decode("UTF-8")
 After you **receive** that string, you need to convert it back from a string to an
 integer. You will likely need to use the python ``split`` function to split the
 string into parts::
