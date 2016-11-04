@@ -67,6 +67,7 @@ Understanding Cookies
 
 Understanding UNIX Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * Create groups and accounts on Raspberry Pi
 * Understand ``chmod`` command.
 
@@ -76,6 +77,8 @@ Other stuff
 * Set up HTTPS with web?
 * Use AWS for login?
 * File sharing?
+* Create a web server in Java or Python?
+* Show how to manually fetch a web page over Telnet?
 
 .. _multi-factor authentication: https://en.wikipedia.org/wiki/Multi-factor_authentication
 .. _SHA: https://en.wikipedia.org/wiki/Secure_Hash_Algorithm
