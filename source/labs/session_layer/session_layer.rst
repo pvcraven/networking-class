@@ -74,8 +74,7 @@ Understanding UNIX Permissions
 Other stuff
 ^^^^^^^^^^^
 
-* Set up HTTPS with web?
-* Use AWS for login?
+* Write a program to send e-mail, and do a Wireshark trace on it?
 * File sharing?
 * Create a web server in Java or Python?
 * Show how to manually fetch a web page over Telnet?

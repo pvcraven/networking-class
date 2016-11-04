@@ -129,7 +129,7 @@ use the program to connect to that IP address.
 Changing the Default Password
 -----------------------------
 
-By default, the username on your computer is ``pi`` and the password is ``raspberry``.
+By default, the user name on your computer is ``pi`` and the password is ``raspberry``.
 To prevent other people and your classmates from accessing your computer, you can
 change the default password. Use the command ``passwd`` from the terminal window.
 
