@@ -13,8 +13,6 @@ It is also responsible for recreating the connection if it gets dropped. And in
 some cases (like the web) you might have multiple connections open as part
 of a session.
 
-.. _session layer: https://en.wikipedia.org/wiki/Session_layer
-
 Protocols You Should Know
 -------------------------
 
@@ -55,12 +53,16 @@ There are other alternatives to FTP:
   can transfer files this way. MobaXTerm does this on the side. This is the
   better way to do things.
 
+**Alternatives:**
 
-Incidentally, if you grab a file off the web via the command-line, use the
+If you want to grab a file off the web via the command-line, use the
 ``wget`` command::
 
 	wget http://cs.simpson.edu/myfile.zip
 
+If you want to keep two directories synchronized, use rsync_. I've wasted a lot
+of time with rsync, so I don't personally like it. But a lot of other people do
+like it.
 
 Network Time Protocol (NTP)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -116,7 +118,7 @@ There are more controls in place now, but it is still easy to send mail using
 SMTP. Even just using Telnet.
 
 Note: In the example below I was unable to use MobaXTerm because of the different
-line endings between Windows and UNIX. I instead shelled to a UNIX machine and
+line endings between Windows and UNIX. I instead shelled to a Linux machine and
 then to mail.simpson.edu.
 
 .. code-block:: none
@@ -148,11 +150,13 @@ then to mail.simpson.edu.
     Connection closed by foreign host.
 
 
+You don't have to manually write the code to send e-mail however.
 There are many libraries out there for sending e-mail from a program. See
-`here <https://docs.python.org/3.5/library/email-examples.html>`_ for some
-Python examples.
+`here <https://docs.python.org/3.5/library/email-examples.html>`_ for how
+to do it in Python.
 
-
+JavaMail is used for Java, you can see a tutorial
+`here <http://crunchify.com/java-mailapi-example-send-an-email-via-gmail-smtp/>`_.
 
 Multipurpose Internet Mail Extensions (MIME)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -231,6 +235,13 @@ So here I've specified the URL and the modern version of HTTP:
 	<!doctype html>
 	And so forth...
 
+If you get into making high-performance web sites, you'll need to understand
+the HTTP protocol in more detail.
+
+Try `WebPageTest.org <https://www.webpagetest.org/>`_ on a website like
+`Hy-Vee's <http://hyvee.com>`_. Also look at the `HTTP status codes`_ and see how
+those codes work on the 2nd request.
+
 
 Lightweight Directory Access Protocol / Active Directory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -297,3 +308,7 @@ https://sidbala.com/h-264-is-magic/
 .. _Lightweight Directory Access Protocol: https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 .. _Active Directory: https://en.wikipedia.org/wiki/Active_Directory
 .. _MIME: https://en.wikipedia.org/wiki/MIME
+.. _HTTP status codes: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+.. _session layer: https://en.wikipedia.org/wiki/Session_layer
+.. _rsync: https://en.wikipedia.org/wiki/Rsync
+

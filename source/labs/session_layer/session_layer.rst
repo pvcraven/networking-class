@@ -74,10 +74,10 @@ Understanding UNIX Permissions
 Other stuff
 ^^^^^^^^^^^
 
-* Write a program to send e-mail, and do a Wireshark trace on it?
-* File sharing?
-* Create a web server in Java or Python?
-* Show how to manually fetch a web page over Telnet?
+* Use a library to send e-mail
+* Write a program from scratch to send e-mail, and do a Wireshark trace on it?
+* Create a web server from scratch in Java or Python?
+* Web scrape BS4 or similar
 
 .. _multi-factor authentication: https://en.wikipedia.org/wiki/Multi-factor_authentication
 .. _SHA: https://en.wikipedia.org/wiki/Secure_Hash_Algorithm
