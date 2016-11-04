@@ -65,10 +65,8 @@ appear to bounce across all the screens.
 
 * Examine the code at :ref:`tcp_tutorial`.
 * Get a "bouncing ball" program to work. Either
-  `this Pygame one <http://programarcadegames.com/python_examples/f.php?file=bouncing_rectangle.py>`_
-  or `this Arcade one <https://pythonhosted.org/arcade/examples/bouncing_rectangle.html>`_
-* Adjust the program so you can have any number of balls bouncing. I suggest creating
-  a ball each time you hit the space bar.
+  `this Pygame one <http://programarcadegames.com/python_examples/f.php?file=bouncing_balls.py>`_
+  or `this Arcade one <https://pythonhosted.org/arcade/examples/bouncing_balls.html>`_
 * Create variables to hold what computer is to your left and right.
 
   * Set them for address and port on "left" and "right" side
@@ -83,6 +81,20 @@ appear to bounce across all the screens.
 For example:
 
 ``50,-3,2\n``
+
+To get that information ready to **send**, you will likely need to use
+`print formatting <http://programarcadegames.com/index.php?chapter=formatting>`_.
+That will allow you to convert from a integer to a string.
+
+After you **receive** that string, you need to convert it back from a string to an
+integer. You will likely need to use the python ``split`` function to split the
+string into parts::
+
+  string_list = my_string.split(",")
+
+And then convert the strings into integers like this::
+
+  y = int(string_list[0])
 
 * Close the connection after sending.
 * Add TCP listeners for the left and for the right.
@@ -99,12 +111,13 @@ Threaded Bouncing Balls
 * Instead of non-blocking calls in your main program loop, figure out how to
   create separate receiving threads to manage the network connections. (No
   need to thread the sending.)
+* For an example of using threads in Python, see: :ref:`thread_tutorial`
 
 Foreign Bouncing Balls
 ^^^^^^^^^^^^^^^^^^^^^^
 
 * Create a threaded on non-threaded bouncing ball program in a language other
-  than Python. Like Java for example.
+  than Python. Like Java for example. See :ref:`java_ball_bounce`
 
 .. _TCP handshaking: https://en.wikipedia.org/wiki/Transmission_Control_Protocol
 
