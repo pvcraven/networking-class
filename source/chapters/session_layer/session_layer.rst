@@ -115,9 +115,40 @@ just as easily as your actual e-mail.
 There are more controls in place now, but it is still easy to send mail using
 SMTP. Even just using Telnet.
 
+.. code-block:: none
+    :emphasize-lines: 1,6,8,10,12,14-20,22
+
+    craven@cs ~ $ telnet mail.simpson.edu 25
+    Trying 207.32.33.199...
+    Connected to mail.simpson.edu.
+    Escape character is '^]'.
+    220 cas3.sc.loc Microsoft ESMTP MAIL Service ready at Fri, 4 Nov 2016 12:27:18 -0500
+    HELO simpson.edu
+    250 cas3.sc.loc Hello [207.32.33.199]
+    MAIL from: <paul.craven@simpson.edu>
+    250 2.1.0 Sender OK
+    RCPT to: <paul.craven@simpson.edu>
+    250 2.1.5 Recipient OK
+    DATA
+    354 Start mail input; end with <CRLF>.<CRLF>
+    From: dude@dude.com
+    To: paul.craven@simpson.edu
+    Subject: Hi
+
+    This is a test
+
+    .
+    250 2.6.0 <fcf8afb4-10f5-489d-8bca-6dc03b3d7105@CAS3.sc.loc> [InternalId=6924808] Queued mail for delivery
+    QUIT
+    221 2.0.0 Service closing transmission channel
+    Connection closed by foreign host.
+
+
 There are many libraries out there for sending e-mail from a program. See
 `here <https://docs.python.org/3.5/library/email-examples.html>`_ for some
 Python examples.
+
+
 
 Multipurpose Internet Mail Extensions (MIME)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

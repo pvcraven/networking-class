@@ -49,7 +49,7 @@ Encryption Coding
 ^^^^^^^^^^^^^^^^^
 
 * Use libraries in Java or Python to perform:
-    * Secret Key Encryption (Like AES) (`Example <http://www.quickprogrammingtips.com/java/how-to-encrypt-and-decrypt-data-in-java-using-aes-algorithm.html>`)
+    * Secret Key Encryption (Like AES) (`Example <http://www.quickprogrammingtips.com/java/how-to-encrypt-and-decrypt-data-in-java-using-aes-algorithm.html>`_)
     * Asymmetric Key Encrypting
     * Hash function
 
@@ -58,7 +58,7 @@ SSH Using Public/Private Keys
 
 * Figure out how to shell to another computer using SSH and a public/private key. Do this
   with two Linux/Mac computers using the ``.ssh`` directory.
-* `Tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2>` (Steps 1-3)
+* `Tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2>`_ (Steps 1-3)
 
 Understanding Cookies
 ^^^^^^^^^^^^^^^^^^^^^
