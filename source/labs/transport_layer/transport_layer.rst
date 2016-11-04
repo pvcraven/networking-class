@@ -117,7 +117,7 @@ Foreign Bouncing Balls
 ^^^^^^^^^^^^^^^^^^^^^^
 
 * Create a threaded on non-threaded bouncing ball program in a language other
-  than Python. Like Java for example.
+  than Python. Like Java for example. See :ref:`java_ball_bounce`
 
 .. _TCP handshaking: https://en.wikipedia.org/wiki/Transmission_Control_Protocol
 
