@@ -41,19 +41,23 @@ For example::
 
 	ftp://paul_craven:mypassword@cs.simpson.edu/mydir/myotherdir/myfile.zip
 
-There are dedicated FTP clients. My favorite is FileZilla_. These are great if
-you have a large number of files to move from one spot to another.
+There are dedicated FTP clients. My favorite is FileZilla_.
+These are great if you have a large number of files to move from one spot to another.
+HOWEVER, it now appears that FileZilla has adware. Even though it allows you
+to opt-out of it, I'm not so wild about that.
 
 FTP runs by default on port 21.
+
+**Alternatives:**
 
 There are other alternatives to FTP:
 
 * FTPS: Encrypts the session. Outdated.
-* SSH File Transfer Protocol: Sends files over an SSH connection. FileZilla
+* SFTP: File Transfer Protocol: Sends files over an SSH connection. FileZilla
   can transfer files this way. MobaXTerm does this on the side. This is the
   better way to do things.
+* Use HTTP
 
-**Alternatives:**
 
 If you want to grab a file off the web via the command-line, use the
 ``wget`` command::
