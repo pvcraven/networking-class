@@ -246,6 +246,14 @@ Try `WebPageTest.org <https://www.webpagetest.org/>`_ on a website like
 `Hy-Vee's <http://hyvee.com>`_. Also look at the `HTTP status codes`_ and see how
 those codes work on the 2nd request.
 
+Like e-mail, you don't have to write your own program to grab and parse pages
+that you get over the Internet. There are many libraries out there already
+written for this purpose.
+
+* `Beautiful Soup 4 <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_ for Python
+* `Jsoup <https://jsoup.org/>`_ for Java
+* PHP has it built in. `Some examples I wrote a while back <http://webdev.training/index.php?chapter=php_command_line&lang=en#section_15>`_.
+
 
 Lightweight Directory Access Protocol / Active Directory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -276,32 +284,55 @@ on a LDAP server.
     }
     ldap_close($con);
 
-.. code-block:: none
-    :emphasize-lines: 4
+
+Microsoft has an
+`Active Directory Client <https://technet.microsoft.com/en-us/sysinternals/adexplorer.aspx>`_.
+This is useful for browsing and understanding the layout of an AD structure. But
+be careful using this or tools like it. It could be a security violation of your
+organization.
+
+Don't use this tool at Simpson.
+
+Encryption and Hashing
+----------------------
 
 
-Encryption Keys
----------------
+* Know the following vocabulary:
+    * Plaintext_ / Cleartext
+    * Ciphertext_
+    * Base64_ Encoding
+    * `Block Cipher`_
+    * `Symmetric Key`_ / Secret key
+        * DES_
+        * AES_
+    * `Asymmetric Key`_
+        * What is the "public key" and the "private key"
+        * `Diffie-Hellman`_
+        * RSA_
+    * `Cryptographic hash function`_
+        * MD5_
+        * SHA_: SHA-1, SHA-2, SHA-3
+        * `Rainbow table`_
+        * Salt_
+    * `Digital Signature`_
+    * Two-factor / `multi-factor authentication`_
 
-Symmetric
-^^^^^^^^^
+Note, it is best to store passwords as hashes. SSN and Credit Cards should
+always be stored encrypted. It is very likely you will run into this need
+during your career.
 
-Asymmetric
-^^^^^^^^^^
+In my opinion, it should be a crime to save passwords as anything but a hash,
+and credit card numbers or SSN as anything but encrypted.
 
-Using Keys with SSH
-^^^^^^^^^^^^^^^^^^^
 
-Using Keys with HTTPS
-^^^^^^^^^^^^^^^^^^^^^
-
-Cookies
--------
+* Using Keys with SSH
+* Using Keys with HTTPS
 
 Streaming
 ---------
 
-https://sidbala.com/h-264-is-magic/
+`This is a great explanation of H-264 <https://sidbala.com/h-264-is-magic/>`_.
+
 
 .. _File Transfer Protocol: https://en.wikipedia.org/wiki/File_Transfer_Protocol
 .. _TL;DR: https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read
@@ -315,4 +346,21 @@ https://sidbala.com/h-264-is-magic/
 .. _HTTP status codes: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 .. _session layer: https://en.wikipedia.org/wiki/Session_layer
 .. _rsync: https://en.wikipedia.org/wiki/Rsync
+.. _multi-factor authentication: https://en.wikipedia.org/wiki/Multi-factor_authentication
+.. _SHA: https://en.wikipedia.org/wiki/Secure_Hash_Algorithm
+.. _MD5: https://en.wikipedia.org/wiki/MD5
+.. _Rainbow table: https://en.wikipedia.org/wiki/Rainbow_table
+.. _Plaintext: https://en.wikipedia.org/wiki/Plaintext
+.. _Ciphertext:  https://en.wikipedia.org/wiki/Ciphertext
+.. _Symmetric Key: https://en.wikipedia.org/wiki/Symmetric-key_algorithm
+.. _DES: https://en.wikipedia.org/wiki/Data_Encryption_Standard
+.. _Block Cipher: https://en.wikipedia.org/wiki/Block_cipher
+.. _AES: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+.. _Asymmetric Key: https://en.wikipedia.org/wiki/Public-key_cryptography
+.. _Diffie-Hellman: https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange
+.. _RSA: https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+.. _Cryptographic hash function: https://en.wikipedia.org/wiki/Cryptographic_hash_function
+.. _Salt: https://en.wikipedia.org/wiki/Salt_(cryptography)
+.. _Digital Signature: https://en.wikipedia.org/wiki/Digital_signature
+.. _Base64: https://en.wikipedia.org/wiki/Base64
 
