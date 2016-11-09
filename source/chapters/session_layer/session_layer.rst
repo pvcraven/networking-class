@@ -293,6 +293,11 @@ organization.
 
 Don't use this tool at Simpson.
 
+Single Sign On
+--------------
+
+Put something here.
+
 Encryption and Hashing
 ----------------------
 
