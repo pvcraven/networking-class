@@ -86,7 +86,21 @@ Web Server
 
 (Medium)
 
-Write a very simple web server. Serve up files over port 80. Respone to GET
+Write a very simple web server. Serve up files over port 80. Respond to GET
 requests. Write this yourself. You can look at examples, but don't just copy
 one.
 
+Single Sign On
+^^^^^^^^^^^^^^
+
+(Medium)
+
+Implement `Amazon's login service <http://login.amazon.com/>`_ yourself.
+Do it on the Web, Android, or iOS.
+
+http://login.amazon.com/
+
+To get credit for this, you'll need to show and explain the code in operation.
+
+See me if you'd like to do single sign on with Facebook, GitHub, or some other
+service instead.

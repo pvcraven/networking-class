@@ -182,9 +182,6 @@ interface with the server via IMAP_.
 IMAP replaced POP3 and added folders, push notifications and a lot of other
 functionality.
 
-.. _IMAP: https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
-.. _Thunderbird: https://www.mozilla.org/en-US/thunderbird/
-
 Hyper Text Transfer Protocol (HTTP)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -296,7 +293,20 @@ Don't use this tool at Simpson.
 Single Sign On
 --------------
 
-Put something here.
+It is possible to use LDAP or many other tools to implement
+`Single Sign On`_ (SSO). SSO lets a user use the same user name and password
+across multiple systems. For example, you can log into the Simpson computers
+and websites using your same information.
+
+You can also use SSO to log in with one account across multiple websites.
+These can be a hassle to program at first, but once they are working, it is
+handy for users to have this functionality.
+
+The last SSO that I coded was Amazon's. You can try it yourself if you like:
+
+http://login.amazon.com/
+
+In fact, you can even pay using Amazon.
 
 Encryption and Hashing
 ----------------------
@@ -329,9 +339,39 @@ during your career.
 In my opinion, it should be a crime to save passwords as anything but a hash,
 and credit card numbers or SSN as anything but encrypted.
 
+SSH
+^^^
 
-* Using Keys with SSH
-* Using Keys with HTTPS
+Secure Shell typically uses asymmetric keys using the RSA algorithm.
+
+HTTPS
+^^^^^
+
+HTTPS provides:
+
+* Encryption
+* Authentication of the server
+* Protection against "man in the middle"
+
+A certificate can be a `Domain Validation`_ certificate. There are some
+brief, usually automated checks to see if the person asking for the certificate
+has access to the domain. It isn't a very detailed check.
+
+A Organization Validation certificate does some vetting to make sure that
+the organization is a valid, real, organization.
+
+An `Extended Validation`_ certificate does quite a bit of vetting to make sure
+that the organization is real, and there is even some auditing that happens.
+Many browsers support turning the address bar green for websites that have this
+level of certificate.
+
+Certificates used to be expensive, and a hassle. However, recently some free
+and automated services have been created to make it easier to have encrypted
+websites. `Let's Encrypt <https://letsencrypt.org/>`_ is one such service
+that has a lot of big-name sponsors.
+
+.. _Extended Validation: https://en.wikipedia.org/wiki/Extended_Validation_Certificate
+.. _Domain Validation: https://en.wikipedia.org/wiki/Domain-validated_certificate
 
 Streaming
 ---------
@@ -368,4 +408,7 @@ Streaming
 .. _Salt: https://en.wikipedia.org/wiki/Salt_(cryptography)
 .. _Digital Signature: https://en.wikipedia.org/wiki/Digital_signature
 .. _Base64: https://en.wikipedia.org/wiki/Base64
+.. _Single Sign On: https://en.wikipedia.org/wiki/Single_sign-on
+.. _IMAP: https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
+.. _Thunderbird: https://www.mozilla.org/en-US/thunderbird/
 
