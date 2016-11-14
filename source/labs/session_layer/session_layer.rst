@@ -46,7 +46,11 @@ Understanding Cookies
     * `Source code of website <http://webdev.training/index.php?chapter=login_management>`_
     * `Website itself <http://webdev.training/chapters/login_management/v2/main.php>`_
     * The password is "mysecretpassword"
-* Show and explain, in person, how this works. If you can't figure it out on your
+* How does the server use cookies to hold information about the user?
+* What are the security risks around cookies?
+* What options do cookies have?
+* Show and explain, in person, how this whole web-cookie thing works.
+  If you can't figure it out on your
   own you can ask, but then you must wait 24 hours before you are allowed to
   explain it to me.
 
