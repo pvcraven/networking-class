@@ -20,10 +20,12 @@ Understanding UNIX Permissions
 (Easy)
 
 * Create groups and accounts on Raspberry Pi
+* Explain why we have groups
 * `Here's a tutorial <https://www.tutorialspoint.com/unix/unix-user-administration.htm>`_.
 * `Here's another <https://www.linode.com/docs/tools-reference/linux-users-and-groups>`_.
-* Understand the ``chmod``, ``chown``, ``useradd``, ``passwrd``, ``groups``, ``userdel``, ``newgrp``, ``chgrp`` commands.
+* Understand the ``chmod``, ``chown``, ``useradd``, ``passwd``, ``groups``, ``userdel``, ``newgrp``, ``chgrp`` commands.
 * Learn the Chmod Octal Format
+* How to create a group, add a person to a group, remove a person from a group
 * Explain, in person, how this works.
 
 SSH Using Public/Private Keys
