@@ -22,7 +22,8 @@ Understanding UNIX Permissions
 * Create groups and accounts on Raspberry Pi
 * `Here's a tutorial <https://www.tutorialspoint.com/unix/unix-user-administration.htm>`_.
 * `Here's another <https://www.linode.com/docs/tools-reference/linux-users-and-groups>`_.
-* Understand ``chmod`` and ``chown`` command.
+* Understand the ``chmod``, ``chown``, ``useradd``, ``passwrd``, ``groups``, ``userdel``, ``newgrp``, ``chgrp`` commands.
+* Learn the Chmod Octal Format
 * Explain, in person, how this works.
 
 SSH Using Public/Private Keys
