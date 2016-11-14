@@ -34,6 +34,8 @@ SSH Using Public/Private Keys
 * Figure out how to shell to another computer using SSH and a public/private key. Do this
   with two Linux/Mac computers using the ``.ssh`` directory.
 * `Tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2>`_ (Steps 1-3)
+* Make sure you know what directory and files all the key info is stored in. Ask if you
+  have trouble figuring it out, because the directory is hidden.
 * Demonstrate, in person, the ability to shell between computers this way.
 
 Understanding Cookies
