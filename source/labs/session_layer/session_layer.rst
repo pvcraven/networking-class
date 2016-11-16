@@ -45,18 +45,29 @@ Understanding Cookies
 
 (Easy)
 
-* Demonstrate and show what happens with a cookie to manage a session via Wireshark
-* Use this website:
-    * `Source code of website <http://webdev.training/index.php?chapter=login_management>`_
-    * `Website itself <http://webdev.training/chapters/login_management/v2/main.php>`_
-    * The password is "mysecretpassword"
-* How does the server use cookies to hold information about the user?
-* What are the security risks around cookies?
-* What options do cookies have?
 * Show and explain, in person, how this whole web-cookie thing works.
   If you can't figure it out on your
   own you can ask, but then you must wait 24 hours before you are allowed to
   explain it to me.
+* Demonstrate and show what happens with a cookie to manage a session via Wireshark
+* You can use this website:
+    * `Source code of website <http://webdev.training/index.php?chapter=login_management>`_
+    * `Website itself <http://webdev.training/chapters/login_management/v2/main.php>`_
+    * The password is "mysecretpassword"
+* How is a cookie set? What does across the wire?
+* What is the difference between a persistent and a session cookie?
+* What is a third party cookie?
+* How do you set an expire time on a cookie? (See `cookie options <https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/>`_)
+* What is a cookie path?
+* Why would you not set a cookie to equal a user name?
+* How does a cookie track a user name or other information? How does it hold
+  "session data" when none of that is stored in the cookie?
+* Session data for most languages is stored in memory.
+    * What is the best data structure for doing this?
+    * What are disadvantages of doing this?
+    * When programming, what do you need to keep in mind because of this?
+    * What are advantages/disadvantages of storing data in the database?
+* What are the security risks around cookies?
 
 Encryption Coding
 ^^^^^^^^^^^^^^^^^
