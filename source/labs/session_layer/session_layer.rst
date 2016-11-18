@@ -110,6 +110,25 @@ Write a very simple web server. Serve up files over port 80. Respond to GET
 requests. Write this yourself. You can look at examples, but don't just copy
 one.
 
+Write it in steps. Pick your favorite language to do it in.
+
+* Write a program to listen on port 80. Try connecting to it with your web browser.
+* Adjust your program so that it reads what the web browser sends. When you get two
+  line feeds in a row, then it should be done sending data. At the very least, you'll need to read up to the first line feed. Print out what you read in.
+* To do this properly, you should **not** assume the entire request comes in one data
+  packet. Each character might come in its own packet. You'll should loop and build
+  your buffer as the characters arrive. And you should even support a backspace
+  character modifying the buffer.
+  But for simplicity of coding I don't care if you make the assumption it does come in
+  one packet and ignore the backspace thing.
+* Send back a simple hard-coded response. See that the web browser gets it.
+* Instead of a hard-coded response, pull a file.
+
+Note, just following the points above will make your program vulnerable to a
+"directory traversal" vulnerability. That's where a person asks for a file like:
+``../etc/passwd`` or ``%2e%2e%2fetc%2f``. (The ``%2e`` is a URL encoded ``.``,
+and ``%2f`` is a ``/``, in case you don't know.)
+
 Single Sign On
 ^^^^^^^^^^^^^^
 
