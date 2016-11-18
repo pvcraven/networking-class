@@ -47,6 +47,7 @@ SSH Using Public/Private Keys
 * Make sure you know what directory and files all the key info is stored in. Ask if you
   have trouble figuring it out, because the directory is hidden.
 * Explain the purpose of the ``id_rsa``, ``id_rsa.pub``, ``authorized_keys``, ``known_hosts``
+  files.
 * Demonstrate, in person, the ability to shell between computers this way.
 * Note: You can leave the pass phrase blank, and then shell directly between computers
   simply based on having the key. If you include a pass phrase, then you need both the
@@ -61,7 +62,9 @@ Understanding Cookies
   If you can't figure it out on your
   own you can ask, but then you must wait 24 hours before you are allowed to
   explain it to me.
-* Demonstrate and show what happens with a cookie to manage a session via Wireshark
+* Demonstrate and show what happens with a cookie to manage a session via Wireshark.
+* **Note**: When you are looking at a web request in Wireshark, your can right-click
+  on one of the packets and "Follow" the whole exchange in plain-text format.
 * You can use this website:
     * `Source code of website <http://webdev.training/index.php?chapter=login_management>`_
     * `Website itself <http://webdev.training/chapters/login_management/v2/main.php>`_
