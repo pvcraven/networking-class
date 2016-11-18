@@ -19,14 +19,22 @@ Understanding UNIX Permissions
 
 (Easy)
 
-* Create groups and accounts on Raspberry Pi
-* Explain why we have groups
+* On the Raspberry Pi, or a Linux computer of some sort, explain "groups" and
+  why we have them.
 * `Here's a tutorial <https://www.tutorialspoint.com/unix/unix-user-administration.htm>`_.
 * `Here's another <https://www.linode.com/docs/tools-reference/linux-users-and-groups>`_.
-* Understand the ``chmod``, ``chown``, ``useradd``, ``passwd``, ``groups``, ``userdel``, ``newgrp``, ``chgrp`` commands.
+* Show how to:
+    * Explain all the file permission indicators shown when you do a ``ls -la``
+    * Create a user
+    * Delete a user
+    * Change a password
+    * Create a group
+    * Add a new person to a group
+    * Add an existing person to a group
+    * Remove a person from a group
+* Understand the ``chmod``, ``chown``, ``useradd``, ``passwd``, ``groups``, ``userdel``, ``newgrp``, ``chgrp``, ``usermod`` commands.
 * Learn the Chmod Octal Format
-* How to create a group, add a person to a group, remove a person from a group
-* Explain, in person, how this works.
+* Show me, in person, how this works.
 
 SSH Using Public/Private Keys
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -38,7 +46,11 @@ SSH Using Public/Private Keys
 * `Tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2>`_ (Steps 1-3)
 * Make sure you know what directory and files all the key info is stored in. Ask if you
   have trouble figuring it out, because the directory is hidden.
+* Explain the purpose of the ``id_rsa``, ``id_rsa.pub``, ``authorized_keys``, ``known_hosts``
 * Demonstrate, in person, the ability to shell between computers this way.
+* Note: You can leave the pass phrase blank, and then shell directly between computers
+  simply based on having the key. If you include a pass phrase, then you need both the
+  key and know the pass phrase. There is a trade-off between security and convenience.
 
 Understanding Cookies
 ^^^^^^^^^^^^^^^^^^^^^
