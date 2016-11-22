@@ -19,14 +19,22 @@ Understanding UNIX Permissions
 
 (Easy)
 
-* Create groups and accounts on Raspberry Pi
-* Explain why we have groups
+* On the Raspberry Pi, or a Linux computer of some sort, explain "groups" and
+  why we have them.
 * `Here's a tutorial <https://www.tutorialspoint.com/unix/unix-user-administration.htm>`_.
 * `Here's another <https://www.linode.com/docs/tools-reference/linux-users-and-groups>`_.
-* Understand the ``chmod``, ``chown``, ``useradd``, ``passwd``, ``groups``, ``userdel``, ``newgrp``, ``chgrp`` commands.
+* Show how to:
+    * Explain all the file permission indicators shown when you do a ``ls -la``
+    * Create a user
+    * Delete a user
+    * Change a password
+    * Create a group
+    * Add a new person to a group
+    * Add an existing person to a group
+    * Remove a person from a group
+* Understand the ``chmod``, ``chown``, ``useradd``, ``passwd``, ``groups``, ``userdel``, ``newgrp``, ``chgrp``, ``usermod`` commands.
 * Learn the Chmod Octal Format
-* How to create a group, add a person to a group, remove a person from a group
-* Explain, in person, how this works.
+* Show me, in person, how this works.
 
 SSH Using Public/Private Keys
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -38,7 +46,12 @@ SSH Using Public/Private Keys
 * `Tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2>`_ (Steps 1-3)
 * Make sure you know what directory and files all the key info is stored in. Ask if you
   have trouble figuring it out, because the directory is hidden.
+* Explain the purpose of the ``id_rsa``, ``id_rsa.pub``, ``authorized_keys``, ``known_hosts``
+  files.
 * Demonstrate, in person, the ability to shell between computers this way.
+* Note: You can leave the pass phrase blank, and then shell directly between computers
+  simply based on having the key. If you include a pass phrase, then you need both the
+  key and know the pass phrase. There is a trade-off between security and convenience.
 
 Understanding Cookies
 ^^^^^^^^^^^^^^^^^^^^^
@@ -49,7 +62,9 @@ Understanding Cookies
   If you can't figure it out on your
   own you can ask, but then you must wait 24 hours before you are allowed to
   explain it to me.
-* Demonstrate and show what happens with a cookie to manage a session via Wireshark
+* Demonstrate and show what happens with a cookie to manage a session via Wireshark.
+* **Note**: When you are looking at a web request in Wireshark, your can right-click
+  on one of the packets and "Follow" the whole exchange in plain-text format.
 * You can use this website:
     * `Source code of website <http://webdev.training/index.php?chapter=login_management>`_
     * `Website itself <http://webdev.training/chapters/login_management/v2/main.php>`_
@@ -111,6 +126,25 @@ Web Server
 Write a very simple web server. Serve up files over port 80. Respond to GET
 requests. Write this yourself. You can look at examples, but don't just copy
 one.
+
+Write it in steps. Pick your favorite language to do it in.
+
+* Write a program to listen on port 80. Try connecting to it with your web browser.
+* Adjust your program so that it reads what the web browser sends. When you get two
+  line feeds in a row, then it should be done sending data. At the very least, you'll need to read up to the first line feed. Print out what you read in.
+* To do this properly, you should **not** assume the entire request comes in one data
+  packet. Each character might come in its own packet. You'll should loop and build
+  your buffer as the characters arrive. And you should even support a backspace
+  character modifying the buffer.
+  But for simplicity of coding I don't care if you make the assumption it does come in
+  one packet and ignore the backspace thing.
+* Send back a simple hard-coded response. See that the web browser gets it.
+* Instead of a hard-coded response, pull a file.
+
+Note, just following the points above will make your program vulnerable to a
+"directory traversal" vulnerability. That's where a person asks for a file like:
+``../etc/passwd`` or ``%2e%2e%2fetc%2f``. (The ``%2e`` is a URL encoded ``.``,
+and ``%2f`` is a ``/``, in case you don't know.)
 
 Single Sign On
 ^^^^^^^^^^^^^^
