@@ -83,6 +83,8 @@ Understanding Cookies
     * When programming, what do you need to keep in mind because of this?
     * What are advantages/disadvantages of storing data in the database?
 * What are the security risks around cookies?
+  How `does this work <http://motherboard.vice.com/read/this-5-device-can-hack-your-locked-computer-in-one-minute?utm_source=mbtwitter>`_ and
+  how do you stop it?
 
 Encryption Coding
 ^^^^^^^^^^^^^^^^^
