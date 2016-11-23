@@ -64,7 +64,7 @@ Understanding Cookies
   explain it to me.
 * Demonstrate and show what happens with a cookie to manage a session via Wireshark.
 * **Note**: When you are looking at a web request in Wireshark, your can right-click
-  on one of the packets and "Follow" the whole exchange in plain-text format.
+  on one of the packets and "Follow TCP Stream" to see the whole exchange in plain-text format.
 * You can use this website:
     * `Source code of website <http://webdev.training/index.php?chapter=login_management>`_
     * `Website itself <http://webdev.training/chapters/login_management/v2/main.php>`_
