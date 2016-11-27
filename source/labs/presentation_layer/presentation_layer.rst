@@ -41,3 +41,14 @@ JavaScript
 ^^^^^^^^^^
 
 Write a demo that shows how to use JavaScript to draw on a Canvas.
+
+ASCII
+^^^^^
+
+Write a program on the Raspberry Pi that:
+
+* Outputs text in different colors.
+* Can clear the screen
+* Can position a character exactly where you want it.
+
+If you want to program in Python, see the Curses library.
