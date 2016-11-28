@@ -127,6 +127,9 @@ Write a very simple web server. Serve up files over port 80. Respond to GET
 requests. Write this yourself. You can look at examples, but don't just copy
 one.
 
+Don't use a class that does everything for you. Like the ``SimpleHttpServer``
+class that exists in Python.
+
 Write it in steps. Pick your favorite language to do it in.
 
 * Write a program to listen on port 80. Try connecting to it with your web browser.
@@ -140,6 +143,14 @@ Write it in steps. Pick your favorite language to do it in.
   one packet and ignore the backspace thing.
 * Send back a simple hard-coded response. See that the web browser gets it.
 * Instead of a hard-coded response, pull a file.
+* Remember that your response will be in two parts. The HTTP "head" section,
+  and the actual HTTP document. See the
+  `HTTP documentation <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_.
+  You'll likely need the ``Content-Length`` field as part of the head.
+  This should be the number of bytes in the HTML portion of the document. Without
+  this, the document will "hang" because the web client won't know when your
+  document is done.
+  bytes in your HTML document. T
 
 Note, just following the points above will make your program vulnerable to a
 "directory traversal" vulnerability. That's where a person asks for a file like:
