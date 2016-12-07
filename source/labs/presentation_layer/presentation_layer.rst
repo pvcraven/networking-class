@@ -50,7 +50,8 @@ Vector Images
 
 (Medium)
 
-Output an image in SVG format.
+Write a servlet that will output an image in SVG format. If you do this
+correctly, it will simply be a bunch of print statements.
 
 PDF
 ^^^
