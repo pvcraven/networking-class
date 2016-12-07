@@ -40,10 +40,15 @@ a file, draw it.) Output in any raster graphics format.
 
 http://searchdomino.techtarget.com/tip/Generating-dynamic-images-using-servlet
 
+Or here, instead of saving it to a file, push it out over a servlet:
+
+http://www.java2s.com/Code/Java/2D-Graphics-GUI/DrawanImageandsavetopng.htm
+
+
 Vector Images
 ^^^^^^^^^^^^^
 
-(Hard)
+(Medium)
 
 Output an image in SVG format.
 
