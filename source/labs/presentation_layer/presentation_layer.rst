@@ -1,5 +1,5 @@
 Lab 6: Presentation Layer
---------------------
+-------------------------
 
 ========  ===== ======
 Step      Grade Points
@@ -24,7 +24,11 @@ Write a Java Servlet (no JSPs) to demonstrate display using HTML/CSS.
 The CSS can be a static file, but generate the HTML with a Servlet. There are
 several examples out there:
 
+See :ref:`tomcat_tutorial`.
+
 http://helloworldprograms.blogspot.com/2010/08/servlet-hello-world.html
+
+
 
 Raster Images
 ^^^^^^^^^^^^^
@@ -32,12 +36,15 @@ Raster Images
 (Hard)
 
 Write a Java Servlet that serves up a dynamic image. (Don't read it from
-a file, draw it.) Output in any raster graphics format.
+a file, draw it.) Output in any raster graphics format. Here's a sample:
 
 http://searchdomino.techtarget.com/tip/Generating-dynamic-images-using-servlet
 
-Then create a servlet that outputs the image. You'll need to set the content
-type to ``image/png`` or ``image/jpg``.
+Or another sample, but instead of saving it to a file, push it out over a servlet:
+
+http://www.java2s.com/Code/Java/2D-Graphics-GUI/DrawanImageandsavetopng.htm
+
+You'll need to set the content type to ``image/png`` or ``image/jpg``.
 
 Vector Images
 ^^^^^^^^^^^^^
