@@ -36,12 +36,24 @@ a file, draw it.) Output in any raster graphics format.
 
 http://searchdomino.techtarget.com/tip/Generating-dynamic-images-using-servlet
 
+Then create a servlet that outputs the image. You'll need to set the content
+type to ``image/png`` or ``image/jpg``.
+
 Vector Images
 ^^^^^^^^^^^^^
 
-(Hard)
+(Medium)
 
-Output an image in SVG format.
+Output an image in
+`SVG format <https://en.wikipedia.org/wiki/Scalable_Vector_Graphics>`_. Make
+it your own image, not something you copied.
+
+You should use a static file that links in an image::
+
+    <img src="my_image_servlet">
+
+Then create a servlet that outputs the image. You'll need to set the content
+type to ``image/svg``.
 
 PDF
 ^^^
@@ -51,6 +63,9 @@ PDF
 Write a Java Servlet that serves up a PDF.
 
 http://www.onjava.com/pub/a/onjava/excerpt/java_cookbook_ch18/?page=6
+
+The PDF should be dynamically generated. Don't just read the PDF in from a
+file.
 
 JavaScript
 ^^^^^^^^^^
