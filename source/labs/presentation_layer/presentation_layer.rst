@@ -69,7 +69,9 @@ PDF
 
 Write a Java Servlet that serves up a PDF.
 
-http://www.onjava.com/pub/a/onjava/excerpt/java_cookbook_ch18/?page=6
+https://pdfbox.apache.org/
+
+http://stackoverflow.com/questions/8913259/how-to-generate-a-downloadable-pdf-with-pdfbox-corrupted-pdf
 
 The PDF should be dynamically generated. Don't just read the PDF in from a
 file.
