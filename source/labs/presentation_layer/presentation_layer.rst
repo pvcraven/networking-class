@@ -55,12 +55,9 @@ Output an image in
 `SVG format <https://en.wikipedia.org/wiki/Scalable_Vector_Graphics>`_. Make
 it your own image, not something you copied.
 
-You should use a static file that links in an image::
-
-    <img src="my_image_servlet">
-
 Then create a servlet that outputs the image. You'll need to set the content
-type to ``image/svg``.
+type to ``image/svg+xml``. Do not output HTML as part of your image. Do not
+do a SVG in an HTML document way of doing things.
 
 PDF
 ^^^
