@@ -1,6 +1,19 @@
 Seven Layer Network Model
 =========================
 
+Networking computers requires standards. We want to be able to have our computers,
+routers, cables, and wireless all work together regardless as to what vendor created
+the product.
+
+There are many organizations that make standards used in networking. One
+such organization is the International Organization for Standardization (ISO)
+based in Switzerland. ISO created a standard called the
+Open Systems Interconnection model (OSI model).
+
+OSI divides up the concept of networking into seven layers.
+
+OSI is a *conceptual* model.
+
 In class we will cover the following topics. Follow the links for detailed
 information.
 

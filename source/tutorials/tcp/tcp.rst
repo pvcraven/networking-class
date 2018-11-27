@@ -90,3 +90,8 @@ Receive lots of messages, and calculate the data rate.
 .. literalinclude:: receive_tcp_nonblocking_multiple.py
     :linenos:
     :language: python
+
+
+Lots of Python networking examples:
+
+https://github.com/crazyguitar/pysheeet/blob/master/docs/notes/python-socket.rst

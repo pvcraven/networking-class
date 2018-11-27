@@ -12,8 +12,6 @@ based the last stage, the actual application.
 .. toctree::
    :maxdepth: 2
 
-   chapters/index.rst
-   tutorials/index.rst
-   labs/index.rst
-   about.rst
+   01_introduction/introduction
+   02_seven_layer_network_model/seven_layer_network_model.rst
 
