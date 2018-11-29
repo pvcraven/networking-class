@@ -1,5 +1,5 @@
-Transport Layer
-===============
+Transport Layer Theory
+======================
 
 Sliding Window Protocol
 -----------------------

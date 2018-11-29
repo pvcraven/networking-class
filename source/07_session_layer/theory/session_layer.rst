@@ -1,5 +1,5 @@
-Session Layer
-=============
+Session Layer Theory
+====================
 
 The `session layer`_ is responsible for opening, closing, and managing a session
 between two nodes.

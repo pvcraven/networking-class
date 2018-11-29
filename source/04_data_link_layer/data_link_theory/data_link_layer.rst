@@ -1,7 +1,7 @@
 .. _datalink-layer:
 
-Data Link Layer
-===============
+Data Link Layer Theory
+======================
 
 The data link layer bundles up all the bits into a *frame* and sends it along
 the wire to another computer. Data link does not manage routing from computer to

@@ -1,5 +1,8 @@
+Session Layer
+=============
+
 .. toctree::
    :maxdepth: 2
 
-   session_layer
+   theory/session_layer
    session_layer/session_layer

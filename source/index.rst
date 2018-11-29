@@ -11,6 +11,7 @@ based the last stage, the actual application.
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
    01_introduction/introduction
    02_seven_layer_network_model/seven_layer_network_model

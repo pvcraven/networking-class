@@ -1,7 +1,10 @@
+Data Link Layer
+===============
+
 .. toctree::
    :maxdepth: 2
 
-   data_link_layer
+   data_link_theory/data_link_layer
    wireshark/wireshark
    raw_ethernet/raw_ethernet
    data_link_lab/data_link

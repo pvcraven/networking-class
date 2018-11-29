@@ -1,7 +1,10 @@
+Networking Layer
+================
+
 .. toctree::
    :maxdepth: 2
 
-   network_layer
+   theory/network_layer
    datagrams/datagrams
    set_ip_address/set_ip_address
    networking_tools/networking_tools

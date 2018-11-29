@@ -26,7 +26,7 @@ or ``ifconfig`` for Mac/UNIX/Linux computers
 See the highlighted lines below. I used Windows to show both my physical
 address (MAC address) and IP address.
 
-.. code-block:: none
+.. code-block:: text
     :emphasize-lines: 16,20
 
     c:\>ipconfig /all
