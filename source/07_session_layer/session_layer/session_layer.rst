@@ -92,12 +92,17 @@ Encryption Coding
 (Hard)
 
 * Use libraries in Java, Python, or whatever to perform:
+
     * Secret Key Encryption (Like AES)
       (`Example <http://www.quickprogrammingtips.com/java/how-to-encrypt-and-decrypt-data-in-java-using-aes-algorithm.html>`_)
+
     * Asymmetric Key Encrypting
+
         * `Example Java RSA <http://www.mysamplecode.com/2011/08/rsa-encryption-decryption-using-bouncy.html>`_
-        that uses `Bouncy Castle <https://www.bouncycastle.org/java.html>`_.
+          that uses `Bouncy Castle <https://www.bouncycastle.org/java.html>`_.
+
     * Hash function (`Hash example <http://stackoverflow.com/questions/3103652/hash-string-via-sha-256-in-java>`_)
+
 * Show me working examples.
 
 E-Mail

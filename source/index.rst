@@ -13,5 +13,11 @@ based the last stage, the actual application.
    :maxdepth: 2
 
    01_introduction/introduction
-   02_seven_layer_network_model/seven_layer_network_model.rst
-
+   02_seven_layer_network_model/seven_layer_network_model
+   03_physical_layer/physical_layer
+   04_data_link_layer/index
+   05_network_layer/index
+   06_transport_layer/index
+   07_session_layer/index
+   08_presentation/index
+   about
