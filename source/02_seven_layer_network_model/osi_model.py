@@ -54,7 +54,7 @@ labels = ["Application Layer", "Presentation Layer", "Session Layer", "Transport
 for box in range(7):
     # Make box
     y = box * interval + top_margin
-    out = f'<rect x="{box_left_margin}" y="{y}" rx="20" ry="20" width="{box_width}" height="{height}" style="fill:None;stroke:black;stroke-width:{line_width};" />\n'
+    out = f'<rect x="{box_left_margin}" y="{y}" rx="20" ry="20" width="{box_width}" height="{height}" style="fill:none;stroke:black;stroke-width:{line_width};" />\n'
     output_file.write(out)
 
     # Make label
