@@ -29,8 +29,13 @@ OSI is a *conceptual* model. There isn't a specific "implementation" of any laye
 specified by this model.
 What the OSI model does is help when you talk to other people about networking, or when
 you want to break apart a complex networking problem into smaller logical parts.
+You know when you talk about the "east-side" of your town? Exactly what fits into
+that definition is a little fuzzy and can change a bit over time, but the
+term gives most people an idea of what part of town you are talking about.
+It works the same way with OSI layers.
 
-If you have trouble remembering the layers, remember "Please Do Not Touch
+If you have trouble remembering the layer names, remember
+the mnemonics "Please Do Not Touch
 Steve's Pet Alligator." Take the first letter from each word of that sentence,
 and you have the first letter of each layer.
 
@@ -42,10 +47,45 @@ named after "Layer 3".
 
 What does each layer do?
 
-1. Physical: Translates the computer's 1's and 0's to and from pulses of electricity,
-   radio waves, or light.
-2. Data-Link: Transfers chunks of data called **frames** direct from one computer to
-   another. A networking hub or switch operates at this level.
+Incoming
+
+1. Physical: Translates pulses of electricity,
+   radio waves, or light to 1's and 0's. When new data is received, the
+   physical layer will pass that data up to the data-link layer.
+2. Data-Link: Decodes the data from the physical layer into chunks of data called
+   "frames". A frame has data about "payload" and if the frame is addressed for
+   this computer and uncorrupted, it is passed up to the networking layer. Otherwise
+   it is ignored.
+3. Networking:
+Transfers chunks of data called **packets** from one computer to another
+   across multiple hops or through devices called routers.
+4. Transport: Figures out how to break large files or streams of data into packets.
+   Figure out when to acknowledge packets sent.
+5. Session: Open and close networking "sessions". Can be used to keep networking
+   traffic from one program on your computer separate from a different program
+   (ports).
+   Can keeps track of a person across multiple requests on the network.
+   Handling
+   a log in and tracking what they do happens here.
+6. Presentation: Know how to display information. Such as web pages, PDF documents,
+   images, text screens. Data compression and encryption typically happen here.
+7. Application: A computer program that responds to user input or runs as a
+   background service. Such as a web browser, a networked video game, or social
+   app.
+
+1. Physical
+
+   * Incoming data: Translates pulses of electricity,
+     radio waves, or light to 1's and 0's. Passes that up to the data-link layer.
+   * Outgoing data: Translates the computer's 1's and 0's to pulses of electricity,
+     radio waves, or light.
+
+2. Data-Link:
+
+   * Incoming data:
+   * Outgoing data: Transfers chunks of data called **frames** direct from one computer to
+     another. A networking hub or switch operates at this level.
+
 3. Networking: Transfers chunks of data called **packets** from one computer to another
    across multiple hops or through devices called routers.
 4. Transport: Figures out how to break large files or streams of data into packets.
@@ -61,6 +101,7 @@ What does each layer do?
 7. Application: A computer program that responds to user input or runs as a
    background service. Such as a web browser, a networked video game, or social
    app.
+
 
 The idea that information is passed up and down the different layers:
 
