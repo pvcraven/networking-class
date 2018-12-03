@@ -1,10 +1,11 @@
 Physical Layer
 ==============
 
-There are a lot of ways we can communicate. The way we get the message from
-one spot to another is called the *medium*.
+When we communicate by talking in person, our message is carried
+by sound waves. That method of communication we call our
+*communication medium.*
 
-Types of communication medium
+Types of Communication Medium
 -----------------------------
 
 The three most frequently used mediums for computer networking are:
