@@ -1,8 +1,9 @@
 Introduction
 ============
 
-There are many organizations that make standards used in networking. One
-such organization is the International Organization for Standardization (ISO)
+Networking needs standards. One
+organization that makes standards
+is the International Organization for Standardization (ISO)
 based in Switzerland. ISO created a standard called the
 Open Systems Interconnection model (OSI model).
 
@@ -48,8 +49,10 @@ and you have the first letter of each layer.
 What does each layer do?
 ------------------------
 
-At the high level, we interact with our application to do something, like
-give a thumbs-up to a video. Each layer works to process that, passing it down
+At the application layer, we interact with our application.
+For example, we can
+give a thumbs-up to a video we like.
+Each OSI layer works to process that "thumbs-up", passing it down
 to a lower layer until our request is finally turned into a signal on a wire.
 
 When we receive data at the physical layer, we pass it up all the layers until
@@ -68,14 +71,15 @@ What might it look like when we receive a web page?
    radio waves, or light to 1's and 0's. When new data is received, the
    physical layer will pass that data up to the data-link layer.
 2. Data-Link: Decodes the data from the physical layer into chunks of data called
-   "frames". A frame has data about "payload" and if the frame is addressed for
+   "frames". A frame has a data "payload" and if the frame is addressed for
    this computer and uncorrupted, it is passed up to the networking layer. Otherwise
    it is ignored.
 3. Networking: Each chunk of data at this level is called a "packet."
-   At the networking level, we look to see is this the final destination for
-   the packet? If so, pass
+   At the networking level, we look to see if this the final destination for
+   the packet. If it is, pass
    it up a level. If not, figure out the next "hop" to pass the packet to.
    Pass the packet back down to the data-link level to go to that hop.
+   The networking layer *routes* packets.
 4. Transport: Takes the data contained in the packets, and reassembles them
    into the original file, image, or larger data stream. If we are missing data,
    we'll ask for it again. We will also pass it to the correct program on the
@@ -115,9 +119,15 @@ like this:
 OSI Model vs. Reality
 ---------------------
 
-Some commonly used protocols don't fit neatly into the OSI model.
+That's the theory behind the OSI model. But in reality? The technologies
+we use don't always fit neatly into those layers.
 
-* Ethernet is often considered as layers 1 and 2.
+You may have heard of **Ethernet**. Ethernet is a set of protocols for networking
+we use when we network with cables or wirelessly.
+It covers both the Physical layer and the Data-Link layer.
+
+You may 
+
 * TCP/IP runs on layers 3 and 4.
 * Web, e-mail, SSH run on layers 5-7.
 

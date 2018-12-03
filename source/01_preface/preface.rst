@@ -1,8 +1,8 @@
 Preface
 =======
 
-This computer networking  book contains a mix of theory, and
-projects.
+This book teaches computer networking by combining hands-on projects with
+an explanation of the theory behind why they work.
 
 Why did I write this book?
 Back when I was in college my networking class taught me a lot of *theory*.
