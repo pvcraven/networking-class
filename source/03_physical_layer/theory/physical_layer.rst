@@ -1,8 +1,13 @@
 Physical Layer
 ==============
 
+There are a lot of ways we can communicate. The way we get the message from
+one spot to another is called the *medium*.
+
 Types of communication medium
 -----------------------------
+
+The three most frequently used mediums for computer networking are:
 
 * Wire (guided)
 * Light (guided or possibly unguided)

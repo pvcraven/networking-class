@@ -34,20 +34,35 @@ that definition is a little fuzzy and can change a bit over time, but the
 term gives most people an idea of what part of town you are talking about.
 It works the same way with OSI layers.
 
-If you have trouble remembering the layer names, remember
-the mnemonics "Please Do Not Touch
-Steve's Pet Alligator." Take the first letter from each word of that sentence,
-and you have the first letter of each layer.
-
 It is worth remembering the name of each layer and their order.
 If you talk to a networking expert and mention that some process happens at
 the "networking layer", or "layer 3" they will know what you are talking about.
 It is such a popular way to talk about networking that there are even companies
 named after "Layer 3".
 
-What does each layer do?
+If you have trouble remembering the layer names, use
+the mnemonic "Please Do Not Touch
+Steve's Pet Alligator." Take the first letter from each word of that sentence,
+and you have the first letter of each layer.
 
-Incoming
+What does each layer do?
+------------------------
+
+At the high level, we interact with our application to do something, like
+give a thumbs-up to a video. Each layer works to process that, passing it down
+to a lower layer until our request is finally turned into a signal on a wire.
+
+When we receive data at the physical layer, we pass it up all the layers until
+we finally hit the application layer where we store that information in a database.
+
+.. image:: osi_model.svg
+    :align: center
+    :alt: alternate text
+
+Incoming Data
+-------------
+
+What might it look like when we receive a web page?
 
 1. Physical: Translates pulses of electricity,
    radio waves, or light to 1's and 0's. When new data is received, the
@@ -56,58 +71,46 @@ Incoming
    "frames". A frame has data about "payload" and if the frame is addressed for
    this computer and uncorrupted, it is passed up to the networking layer. Otherwise
    it is ignored.
-3. Networking:
-Transfers chunks of data called **packets** from one computer to another
-   across multiple hops or through devices called routers.
-4. Transport: Figures out how to break large files or streams of data into packets.
-   Figure out when to acknowledge packets sent.
-5. Session: Open and close networking "sessions". Can be used to keep networking
-   traffic from one program on your computer separate from a different program
-   (ports).
-   Can keeps track of a person across multiple requests on the network.
-   Handling
-   a log in and tracking what they do happens here.
-6. Presentation: Know how to display information. Such as web pages, PDF documents,
-   images, text screens. Data compression and encryption typically happen here.
-7. Application: A computer program that responds to user input or runs as a
-   background service. Such as a web browser, a networked video game, or social
-   app.
+3. Networking: Each chunk of data at this level is called a "packet."
+   At the networking level, we look to see is this the final destination for
+   the packet? If so, pass
+   it up a level. If not, figure out the next "hop" to pass the packet to.
+   Pass the packet back down to the data-link level to go to that hop.
+4. Transport: Takes the data contained in the packets, and reassembles them
+   into the original file, image, or larger data stream. If we are missing data,
+   we'll ask for it again. We will also pass it to the correct program on the
+   computer that is expecting the data.
+5. Session: At this level we track a whole "conversation." So if multiple files
+   are being sent, we'll know to send them to the right user. We'll also decrypt
+   and uncompress any zipped up data at this level.
+6. Presentation: This is where we display information. We might combine images,
+   web files, and style documents together to render a web page at this level.
+7. Application: At this level, we interact with the user and wait for a "thumbs up"
+   or "thumbs down" on our post.
 
-1. Physical
+Outgoing Data
+-------------
 
-   * Incoming data: Translates pulses of electricity,
-     radio waves, or light to 1's and 0's. Passes that up to the data-link layer.
-   * Outgoing data: Translates the computer's 1's and 0's to pulses of electricity,
-     radio waves, or light.
+What if the user clicks a "thumbs-up" on the video? The layers might work
+like this:
 
-2. Data-Link:
-
-   * Incoming data:
-   * Outgoing data: Transfers chunks of data called **frames** direct from one computer to
-     another. A networking hub or switch operates at this level.
-
-3. Networking: Transfers chunks of data called **packets** from one computer to another
-   across multiple hops or through devices called routers.
-4. Transport: Figures out how to break large files or streams of data into packets.
-   Figure out when to acknowledge packets sent.
-5. Session: Open and close networking "sessions". Can be used to keep networking
-   traffic from one program on your computer separate from a different program
-   (ports).
-   Can keeps track of a person across multiple requests on the network.
-   Handling
-   a log in and tracking what they do happens here.
-6. Presentation: Know how to display information. Such as web pages, PDF documents,
-   images, text screens. Data compression and encryption typically happen here.
-7. Application: A computer program that responds to user input or runs as a
-   background service. Such as a web browser, a networked video game, or social
-   app.
+1. Application: Realize the user pressed a mouse button on the document. Pass
+   that down to the presentation layer.
+2. Presentation: Receive that the user pressed the "thumbs up" icon. Turn that
+   into a small file that holds info on which thumbs-up was clicked.
+3. Session: Add information about who the user was. Encrypt the message. Compress
+   it.
+4. Transport: Take the file and break it into smaller packet-sized parts.
+5. Networking: Add an address with our final destination. We probably aren't going
+   to get there in one hop. Figure out what the next hop will be.
+6. Data-link: Add an address for our next hop.
+7. Turn the data into electrical pulses on a wire.
 
 
-The idea that information is passed up and down the different layers:
-
-.. image:: osi_model.svg
+.. image:: osi_model_2.svg
     :align: center
     :alt: alternate text
+    :width: 600px
 
 OSI Model vs. Reality
 ---------------------
