@@ -20,8 +20,7 @@ reality was a rather large learning hurdle.
 Eventually I moved into teaching college. I wanted to do better
 with my classes.
 But the books I found
-never had the mix of theory and hands-on projects that I was looking
-for.
+never had the right mix of theory and hands-on projects.
 
 So I wrote my own. This book covers the parts of networking that I needed
 to know during my career as a programmer. It has sample mini-projects so that you can
