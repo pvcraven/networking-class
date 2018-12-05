@@ -13,7 +13,13 @@ We also need a GPIO breakout board so we can access these pins, and
 some LEDs. You can get kits with all of these parts from companies like
 Canakit and Adafruit. Not all of their kits include the parts we
 need. Make sure the kit you get includes a breakout board, breadboard,
-and LEDs.
+and LEDs. I used the following I got from Amazon:
+
+* CanaKit Raspberry Pi 3 B+ (B Plus) Ultimate Starter Kit (32 GB Edition, Clear Case)
+
+Also, from Adafruit, this would work:
+
+* Raspberry Pi 3 Model B Starter Packs
 
 Please work with another student so you have two Raspberry Pi's to communicate,
 or work with a couple of the computers that I have.

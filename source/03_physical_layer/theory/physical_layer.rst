@@ -1,5 +1,5 @@
-Physical Layer
-==============
+Physical Layer Theory
+=====================
 
 When we communicate by talking in person, our message is carried
 by sound waves. That method of communication we call our
