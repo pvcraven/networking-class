@@ -1,13 +1,19 @@
-Lab 1: Manage your own physical layer
--------------------------------------
+Physical Layer Projects
+=======================
 
-This lab is designed to promote a deeper understanding of the physical layer
-by applying what you've learned to create your own implementation if the
-physical layer.
+To really understand the physical layer, let's create our own
+implementation.
 
-We will be using two `Raspberry Pi`_'s to communicate. Rather than use the built-in
-Ethernet or wireless, we'll control the voltage with our own programs we write.
-We will also do the wiring ourselves.
+This requires a bit of hardware. Raspberry Pi computers are great
+because they are cheap, and they have General Purpose Input Output
+(GPIO) pins. We can control the easily set the voltage on these
+pins. This is not something most computers give you the option to do.
+
+We also need a GPIO breakout board so we can access these pins, and
+some LEDs. You can get kits with all of these parts from companies like
+Canakit and Adafruit. Not all of their kits include the parts we
+need. Make sure the kit you get includes a breakout board, breadboard,
+and LEDs.
 
 Please work with another student so you have two Raspberry Pi's to communicate,
 or work with a couple of the computers that I have.
@@ -44,9 +50,12 @@ python version 2, which won't work with our code.
 Step 1: Dual Blinking LEDs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Start with the tutorial to blink an LED. Make sure you have that working.
+Skip ahead and follow the section:
 
-Get two LEDs to blink at the same time. Use pins 12 and 17. Blink
+:ref:`gpio_tutorial`.
+
+From what you learned in that tutorial, expand from it and
+get two LEDs to blink at the same time. Use pins 12 and 17. Blink
 both a green and red LED at the same time.
 
 This is an example, with a 1 second blink time.
@@ -58,6 +67,10 @@ This is an example, with a 1 second blink time.
 
 Step 2: Encode a message
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Skip ahead and follow:
+
+:ref:`bit_shifting_tutorial`
 
 Look at the bit shifting tutorial. Encode a message.
 That is, a message with multiple bytes.

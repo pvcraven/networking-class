@@ -1,5 +1,5 @@
-Command Line
-------------
+Tutorial: Basic Command Line
+============================
 
 Below is a list of commands you should know. We'll go over them in class:
 

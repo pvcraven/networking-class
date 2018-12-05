@@ -1,7 +1,7 @@
 .. _gpio_tutorial:
 
-Raspberry Pi GPIO
-==================
+Tutorial: Raspberry Pi GPIO
+===========================
 
 Step one: Blink an LED
 ----------------------
@@ -103,7 +103,7 @@ Instead, we can wait for the wire to change between high and low:
     :linenos:
     :language: python
 
-This is much better. But still no great. Because this is "blocking." Our program can't do anything
+This is much better. But still not great. Because this is "blocking." Our program can't do anything
 unless there is a change in state on the wire. If there is never a change, we just hang.
 
 A better option? Use a callback. Write a function that the computer will run when there is a

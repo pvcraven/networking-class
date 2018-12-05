@@ -1,5 +1,7 @@
-Bit Shifting
-------------
+.. _bit_shifting_tutorial:
+
+Tutorial: Bit Shifting
+======================
 
 Ok, we know that numbers and letters are stored in binary. But how
 do you convert from a number or a letter to binary? Perhaps you

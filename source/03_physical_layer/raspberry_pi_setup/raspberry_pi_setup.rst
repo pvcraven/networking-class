@@ -1,5 +1,5 @@
-Raspberry Pi Setup
-==================
+Tutorial: Raspberry Pi Setup
+============================
 
 Basic Setup and Installation
 ----------------------------
@@ -64,7 +64,8 @@ Edit the configuration file with nano or vim:
 ``sudo nano /etc/wpa_supplicant/wpa_supplicant.conf``
 
 Replace
-=======
+-------
+
 Then, add the section below. If there already is a section for student, remove
 it and replace it with this. If you have a section scguest, remove that.
 Replace ``USERNAME`` with your username.

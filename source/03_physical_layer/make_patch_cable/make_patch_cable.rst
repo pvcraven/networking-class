@@ -1,5 +1,5 @@
-Make a Patch Cable
-==================
+Tutorial: Make a Patch Cable
+============================
 
 Ok, other people have done great work on this. I'm not going to reinvent
 the wheel.
