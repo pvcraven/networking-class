@@ -22,6 +22,6 @@ with my classes.
 But the books I found
 never had the right mix of theory and hands-on projects.
 
-So I wrote my own. This book covers the parts of networking that I needed
+So I wrote my this. The book covers the parts of networking that I needed
 to know during my career as a programmer. It has sample mini-projects so that you can
 see the concepts in action.

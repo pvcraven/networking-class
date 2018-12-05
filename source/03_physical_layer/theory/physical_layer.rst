@@ -10,12 +10,32 @@ Types of Communication Medium
 
 The three most frequently used mediums for computer networking are:
 
-* Wire (guided)
-* Light (guided or possibly unguided)
-* Radio (unguided)
+* Electricity via Wire
+* Light via Fiber Optics
+* Radio waves broadcast everywhere with an antenna or directed with a dish
 
-Wire
-^^^^
+Wire as a Medium
+^^^^^^^^^^^^^^^^
+
+Wire transmits our signals by electrical pulses along a some kind of
+material that conducts electricity.
+
+Normally we need at least two conductors, as electricity works better
+when it has a closed path for the electricity to flow. That's why
+batteries have both a positive and negative side.
+Electrons flow out of the negative side and back into the positive
+side.
+
+But electricity on a wire is prone to interference and loss.
+Electricity flowing through a wire creates magnetism, which
+can cause us to lose the signal. Also, magnetic fields can
+create electricity in wires, which can cause us to get new
+signals on the wire we don't want. We call this "noise" or
+"interference."
+
+Engineers and scientists have spent a lot of time trying
+to come up with ways to minimize the loss and interference
+for signals traveling on a wire.
 
 * Regular wire
 * `Twisted Pair`_ - TP. Why is it twisted?
@@ -44,9 +64,26 @@ Wire
     :align: center
     :alt: From Wikipedia Commons
 
+stranded vs solid
 
-Light
-^^^^^
+Light as a Medium
+^^^^^^^^^^^^^^^^^
+
+Fiber optics provide some advantages over wire:
+
+* Fiber optics don't lose signal because of electromagnetic loss, nor
+  do they pick up noise from stray magnetic fields. This means we can
+  send our signal further with fiber.
+* Fiber optics can transmit more data, faster, than wire can.
+
+But there are drawbacks:
+
+* Connecting fiber optic cable is more difficult.
+* At each end, you need more electronics to send and receive signals than
+  you do with wire. You have to convert from electricity to light, then
+  from light back to electricity again.
+
+blah
 
 * IR (like older TV remotes)
 * Laser + fiber optics (see `how fiber optics work`_) (Image from Apollo
@@ -57,8 +94,10 @@ Light
     :align: center
     :alt: From http://apollotech.com.au/product-category/fibre-optic-cable/
 
-Radio
-^^^^^
+Radio as a Medium
+^^^^^^^^^^^^^^^^^
+
+
 
 * `Electromagnetic Spectrum`_
 * `United States Spectrum Allocation Chart`_

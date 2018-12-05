@@ -28,7 +28,8 @@ very much.
 
 OSI is a *conceptual* model. There isn't a specific "implementation" of any layer
 specified by this model.
-What the OSI model does is help when you talk to other people about networking, or when
+What the OSI model does is help whith, is when you talk to other people about networking.
+It also helps when
 you want to break apart a complex networking problem into smaller logical parts.
 You know when you talk about the "east-side" of your town? Exactly what fits into
 that definition is a little fuzzy and can change a bit over time, but the
@@ -124,16 +125,20 @@ we use don't always fit neatly into those layers.
 
 You may have heard of **Ethernet**. Ethernet is a set of protocols for networking
 we use when we network with cables or wirelessly.
-It covers both the Physical layer and the Data-Link layer.
+It covers both the Physical (layer 1) and the Data-Link (layer 2).
 
-You may 
+You may have heard of **TCP/IP**. It is the one of the main protocols that
+gets Internet traffic to its destination. TCP/IP stands for Transmission Control
+Protocol/Internet Protocol. IP covers networking (layer 3), TCP covers
+transport (layer 4).
 
-* TCP/IP runs on layers 3 and 4.
-* Web, e-mail, SSH run on layers 5-7.
+The display of web pages, PDFs, images, even 3d graphics
+fall under presentation (layer 6), while the management of menus, buttons and other
+are covered by the application (layer 7).
 
-In this book we will cover the lower networking layers one through six, starting
-with the Physical Layer.
-
+Just remember, many of the boundaries between these layers are fuzzy,
+and not clearly defined. Often technologies do tasks outside of what
+their "layer", and software may lump multiple layers together.
 
 Review
 ------
