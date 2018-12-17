@@ -21,69 +21,52 @@ Also, from Adafruit, this would work:
 
 * Raspberry Pi 3 Model B Starter Packs
 
-Please work with another student so you have two Raspberry Pi's to communicate,
-or work with a couple of the computers that I have.
+Work with two Raspberry Pi's (this works great if you have a partner to try
+this with) so you can set up a link between the two.
 
-Your grade for this lab depends on how many steps you complete. Each step gets
-you closer to the Manchester encoding protocol that was originally used for
-things like Ethernet, and is even used for IR based TV remotes.
+Step 1: Explore the Raspberry Pi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-After each step you complete, call me over. Let me see that it is working, ask
-questions to make sure you understand, and then I'll give you the grade.
-Don't skip steps.
+Get your Raspberry Pi up and working. Skip forward in this chapter and
+find the :ref:`raspberry_pi_setup` section.
 
-========  ===== ======
-Step      Grade Points
-========  ===== ======
-No steps  F     0
-Step 1    C-    70
-Step 2    C+    77
-Step 3    B-    80
-Step 4    B     85
-Step 5    B+    88
-Step 6    A-    92
-Step 7    A     98
-========  ===== ======
+Once you have a working Raspberry Pi, you might need to learn a bit on how
+to use the command line. Skip forward in this chapter and find the
+:ref:`command-line-tutorial`. You want to have enough skill that you can move
+between directories, list files, and also create and edit your own files.
 
-If you are new to the Linux command line, which many of you are, ask questions!
-You can also find a lot on line. I recommend this `linux command line tutorial`_
-and this `command line cheat sheet`_. If you find something you like better, make
-sure to tell me.
+At the end of this step, you should be able to show your Raspberry Pi up and
+running with the keyboard, mouse, and monitor working. You should be able to
+perform the basic command line functions ``cd`` and ``ls``.
 
-Remember: Use 'python3' to run your program. The 'python' command will use
-python version 2, which won't work with our code.
-
-Step 1: Dual Blinking LEDs
+Step 2: Dual Blinking LEDs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Skip ahead and follow the section:
-
-:ref:`gpio_tutorial`.
+The next step is to blink a light. We will use Light Emitting Diodes (LEDs).
+To get one LED blinkind, follow the :ref:`gpio_tutorial`.
 
 From what you learned in that tutorial, expand from it and
-get two LEDs to blink at the same time. Use pins 12 and 17. Blink
+get *two* LEDs to blink at the same time. Use pins 12 and 17. Blink
 both a green and red LED at the same time.
 
-This is an example, with a 1 second blink time.
+At the end of this step, you should be able to show two LEDs blinking.
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mXCQbWq5w3Q" frameborder="0" allowfullscreen></iframe>
 
 
-Step 2: Encode a message
+Step 3: Encode a message
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Skip ahead and follow:
-
-:ref:`bit_shifting_tutorial`
+Skip ahead and follow the :ref:`bit_shifting_tutorial`
 
 Look at the bit shifting tutorial. Encode a message.
 That is, a message with multiple bytes.
 Have one LED blink when there is a one, and not blink when there is a zero.
 The clock LED should blink on/off for each change bit that you have.
 
-.. image:: ../../chapters/physical_layer/clock_signal.svg
+.. image:: ../theory/clock_signal.svg
     :width: 500px
     :align: center
 
@@ -120,7 +103,7 @@ The basic steps:
 4. Bring the clock LOW
 5. Wait 0.1 seconds.
 
-Step 3: Receive a signal
+Step 4: Receive a signal
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Get another Raspberry Pi.
@@ -137,7 +120,7 @@ Step 3: Receive a signal
   The read program should be able to detect state changes. If it doesn't, stop
   here and debug.
 
-Step 4: Decode a signal
+Step 5: Decode a signal
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 * Adjust your step 3 program.
@@ -223,7 +206,7 @@ Or you can change your code to flush the output after every character. At
 the start of your code do a ``import sys``. Then when you want to force the
 characters to output, do a ``sys.stdout.flush()``.
 
-Step 5: Convert decoded bits to bytes
+Step 6: Convert decoded bits to bytes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Change your program so it decodes the individual bits, and into
@@ -238,7 +221,7 @@ Step 5: Convert decoded bits to bytes
 * Print the bytes and confirm they are ok.
 
 
-Step 6: Manchester encoding
+Step 7: Manchester encoding
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Update your code so you can send using `Manchester Encoding`_. Manchester
@@ -259,7 +242,7 @@ Your receiver code will need two parts.
 
 * Wait
 
-Step 7: Manchester decoding
+Step 8: Manchester decoding
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Write code so you can receive using `Manchester Encoding`_.
@@ -291,3 +274,37 @@ Write code so you can receive using `Manchester Encoding`_.
 .. _Raspberry Pi: https://www.raspberrypi.org/products/raspberry-pi-3-model-b/
 .. _command line cheat sheet: http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/
 .. _linux command line tutorial: http://linuxcommand.org/index.php
+
+
+Grading
+-------
+
+Your grade for this lab depends on how many steps you complete. Each step gets
+you closer to the Manchester encoding protocol that was originally used for
+things like Ethernet, and is even used for IR based TV remotes.
+
+After each step you complete, call me over. Let me see that it is working, ask
+questions to make sure you understand, and then I'll give you the grade.
+Don't skip steps.
+
+========  ===== ======
+Step      Grade Points
+========  ===== ======
+No steps  F     0
+Step 1    F     50
+Step 2    C-    70
+Step 2    C+    77
+Step 3    B-    80
+Step 4    B     85
+Step 5    B+    88
+Step 6    A-    92
+Step 7    A     100
+========  ===== ======
+
+If you are new to the Linux command line, which many of you are, ask questions!
+You can also find a lot on line. I recommend this `linux command line tutorial`_
+and this `command line cheat sheet`_. If you find something you like better, make
+sure to tell me.
+
+Remember: Use 'python3' to run your program. The 'python' command will use
+python version 2, which won't work with our code.

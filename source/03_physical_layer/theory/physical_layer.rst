@@ -3,16 +3,17 @@ Physical Layer Theory
 
 When we communicate by talking in person, our message is carried
 by sound waves. That method of communication we call our
-*communication medium.*
+**communication medium**. When we network computers, we work with several different
+types of communication medium.
 
 Types of Communication Medium
 -----------------------------
 
 The three most frequently used mediums for computer networking are:
 
-* Electricity via Wire
-* Light via Fiber Optics
-* Radio waves broadcast everywhere with an antenna or directed with a dish
+* Electricity transmitted over a wire
+* Light transmitted over fiber optics
+* Radio waves broadcast everywhere with an antenna, or directed with a dish
 
 Wire as a Medium
 ^^^^^^^^^^^^^^^^
@@ -26,6 +27,13 @@ batteries have both a positive and negative side.
 Electrons flow out of the negative side and back into the positive
 side.
 
+For example, we can encode ones and zeros by alternating the
+direction the electrons are flowing:
+
+.. image:: signal_01.svg
+    :width: 500px
+    :alt: Signal on a wire
+
 But electricity on a wire is prone to interference and loss.
 Electricity flowing through a wire creates magnetism, which
 can cause us to lose the signal. Also, magnetic fields can
@@ -37,13 +45,51 @@ Engineers and scientists have spent a lot of time trying
 to come up with ways to minimize the loss and interference
 for signals traveling on a wire.
 
-* Regular wire
-* `Twisted Pair`_ - TP. Why is it twisted?
+One common trick, run two wires.
+Have electricity flow in opposite directions. We call this a **balanced line**.
 
-.. image:: Twisted-Pair-AlDmour.jpg
+.. image:: signal_02.svg
     :width: 500px
-    :align: center
-    :alt: alternate text
+    :alt: Signal on a wire
+
+What if we get noise or interference on the wire? Chances are, it will affect
+both wires, in the same direction:
+
+.. image:: signal_03.svg
+    :width: 500px
+    :alt: Signal on a wire
+
+So when we receive our signal, we invert the signal on one of the wires, then
+add the signal on both wires together. That way the noise is canceled out!
+This is called **differential signaling**.
+
+.. image:: signal_04.svg
+    :width: 500px
+    :alt: Signal on a wire
+
+Using a balanced line and differential signaling helps get a cleaner signal
+further. To get an even cleaner signal, we can twist the wire. This helps
+keep any noise introduced to the wires to be the same for both wires. Otherwise the
+wire closest to the noise will pick up more noise and we can't completely
+cancel it out. Twisting also helps with reducing loss
+of signal. This type of wire is called **twisted pair**.
+Sometimes we just abbreviate this TP, which works great unless you talk to
+a non-network engineer who might think you are talking about Toilet Paper.
+
+There are many standards for the construction of twisted pair cable.
+Most cable standards used in wiring networks in a building today different
+fall under the "Cat 5",
+"Cat 5e" or "Cat6" standards. Cat is short for category.
+Any of these cable types work fine for most networking.
+Lower numbered categories below 5 may not reliably handle speeds of modern networks.
+
+Cables can be made out of **stranded wire** or **solid-core** wire. Solid-core
+wire transmits signal better than stranded wire and usually is the better choice.
+However stranded cable is more flexible and bends easier, so sometimes stranded is
+a popular choice for short patch cables that you'll coil and uncoil frequently.
+
+You can buy **shielded cables** that have foil wrapped around them to reduce
+interference. Yes, even your cables can have tin-foil hats.
 
 * Shielded (STP) or Unshielded (UTP) Twisted Pair (Image from Pace University)
 
@@ -64,16 +110,20 @@ for signals traveling on a wire.
     :align: center
     :alt: From Wikipedia Commons
 
-stranded vs solid
-
 Light as a Medium
 ^^^^^^^^^^^^^^^^^
+
+Instead of communicating with a wire, we can communicate with light.
+We can direct the light with **fiber optics**. Fiber optics uses glass
+to bounce a laser light inside the "wire" until it reaches the end.
 
 Fiber optics provide some advantages over wire:
 
 * Fiber optics don't lose signal because of electromagnetic loss, nor
   do they pick up noise from stray magnetic fields. This means we can
   send our signal further with fiber.
+  Fiber optics can go so far, that we have cables which go under the ocean
+  all the way from America to Europe.
 * Fiber optics can transmit more data, faster, than wire can.
 
 But there are drawbacks:
@@ -83,11 +133,13 @@ But there are drawbacks:
   you do with wire. You have to convert from electricity to light, then
   from light back to electricity again.
 
-blah
+There are some great videos that visually show how fiber optics work. I
+recommend searching for videos on "`how do fiber optics work`_" if you want
+to know more.
 
-* IR (like older TV remotes)
-* Laser + fiber optics (see `how fiber optics work`_) (Image from Apollo
-  Technology)
+You don't have to use fiber optics to communicate with light. Many TV remotes
+communicate with an Infra-Red (IR) light to communicate with your TV.
+
 
 .. image:: fibre_bundle.jpg
     :width: 500px
@@ -200,7 +252,7 @@ line whenever the clock signal is in a falling state.
 
 .. _Twisted Pair: https://en.wikipedia.org/wiki/Twisted_pair
 .. _Coaxial Cable: https://en.wikipedia.org/wiki/Coaxial_cable
-.. _how fiber optics work: https://www.youtube.com/watch?v=9VmA2S2XiCo
+.. _how do fiber optics work: https://www.youtube.com/watch?v=0MwMkBET_5I
 .. _Amplitude Modulation: https://en.wikipedia.org/wiki/Amplitude_modulation
 .. _Frequency Modulation: https://en.wikipedia.org/wiki/Frequency_modulation
 .. _Pulse Code Modulation: https://en.wikipedia.org/wiki/Pulse-code_modulation

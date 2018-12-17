@@ -1,8 +1,8 @@
 Preface
 =======
 
-This book teaches computer networking by combining hands-on projects with
-an explanation of the theory behind why they work.
+This book teaches computer networking by combining theory, tutorials, and
+projects.
 
 Why did I write this book?
 Back when I was in college my networking class taught me a lot of *theory*.
@@ -17,11 +17,11 @@ that theory helped a lot more than my cynical younger self thought it would.
 But that first "jump" to make theory into
 reality was a rather large learning hurdle.
 
-Eventually I moved into teaching college. I wanted to do better
+Eventually I changed jobs and started teaching college. I wanted to do better
 with my classes.
 But the books I found
 never had the right mix of theory and hands-on projects.
 
-So I wrote my this. The book covers the parts of networking that I needed
-to know during my career as a programmer. It has sample mini-projects so that you can
-see the concepts in action.
+So I wrote this. It covers the concepts that I needed
+to know during my career as a programmer. Just as importantly,
+the mini-projects let you see those concepts in action.

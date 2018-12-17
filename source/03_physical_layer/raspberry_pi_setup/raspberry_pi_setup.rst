@@ -1,3 +1,5 @@
+.. _raspberry_pi_setup:
+
 Tutorial: Raspberry Pi Setup
 ============================
 

@@ -1,11 +1,13 @@
 Introduction
 ============
 
-Networking needs standards. One
-organization that makes standards
-is the International Organization for Standardization (ISO)
-based in Switzerland. ISO created a standard called the
+There are a lot of "standards" when it comes to networking. One
+organization that makes some of those standards
+is the International Organization for Standardization (ISO).
+ISO created a standard called the
 Open Systems Interconnection model (OSI model).
+
+Yes, ISO created OSI. The acronyms are just reversed.
 
 OSI Model
 ---------
@@ -21,14 +23,12 @@ OSI divides up the concept of networking into seven layers:
 7. Application
 
 This book is organized around these layers. We are going to start at the Physical
-Layer and work our way up to the Presentation Layer. As for the Application
-Layer? There are many other books
-that cover how to write computer applications, so we won't dive into that part
-very much.
+layer and work our way up to the Presentation Layer. As for the Application
+layer? We could write another whole other book on that.
 
 OSI is a *conceptual* model. There isn't a specific "implementation" of any layer
-specified by this model.
-What the OSI model does is help whith, is when you talk to other people about networking.
+in this model.
+What the OSI model does is help with, is when you talk to other people about networking.
 It also helps when
 you want to break apart a complex networking problem into smaller logical parts.
 You know when you talk about the "east-side" of your town? Exactly what fits into
@@ -37,10 +37,11 @@ term gives most people an idea of what part of town you are talking about.
 It works the same way with OSI layers.
 
 It is worth remembering the name of each layer and their order.
+The physical layer is considered "layer 1."
 If you talk to a networking expert and mention that some process happens at
 the "networking layer", or "layer 3" they will know what you are talking about.
 It is such a popular way to talk about networking that there are even companies
-named after "Layer 3".
+named after "layer 3."
 
 If you have trouble remembering the layer names, use
 the mnemonic "Please Do Not Touch
@@ -50,7 +51,7 @@ and you have the first letter of each layer.
 What does each layer do?
 ------------------------
 
-At the application layer, we interact with our application.
+At the application layer, the user interacts with our application.
 For example, we can
 give a thumbs-up to a video we like.
 Each OSI layer works to process that "thumbs-up", passing it down
@@ -66,7 +67,7 @@ we finally hit the application layer where we store that information in a databa
 Incoming Data
 -------------
 
-What might it look like when we receive a web page?
+What might it look like when we *receive* a web page?
 
 1. Physical: Translates pulses of electricity,
    radio waves, or light to 1's and 0's. When new data is received, the
@@ -130,9 +131,9 @@ It covers both the Physical (layer 1) and the Data-Link (layer 2).
 You may have heard of **TCP/IP**. It is the one of the main protocols that
 gets Internet traffic to its destination. TCP/IP stands for Transmission Control
 Protocol/Internet Protocol. IP covers networking (layer 3), TCP covers
-transport (layer 4).
+transport (layer 4). Mostly.
 
-The display of web pages, PDFs, images, even 3d graphics
+The display of web pages, PDFs, images, even 3D graphics
 fall under presentation (layer 6), while the management of menus, buttons and other
 are covered by the application (layer 7).
 
