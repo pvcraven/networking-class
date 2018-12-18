@@ -344,3 +344,18 @@ line whenever the clock signal is in a falling state.
 .. _United States Spectrum Allocation Chart: https://upload.wikimedia.org/wikipedia/commons/d/df/United_States_Frequency_Allocations_Chart_2011_-_The_Radio_Spectrum.pdf
 .. _Electromagnetic Spectrum: https://en.wikipedia.org/wiki/Electromagnetic_spectrum
 .. _Radio Wave Propagation: http://www.pac-attack.com/articles/radio-wave-propagation
+
+Review
+------
+
+* Define: communication medium
+* What are the three most common mediums for computer networking?
+* Define: balanced line
+* Define: differential signaling
+* Define: twisted pair
+* Define: Cat 6 cable
+* When would you use solid-core wire vs. stranded wire?
+* What is coax cable and when do you use it?
+* What is a fiber optic cable? What is it made of?
+* How does light stay in a fiber optic cable?
+
