@@ -6,9 +6,6 @@ by sound waves. That method of communication we call our
 **communication medium**. When we network computers, we work with several different
 types of communication medium.
 
-Types of Communication Medium
------------------------------
-
 The three most frequently used mediums for computer networking are:
 
 * Electricity transmitted over a wire
@@ -16,7 +13,7 @@ The three most frequently used mediums for computer networking are:
 * Radio waves broadcast everywhere with an antenna, or directed with a dish
 
 Wire as a Medium
-^^^^^^^^^^^^^^^^
+----------------
 
 Wire transmits our signals by electrical pulses along a some kind of
 material that conducts electricity.
@@ -98,7 +95,13 @@ interference. Yes, even your cables can have tin-foil hats.
     :align: center
     :alt: From Pace University http://webpage.pace.edu/ms16182p/networking/cables.html
 
-* `Coaxial Cable`_
+We can also use `coaxial cable`_. Coaxial cable (sometimes
+just called coax) is used for transmitting high frequency signals. While TP
+is used for transmitting digital (on/off) signals, coax is used for transmitting
+analog signals with frequencies just like radio waves. In fact, coax can be
+used to carry radio signals directly to the antenna for broadcast. Coax uses
+a center conductor (wire) surrounded by an insulator, surrounded by an outer
+conductor.
 
 .. image:: coaxial_cable_cutaway.svg
     :width: 500px
@@ -111,7 +114,7 @@ interference. Yes, even your cables can have tin-foil hats.
     :alt: From Wikipedia Commons
 
 Light as a Medium
-^^^^^^^^^^^^^^^^^
+-----------------
 
 Instead of communicating with a wire, we can communicate with light.
 We can direct the light with **fiber optics**. Fiber optics uses glass
@@ -147,15 +150,60 @@ communicate with an Infra-Red (IR) light to communicate with your TV.
     :alt: From http://apollotech.com.au/product-category/fibre-optic-cable/
 
 Radio as a Medium
-^^^^^^^^^^^^^^^^^
+-----------------
+
+There's a lot to radio waves as a medium, but here are some important facts you
+should know.
+
+We communicate via radio based on the **frequency** of the radio waves. For example,
+you can listen to music based on radio frequency, when you tune into 90.1 MHz
+(90.1 million cycles per second) on your FM car
+radio. You might listen to AM radio at 1040 kHz (1,040 thousand cycles
+per second). Your WiFi might run at 2.5 GHz (2.5 billion cycles per second).
+
+When communicating via radio, we don't broadcast just at 90.1 MHz. We broadcast
+a bit above and below that frequency as well. The FM radio we are used to
+listening to goes about 90 kHz up and 90kHz down from 90.1 MHz, for a total
+width of 180 kHz. We call this the **bandwidth**. The more bandwidth we
+use, the more data that can be transmitted.
+
+Radio waves act differently depending on their frequency.
+Lower frequencies tend to travel further than higher frequency
+waves. It is entirely possible to transmit from one side of the
+Earth to the other using lower frequency waves. On the other
+hand, high frequencies have more bandwidth for faster data
+transmission. And you don't have to worry about interference
+from the other side of the globe. **Radio wave
+propagation** is how these radio waves travel, bounce, and get
+absorbed.
+
+It is worth taking a bit of time to look up and review the
+`electromagnetic spectrum`_ to see all of these different
+frequencies. To make sure people and devices don't
+interfere with each other, we set aside parts of the spectrum for
+different uses. You can look up the `United States Spectrum Allocation
+Chart`_ for more information on how we divide this up in the US.
+
+Most of the standards for wireless communication have been put
+together by the Institute of Electrical and Electronics Engineers
+(IEEE). Many of these standards are part of the IEEE
+standard numbered "802.11".
+As more updated standards are made, they add letters to the end of the
+802.11 standard.
+
+For computers, we typically use these frequencies and standards
+in the United States:
+
+* 2.4 GHz (802.11b/g/n/ax and Bluetooth)
+* 5 GHz (802.11a/h/j/n/ac/ax)
+
+Inside these ranges, there are different "channels" that can be
+selected. If you are having problems with your wireless because too
+many other people have wireless routers running, you can
+use tools to find if there are other channels your can set your router
+to that will have less interference.
 
 
-
-* `Electromagnetic Spectrum`_
-* `United States Spectrum Allocation Chart`_
-* `Radio Wave Propagation`_
-* Bluetooth
-* Wi-Fi (see `types of wifi standards`_)
 * Microwave links
 
 .. image:: Microwave_tower_silhouette-2.jpg
@@ -163,17 +211,21 @@ Radio as a Medium
     :align: center
     :alt: From Wikipedia Commons
 
-* Satellite
+Another important-to-know method of communicating data is by radio and satellite.
+This has the advantage of being able to communication between any two points
+that can see the same satellite, or any satellite that is part of a network.
+So you can communicate from in the middle of the ocean, in the country,
+or while travelling where it is impractical to get a wired connection.
 
-  * `Low Earth Orbit`_
-  * Geosynchronous_
+Satellites used for communication often
+are in `geosynchronous orbit`_. Geosynchronous orbit is when a satellite orbits
+at exactly the same speed that the Earth rotates. This means to a person on the
+Earth, the satellite appears to be in the same spot in the sky. It is useful because
+you can aim a dish at the satellite and not have to move it.
 
-    * What is geosynchronous?
-    * How far up is a geosynchronous orbit?
-
-      * Approximately 35,786 km (22,236 mi) above sea level
-
-    * How long does it take light to make the round trip?
+However, there are disadvantages to this. To get a geosynchronous orbit, the
+satellite must be about 35,786 km (22,236 mi) above sea level. Why is that
+an issue? Let's do some math.
 
 Speed of light:
 
@@ -207,24 +259,51 @@ Solve:
 
    t \approx 0.24\;\text{seconds}
 
+Therefore, any time you want to do something over the network, it will take
+an extra quarter second to get from you to the server because of the satellite.
+An extra half second if you want a reply.
+This is not a problem some types of communication like
+TV shows, but it is a problem if you have to wait an extra 0.5 seconds
+for every mouse click, or you add that delay into a conversation over the
+phone with people.
 
+.. _geosynchronous orbit: https://en.wikipedia.org/wiki/Geosynchronous_satellite
 
-Types of communicating
-^^^^^^^^^^^^^^^^^^^^^^
+Another way to do satellite communication is to have not just one
+satellite in a geosynchronous orbit, but a whole lot of satellites
+zooming around closer to the Earth in `Low Earth Orbit`_ (LEO). Because
+the satellites are closer, you don't have as much delay. But you have
+to launch and maintain a lot more satellites.
 
-* Simplex (One way, broadcast radio)
-* Half duplex (Two ways, but can't talk and listen. Walkie-talkies.)
-* `Full duplex`_ (Both can talk and here. Phone.)
+Types of Communicating
+----------------------
+
+You should be familiar with the following terms with doing
+communication.
+
+* **Simplex** (Transmit one way using one channel, such as broadcast radio)
+* **Half duplex** (Transmit two ways using one channel. Note you can't talk and
+  listen at the same time because there's only one channel.
+  Think old-style walkie-talkies or CB radio.)
+* **Full duplex** (Transmit two ways using two channels or pairs of wires.
+  Both can talk and listen at the same time. This is just like talking
+  on the phone.)
+
+So if you want to sent/receive at the same time, you need two channels
+of communication.
 
 Encoding
-^^^^^^^^
+--------
+
+How do we take a digital on/off signal, and encode it on an analog line?
 
 Types of encoding digital onto analog:
 
 * `Amplitude Modulation`_ (AM)
 * `Frequency Modulation`_ (FM)
 
-Types of encoding analog onto digital:
+Now the opposite. How do we take an analog signal and encode it on a
+digital line?
 
 * `Pulse Code Modulation`_ (PCM)
 * `Pulse Width Modulation`_ (PWM)
@@ -260,8 +339,6 @@ line whenever the clock signal is in a falling state.
 .. _Manchester Encoding: https://en.wikipedia.org/wiki/Manchester_code
 .. _types of wifi standards: https://en.wikipedia.org/wiki/IEEE_802.11
 .. _Clock and data signal: https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi
-.. _Full duplex: https://en.wikipedia.org/wiki/Duplex_(telecommunications)
-.. _Geosynchronous: https://en.wikipedia.org/wiki/Geosynchronous_satellite
 .. _Low Earth Orbit: https://en.wikipedia.org/wiki/Low_Earth_orbit
 .. _8b 10b Encoding: https://en.wikipedia.org/wiki/8b/10b_encoding
 .. _United States Spectrum Allocation Chart: https://upload.wikimedia.org/wikipedia/commons/d/df/United_States_Frequency_Allocations_Chart_2011_-_The_Radio_Spectrum.pdf

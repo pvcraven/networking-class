@@ -37,7 +37,7 @@ between directories, list files, and also create and edit your own files.
 
 At the end of this step, you should be able to show your Raspberry Pi up and
 running with the keyboard, mouse, and monitor working. You should be able to
-perform the basic command line functions ``cd`` and ``ls``.
+perform the basic command-line functions ``cd`` and ``ls``.
 
 Step 2: Dual Blinking LEDs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -66,7 +66,7 @@ That is, a message with multiple bytes.
 Have one LED blink when there is a one, and not blink when there is a zero.
 The clock LED should blink on/off for each change bit that you have.
 
-.. image:: ../theory/clock_signal.svg
+.. image:: ../01_theory/clock_signal.svg
     :width: 500px
     :align: center
 

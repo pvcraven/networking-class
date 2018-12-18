@@ -3,10 +3,6 @@
 Tutorial: Basic Command Line
 ============================
 
-
-Command Line Tutorial
-=====================
-
 Managing a server via command-line can be better than using a graphical interface
 with windows and menus. Why?
 
@@ -18,9 +14,11 @@ with windows and menus. Why?
 Command Prompt
 --------------
 
-The *command prompt* is the bit of text that the computer prints out before
+The **command prompt** is the bit of text that the computer prints out before
 you type in commands. You can `customize this prompt <http://ezprompt.net/>`_, but what UNIX uses
-is pretty good by default::
+is pretty good by default:
+
+.. code-block:: text
 
     ubuntu@ip-172-31-39-218:/var/www/sample-web-project/public_html$
 
@@ -41,8 +39,9 @@ Directories and Files
 List files
 ^^^^^^^^^^
 You list files in a directory with the command ``ls`` which is short for "list".
-For example::
+For example:
 
+.. code-block:: text
 
     ubuntu@ip-172-31-39-218:/etc/apache2$ ls
     apache2.conf  conf-available  conf-enabled  envvars  magic  mods-available  mods-enabled  ports.conf  sites-available  sites-enabled
@@ -50,7 +49,9 @@ For example::
 
 This is a "short listing" of files. There are
 `a lot of options <http://www.rapidtables.com/code/linux/ls.htm>`_ while listing
-files. I often use ``ls -la``::
+files. I often use ``ls -la``:
+
+.. code-block:: text
 
     ubuntu@ip-172-31-39-218:/etc/apache2$ ls -la
     total 88
@@ -88,7 +89,9 @@ web page links to ``Index.html`` when the file name is actually ``index.html``.
 Directory Navigation
 ^^^^^^^^^^^^^^^^^^^^
 
-You can change directories with ``cd <directory>``. For example::
+You can change directories with ``cd <directory>``. For example:
+
+.. code-block:: text
 
     ubuntu@ip-172-31-39-218:/etc$ cd apache2
     ubuntu@ip-172-31-39-218:/etc/apache2$
@@ -164,11 +167,15 @@ The ``cp`` command will copy files. Here are some examples:
 Copy file1.txt into a new file called file2.txt
 UNLESS you have a directory named file2.txt, then it
 would copy file1.txt into that directory.
-(But file2.txt would be a strange directory name.)::
+(But file2.txt would be a strange directory name.):
+
+.. code-block:: text
 
     cp file1.txt file2.txt
 
-Copy file1.txt up one directory::
+Copy file1.txt up one directory:
+
+.. code-block:: text
 
     cp file1.txt ..
 
@@ -176,12 +183,16 @@ Wildcard
 ^^^^^^^^
 
 The asterisk (*) is a "wildcard" character. We can use it to copy all files in
-the current directory into another directory named 'thumbnails'::
+the current directory into another directory named 'thumbnails':
+
+.. code-block:: text
 
     cp * thumbnails
 
 You can also use it to specify part of a file name. The following command will
-only copy ``.jpg`` files::
+only copy ``.jpg`` files:
+
+.. code-block:: text
 
     cp *.jpg thumbnails
 
@@ -190,17 +201,23 @@ Moving and Renaming Files
 
 The ``mv`` command can move and/or rename files. For example:
 
-Rename file1.txt to file2.txt::
+Rename file1.txt to file2.txt:
+
+.. code-block:: text
 
     mv file1.txt file2.txt
 
-Move file1 up one directory::
+Move file1 up one directory:
+
+.. code-block:: text
 
     mv file1.txt ..
 
 Rename file1.txt to 'backup'
 OR if a directory named 'backup' exists,
-move file1 into the 'backup' directory.::
+move file1 into the 'backup' directory.:
+
+.. code-block:: text
 
     mv file1.txt backup
 
@@ -209,7 +226,9 @@ Deleting Files
 
 You can delete a file with the ``rm`` command, which is short for "remove."
 
-This will delete file1.txt::
+This will delete file1.txt:
+
+.. code-block:: text
 
     rm file1.txt
 
@@ -243,20 +262,26 @@ head
 
 Sometimes cat displays *too* many lines. You only want to look at the first few
 lines. You can use the ``head`` command to look at any number of lines that are
-at the beginning. The default is 10.::
+at the beginning. The default is 10.:
+
+.. code-block:: text
 
     head myfile.txt
 
 tail
 ^^^^
 
-The ``tail`` command lets you look at the last few lines of the file. For example::
+The ``tail`` command lets you look at the last few lines of the file. For example:
+
+.. code-block:: text
 
     tail myfile.txt
 
 One of the most useful features of ``tail`` is the ability to *follow* a file. As
 a file gets more lines added to it, you can see it update live. For example, if you
-want to see what is happening on your web server, live, use::
+want to see what is happening on your web server, live, use:
+
+.. code-block:: text
 
     tail -f /var/log/apache2/access.log
 
@@ -281,7 +306,9 @@ Restarting Services
 -------------------
 
 There are multiple ways to restart services. The only one you'll really
-need to know for this class is::
+need to know for this class is:
+
+.. code-block:: text
 
     sudo service apache2 restart
 
@@ -293,13 +320,17 @@ the directory ``/etc/init.d``. The ``etc`` is the configuration directory.
 The ``init`` stands for *initialize* and the ``.d`` is for ``daemon``, which
 is the term for a background process.
 
-If you do the following::
+If you do the following:
+
+.. code-block:: text
 
     cd /etc/init.d
     ls -la
 
 You can see all the available processes. You can start/stop/restart any
-process by putting in the name of the process like this::
+process by putting in the name of the process like this:
+
+.. code-block:: text
 
     ./apache2 restart
 
@@ -320,7 +351,9 @@ specifically ask for administrator privileges. You can
 do with with the "Super-User Do" command.
 
 For example this command will fail if you don't have admin
-privileges::
+privileges:
+
+.. code-block:: text
 
     /etc/init.d/apache2 restart
 
@@ -331,10 +364,11 @@ But this command will work:
 You can also execute any command as someone else with the ``-u``
 directive. The web server runs under a user account called
 ``www-data``. So the following will run the command as if it was
-run by ``www-data``::
+run by ``www-data``:
+
+.. code-block:: text
 
     sudo -u www-data <my command here>
-
 
 Installing Software
 -------------------
@@ -344,14 +378,18 @@ The command ``apt-get`` controls adding, updating, and removing software
 packages.
 
 Before adding or updating software, you should get the list of what is
-available::
+available:
+
+.. code-block:: text
 
     sudo apt-get update
 
 This is similar to Windows "check for updates." We have not updated
 anything, we've just seen what is out there.
 
-We can install updates with::
+We can install updates with:
+
+.. code-block:: text
 
     sudo apt-get upgrade
 
@@ -360,15 +398,21 @@ your computer like you do with Windows. It is not unusual for
 Linux systems to go years without a reboot.
 
 If you want to install new software, you just have to find the
-name of the software and install it like this::
+name of the software and install it like this:
+
+.. code-block:: text
 
     sudo apt-get install apache2
 
-You can list lots of packages on the same line if you like::
+You can list lots of packages on the same line if you like:
+
+.. code-block:: text
 
     sudo apt-get install apache2 php
 
-You can see all the currently installed software on a system with::
+You can see all the currently installed software on a system with:
+
+.. code-block:: text
 
     apt --installed list
 
@@ -380,8 +424,7 @@ command. Try that on Windows.
 Log Out
 -------
 
-To log out of the server, type `exit`.
-
+To log out of the server, type ``exit``.
 
 Vim
 ---
@@ -416,115 +459,3 @@ Here are some other useful commands:
 * ``ps`` - Show a list of processes that are associated with your account
 * ``ps -ef`` - Show extended details about all processes running
 
-Command Line Reference
-----------------------
-
-Below is a list of commands you should know. We'll go over them in class:
-
-+---------------------------+------------------------------------------------------+
-| Command                   | Action                                               |
-+================+=================================================================+
-| **Listing Files**                                                                |
-+---------------------------+------------------------------------------------------+
-| ls                        | Directory listing for the current working directory  |
-+---------------------------+------------------------------------------------------+
-| ls \*.py                  | List all files ending in .py                         |
-+---------------------------+------------------------------------------------------+
-| ls -la                    | Directory listing with details and hidden files      |
-+---------------------------+------------------------------------------------------+
-| ls /                      | List all the files in the root directory             |
-+---------------------------+------------------------------------------------------+
-| **Directories**                                                                  |
-+---------------------------+------------------------------------------------------+
-| pwd                       | Print our Working Directory                          |
-+---------------------------+------------------------------------------------------+
-| cd dir                    | Change current directory to dir. Assumes dir is      |
-|                           | in the current directory.                            |
-+---------------------------+------------------------------------------------------+
-| cd ..                     | Go up one directory                                  |
-+---------------------------+------------------------------------------------------+
-| cd ../dir                 | Go up one directory, then down into *dir*            |
-+---------------------------+------------------------------------------------------+
-| cd /                      | Switch to the root directory                         |
-+---------------------------+------------------------------------------------------+
-| cd /home                  | Switch to the root directory, then look for the      |
-|                           | home directory                                       |
-+---------------------------+------------------------------------------------------+
-| cd                        | Switch to the home directory                         |
-+---------------------------+------------------------------------------------------+
-| cd ~                      | Switch to the home directory                         |
-+---------------------------+------------------------------------------------------+
-| cd ~/docs                 | Switch to the docs directory inside the home         |
-|                           | directory.                                           |
-+---------------------------+------------------------------------------------------+
-| mkdir mydir               | Make a new directory called mydir in the current     |
-|                           | working directory.                                   |
-+---------------------------+------------------------------------------------------+
-| **Removing Files**                                                               |
-+---------------------------+------------------------------------------------------+
-| rm file                   | Remove (delete) file named 'file'.                   |
-+---------------------------+------------------------------------------------------+
-| rm -rf  mydir             | Remove (delete) directory named 'mydir' and          |
-|                           | everything in it.                                    |
-+---------------------------+------------------------------------------------------+
-| rm -rf  /                 | Remove everything on the computer. THIS IS BAD.      |
-+---------------------------+------------------------------------------------------+
-| **Moving and Copying Files**                                                     |
-+---------------------------+------------------------------------------------------+
-| cp file1 file2            | Copy file1, name the copy file2.                     |
-+---------------------------+------------------------------------------------------+
-| cp file1 ../backup        | Copy file1 up one directory, then either name it     |
-|                           | 'backup' or put 'file1' in the directory 'backup' if |
-|                           | it already exists.                                   |
-+---------------------------+------------------------------------------------------+
-| cp \* ../backup           | Copy every file in the current directory up one      |
-|                           | directory, and then down into a directory named      |
-|                           | 'backup'. This does NOT recurse into subdirectories. |
-+---------------------------+------------------------------------------------------+
-| cp -r \* ../backup        | Copy every file in the current directory up one      |
-|                           | directory, and then down into a directory named      |
-|                           | 'backup'. This does DOES recurse into subdirectories.|
-+---------------------------+------------------------------------------------------+
-| mv file1 file2            | Rename file1 to file2                                |
-+---------------------------+------------------------------------------------------+
-| mv file1 ..               | Move file1 up one directory.                         |
-+---------------------------+------------------------------------------------------+
-| mv file1 mydir            | Move file1 into mydir.                               |
-+---------------------------+------------------------------------------------------+
-| **Displaying Files**                                                             |
-+---------------------------+------------------------------------------------------+
-| cat myfile                | Displays the contents of myfile                      |
-+---------------------------+------------------------------------------------------+
-| more myfile               | Displays the contents of myfile, pauses at each page.|
-+---------------------------+------------------------------------------------------+
-| less myfile               | Displays the contents of myfile, allows page up/down.|
-+---------------------------+------------------------------------------------------+
-| head myfile               | Displays the first few lines of myfile               |
-+---------------------------+------------------------------------------------------+
-| tail myfile               | Displays the last few lines of myfile                |
-+---------------------------+------------------------------------------------------+
-| tail -f myfile            | Displays the last few lines of myfile, then pauses   |
-|                           | and will keep printing additional lines as they are  |
-|                           | added. Great for following log files.                |
-+---------------------------+------------------------------------------------------+
-| **Process Management**                                                           |
-+---------------------------+------------------------------------------------------+
-| ps                        | List active processes                                |
-+---------------------------+------------------------------------------------------+
-| ps -ef                    | List active processes and details                    |
-+---------------------------+------------------------------------------------------+
-| top                       | Continually updated list of CPU heavy processes.     |
-+---------------------------+------------------------------------------------------+
-| kill PID                  | Kill the specified process id with SIGTERM.          |
-+---------------------------+------------------------------------------------------+
-| kill -9 PID               | Kill the specified process id with                   |
-|                           | `SIGKILL <http://turnoff.us/geek/dont-sigkill/>`_.   |
-+---------------------------+------------------------------------------------------+
-| ctrl-z                    | Move currently running process to background.        |
-+---------------------------+------------------------------------------------------+
-| command &                 | Run command in the background.                       |
-+---------------------------+------------------------------------------------------+
-| bg                        | List background processes.                           |
-+---------------------------+------------------------------------------------------+
-| fg                        | Bring job to forground.                              |
-+---------------------------+------------------------------------------------------+
