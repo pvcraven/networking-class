@@ -25,7 +25,7 @@ Set up your Raspberry Pi like this photo:
     :align: center
     :alt: alternate text
 
-We will put in a jumper wire to the breakout labeled "17." Then we will run
+We will put in a jumper wire to the breakout labeled 17. Then we will run
 that wire to an empty column on the right. Then plug in the long (positive)
 side of the LED into a different hole in that column. Plug the short (negative)
 side of the LED into the column to the right.
@@ -58,8 +58,8 @@ below:
     :linenos:
     :language: python
 
-When the GPIO pin is set "high" electricity flows and the LED lights up. When
-it is set "low" the LED goes out.
+When the GPIO pin is set **high** electricity flows and the LED lights up. When
+it is set **low** the LED goes out.
 
 (Side note, instead of hooking the LED to ground if you hook it to the
 positive rail then everything is backwards. When you set the GPIO pin to low,
@@ -96,7 +96,7 @@ And on the other computer, let's read that wire:
     :linenos:
     :language: python
 
-Great! But what we are doing is "polling." We are periodically seeing if the value changes.
+Great! But what we are doing is **polling**. We are periodically seeing if the value changes.
 So if it doesn't change, we are wasting time. If it changes faster than we are polling, then
 we miss changes. Polling is no good.
 
@@ -106,7 +106,7 @@ Instead, we can wait for the wire to change between high and low:
     :linenos:
     :language: python
 
-This is much better. But still not great. Because this is "blocking." Our program can't do anything
+This is much better. But still not great. Because this is **blocking**. Our program can't do anything
 unless there is a change in state on the wire. If there is never a change, we just hang.
 
 A better option? Use a callback. Write a function that the computer will run when there is a
