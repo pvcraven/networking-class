@@ -3,10 +3,13 @@
 Tutorial: Raspberry Pi GPIO
 ===========================
 
+The goal of this tutorial is to show you how to hook your Raspberry Pi
+up to an LED, and control that LED with a program.
+
 Step one: Blink an LED
 ----------------------
 
-Let's blink an LED. We will use something called a "breadboard." A breadboard
+Let's blink an LED. We will use something called a **breadboard**. A breadboard
 is a handy way to connect wires without soldering. Each five hole column is
 connected together. Each long strip on the bottom and top are connected
 horizontally. Usually we use that for the + side of the power, and the - side

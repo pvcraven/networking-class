@@ -2,8 +2,10 @@ Physical Layer Theory
 =====================
 
 When we communicate by talking in person, our message is carried
-by sound waves. That method of communication we call our
-**communication medium**. When we network computers, we work with several different
+by sound waves. Those sound waves are our
+**communication medium**. Communication medium is the channel
+or system that a sender transmits a message to a receiver.
+When we network computers, we work with several different
 types of communication medium.
 
 The three most frequently used mediums for computer networking are:
@@ -76,7 +78,7 @@ a non-network engineer who might think you are talking about Toilet Paper.
 There are many standards for the construction of twisted pair cable.
 Most cable standards used in wiring networks in a building today different
 fall under the "Cat 5",
-"Cat 5e" or "Cat6" standards. Cat is short for category.
+"Cat 5e" or "Cat 6" standards. Cat is short for category.
 Any of these cable types work fine for most networking.
 Lower numbered categories below 5 may not reliably handle speeds of modern networks.
 
@@ -152,8 +154,8 @@ communicate with an Infra-Red (IR) light to communicate with your TV.
 Radio as a Medium
 -----------------
 
-There's a lot to radio waves as a medium, but here are some important facts you
-should know.
+There's a lot to radio waves as a medium, more than what we can cover in this
+book. However, we can get started learning some of the most critical parts  .
 
 We communicate via radio based on the **frequency** of the radio waves. For example,
 you can listen to music based on radio frequency, when you tune into 90.1 MHz
@@ -275,6 +277,10 @@ zooming around closer to the Earth in `Low Earth Orbit`_ (LEO). Because
 the satellites are closer, you don't have as much delay. But you have
 to launch and maintain a lot more satellites.
 
+If you want to know more about radio waves, I'd suggest
+searching up how to get an **amateur radio license** in your country. There
+are many books that cover projects you can do with radio waves.
+
 Types of Communicating
 ----------------------
 
@@ -292,25 +298,70 @@ communication.
 So if you want to sent/receive at the same time, you need two channels
 of communication.
 
-Encoding
---------
+Types of Modulation
+-------------------
 
-How do we take a digital on/off signal, and encode it on an analog line?
+When talk and listen, we typically can hear frequencies between 20 Hz and 22 kHz. How
+do we take those frequencies and transmit them over the radio at a much higher frequency?
+How do we take an analog signal like music and save it digitally when we only have 1's and 0's?
 
-Types of encoding digital onto analog:
+This process of translating the signal to a different signal is called **modulation**.
+Going the other way, we call it **demodulation**.
 
-* `Amplitude Modulation`_ (AM)
-* `Frequency Modulation`_ (FM)
+Amplitude Modulation
+~~~~~~~~~~~~~~~~~~~~
 
-Now the opposite. How do we take an analog signal and encode it on a
-digital line?
+The earliest form of modulation invented for transmitting voice by radio
+is called **Amplitude Modulation** (AM). If you've used AM radio, you've
+used Amplitude Modulation.
 
-* `Pulse Code Modulation`_ (PCM)
-* `Pulse Width Modulation`_ (PWM)
+AM takes the audio signal (top) with the AM frequency (such as 1040 kHz)
+which we call the **carrier frequency** (middle). This leaves us with our
+AM modulated signal (bottom):
 
-Ways to put bits on a wire:
+.. figure:: am.svg
 
-* `Clock and data signal`_
+    Image from "Introduction To Digital Modulation" by Doug Hoyte
+
+Unfortunately AM wastes a lot of power and any electromagnetic noise from
+things like motors or lightning can be decoded as audio pops and crackles
+instead of being ignored.
+
+Frequency Modulation
+~~~~~~~~~~~~~~~~~~~~
+
+Another way to modulate audio signals into a radio frequency is by
+**frequency modulation** (FM). Any time you listen to FM radio you
+are using frequency modulation.
+
+Rather than change the amplitude of our carrier based on the signal
+we want to modulate, we will change our frequency. So our carrier
+frequency might go between 90.0 MHz to 90.2 MHz.
+
+.. figure:: am.svg
+
+    "Frequency_Modulation.svg" retrieved from Wikipedia
+
+Pulse Code Modulation
+~~~~~~~~~~~~~~~~~~~~~
+
+`Pulse Code Modulation`_ (PCM)
+
+.. figure:: pcm.svg
+
+    "Pcm.svg" Image from Wikipedia
+
+Pulse Width Modulation
+~~~~~~~~~~~~~~~~~~~~~~
+
+`Pulse Width Modulation`_ (PWM)
+
+.. figure:: pwm.svg
+
+    `Image from Real Digital <https://www.realdigital.org/doc/333049590c67cb553fc7f9880b2f79c3>`_
+
+Clock and Data Lines
+--------------------
 
 This uses two wires. One wire is a clock signal, which operates on a regular
 interval. The other signal is a data signal.
@@ -358,4 +409,8 @@ Review
 * What is coax cable and when do you use it?
 * What is a fiber optic cable? What is it made of?
 * How does light stay in a fiber optic cable?
+* What is radio wave propagation?
+* Explain the electromagnetic spectrum.
+* Transmitting via a satellite in geosynchronous orbit adds about how much of a delay? Why?
+* What is the difference between simplex, half-duplex, and duplex?
 

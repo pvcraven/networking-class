@@ -4,7 +4,7 @@ Preface
 This book teaches computer networking by combining theory, tutorials, and
 projects.
 
-Why did I write this book?
+Why do I think you'll find this book worth your time?
 Back when I was in college my networking class taught me a lot of *theory*.
 When I finished that class I knew how to network computers *in theory*.
 I'd never done it in reality. I felt that if I'd taken a class in networking,
@@ -24,4 +24,4 @@ never had the right mix of theory and hands-on projects.
 
 So I wrote this. It covers the concepts that I needed
 to know during my career as a programmer. Just as importantly,
-the mini-projects let you see those concepts in action.
+the mini-projects realize you can apply those concepts yourself.

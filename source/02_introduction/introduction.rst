@@ -133,6 +133,9 @@ gets Internet traffic to its destination. TCP/IP stands for Transmission Control
 Protocol/Internet Protocol. IP covers networking (layer 3), TCP covers
 transport (layer 4). Mostly.
 
+Have seen those letters, "http"? They stand for **HyperText Transport Protocol**.
+That covers parts of transport and session layers (layers 4 and 5).
+
 The display of web pages, PDFs, images, even 3D graphics
 fall under presentation (layer 6), while the management of menus, buttons and other
 are covered by the application (layer 7).
